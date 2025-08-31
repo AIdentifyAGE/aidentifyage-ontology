@@ -5,10 +5,28 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:AIDAge="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge">
         <rdfs:comment>Base Ontology for use in AIdentifyAGE Project</rdfs:comment>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#synonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#synonym"/>
     
 
 
@@ -23,39 +41,69 @@
     
 
 
-    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#hasScore -->
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_Data -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#hasScore">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_Data">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:comment>Represents a score a given TeethSet has</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ReportData"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedData"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#hasTeethSet -->
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_RadiographicImaging -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#hasTeethSet">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_RadiographicImaging">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedData"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#OPG"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_Score -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_Score">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#hasTreatment -->
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_TeethSet -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#hasTreatment">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_TeethSet">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#isTreatmentOf"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:comment>Represents which treatments are present in a given OPG</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#OPG"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TeethSet"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#isTreatmentOf -->
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_Tooth -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#isTreatmentOf">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_Tooth">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:comment>Represents which treatments are present in a given OPG</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TeethSet"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothTypeFDI"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_Treatment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_Treatment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#is_TreatmentOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothTypeFDI"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TreatmentOption"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#is_TreatmentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#is_TreatmentOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
     </owl:ObjectProperty>
     
 
@@ -71,20 +119,107 @@
     
 
 
-    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectionDateTime -->
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedDataProperties -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectionDateTime">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedDataProperties">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedData"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ReportDataProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ReportDataProperties">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ReportData"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ReportDateTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ReportDateTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ReportDataProperties"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectionPlace -->
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothDataProperties -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectionPlace">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothDataProperties">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#OPG"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_ApplicantName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_ApplicantName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedDataProperties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_ForensicCaseNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_ForensicCaseNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedDataProperties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_ForensicExpert -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_ForensicExpert">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedDataProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_OPGTakenDateTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_OPGTakenDateTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedDataProperties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_ProvidedBirthDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_ProvidedBirthDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedDataProperties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_RequestingEntity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_RequestingEntity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedDataProperties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_RootType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_RootType">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothDataProperties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_Sex -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_Sex">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedDataProperties"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -141,10 +276,33 @@
     
 
 
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Canine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Canine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PROTOTYPEToothType"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedData -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedData">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_RadiographicImaging"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#RadiographicImagingProcedure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Represents the collected information at the beginning of the forensic process</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Deciduous -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Deciduous">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothTypeFDI"/>
     </owl:Class>
     
 
@@ -154,6 +312,422 @@
     <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#DemirjianScoringSystem">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ScoringSystem"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#MoorreesFanningHuntScoringSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_11 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_11">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_12 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_12">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_13 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_13">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_14 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_14">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_15 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_15">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_16 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_16">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_17 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_17">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_18 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_18">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_21 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_21">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_22 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_22">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_23 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_23">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_24 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_24">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_25 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_25">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_26 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_26">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_27 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_27">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_28 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_28">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_31 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_31">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_32 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_32">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_33 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_33">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_34 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_34">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_35 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_35">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_36 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_36">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_37 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_37">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_38 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_38">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_41 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_41">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_42 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_42">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_43 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_43">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_44 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_44">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_45 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_45">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_46 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_46">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_47 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_47">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_48 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_48">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_51 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_51">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Deciduous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_52 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_52">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Deciduous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_53 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_53">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Deciduous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_54 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_54">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Deciduous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_55 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_55">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Deciduous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_61 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_61">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Deciduous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_62 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_62">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Deciduous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_63 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_63">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Deciduous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_64 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_64">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Deciduous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_65 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_65">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Deciduous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_71 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_71">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Deciduous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_72 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_72">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Deciduous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_73 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_73">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Deciduous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_74 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_74">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Deciduous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_75 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_75">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Deciduous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_81 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_81">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Deciduous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_82 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_82">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Deciduous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_83 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_83">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Deciduous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_84 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_84">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Deciduous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_85 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_85">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Deciduous"/>
     </owl:Class>
     
 
@@ -198,6 +772,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Incisor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Incisor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PROTOTYPEToothType"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Index -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Index"/>
@@ -208,6 +790,22 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#MissingTooth">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TreatmentOption"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Mixed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Mixed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothTypeFDI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Molar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Molar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PROTOTYPEToothType"/>
     </owl:Class>
     
 
@@ -223,10 +821,12 @@
     <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#OPG -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#OPG">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#RadiographicImagingProcedure"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#hasTreatment"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TreatmentOption"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_TeethSet"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TeethSet"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Represents an Orthopantomogram (OPG). It consists in a panoramic X-Ray picture of a person&apos;s mouth (oral cavity and complete set of teeth)</rdfs:comment>
@@ -246,6 +846,13 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#OPGTakenDateTime">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedData"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_TeethSet"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TeethSet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -258,6 +865,29 @@
     
 
 
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PROTOTYPEToothType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PROTOTYPEToothType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothTypeFDI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Premolar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Premolar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PROTOTYPEToothType"/>
+        <AIDAge:synonym>Bicuspids</AIDAge:synonym>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ProvidedBirthDate -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ProvidedBirthDate">
@@ -266,9 +896,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#RadiographicImagingProcedure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#RadiographicImagingProcedure">
+        <rdfs:comment>Place holder for the OPG upper class</rdfs:comment>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/SNOMEDCT/363680008</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ReportData -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ReportData">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_Data"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Represents the necessary information present in the official report</rdfs:comment>
     </owl:Class>
     
@@ -317,6 +962,12 @@
     <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TeethSet -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TeethSet">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_Tooth"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothTypeFDI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Represents the human teeth sets</rdfs:comment>
     </owl:Class>
     
@@ -325,6 +976,13 @@
     <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothTypeFDI -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothTypeFDI">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#has_Treatment"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TreatmentOption"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Represents each existing Tooth Type</rdfs:comment>
     </owl:Class>
     
@@ -357,12 +1015,95 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Canine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Incisor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Molar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Premolar"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedData"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Index"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#OPG"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PROTOTYPEToothType"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#RadiographicImagingProcedure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ReportData"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ScoringSystem"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TeethSet"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothTypeFDI"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TreatmentOption"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Deciduous"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Mixed"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Permanent"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_11"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_12"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_13"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_14"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_15"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_16"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_17"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_18"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_21"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_22"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_23"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_24"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_25"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_26"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_27"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_28"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_31"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_32"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_33"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_34"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_35"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_36"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_37"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_38"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_41"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_42"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_43"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_44"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_45"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_46"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_47"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_48"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_51"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_52"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_53"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_54"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_55"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_61"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_62"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_63"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_64"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_65"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_71"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_72"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_73"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_74"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_75"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_81"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_82"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_83"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_84"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_85"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
