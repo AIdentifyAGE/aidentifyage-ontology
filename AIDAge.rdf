@@ -77,7 +77,79 @@
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118">
+        <obo:IAO_0000111 xml:lang="en">alternative label</obo:IAO_0000111>
+        <obo:IAO_0000111 xml:lang="en">alternative term</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115 xml:lang="en">A label for a class or property that can be used to refer to the class or property instead of the preferred rdfs:label. Alternative labels should be used to indicate community- or context-specific labels, abbreviations, shorthand forms and the like.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An alternative name for a class or property which means the same thing as the preferred name (semantically equivalent)</obo:IAO_0000115>
+        <obo:IAO_0000117>OBO Operations committee</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Daniel Schober</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
+        <rdfs:comment>Consider re-defing to: An alternative name for a class or property which can mean the same thing as the preferred name (semantically equivalent, narrow, broad or related).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/ohd/imports/caro_import.owl"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/ohd/imports/iao_import.owl"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/ohd/imports/omo_import.owl"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/ohd/imports/ro_import.owl"/>
+        <rdfs:label xml:lang="en">alternative label</rdfs:label>
+        <rdfs:label>alternative term</rdfs:label>
+        <rdfs:label xml:lang="en">alternative term</rdfs:label>
+    </owl:AnnotationProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/IAO_0000118"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/IAO_0000118"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000111"/>
+        <owl:annotatedTarget xml:lang="en">alternative label</owl:annotatedTarget>
+        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/IAO_0000118"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000114"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/IAO_0000118"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">A label for a class or property that can be used to refer to the class or property instead of the preferred rdfs:label. Alternative labels should be used to indicate community- or context-specific labels, abbreviations, shorthand forms and the like.</owl:annotatedTarget>
+        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/IAO_0000118"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000117"/>
+        <owl:annotatedTarget>OBO Operations committee</owl:annotatedTarget>
+        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/IAO_0000118"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000117"/>
+        <owl:annotatedTarget xml:lang="en">PERSON:Daniel Schober</owl:annotatedTarget>
+        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/IAO_0000118"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000119"/>
+        <owl:annotatedTarget xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</owl:annotatedTarget>
+        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/IAO_0000118"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>Consider re-defing to: An alternative name for a class or property which can mean the same thing as the preferred name (semantically equivalent, narrow, broad or related).</owl:annotatedTarget>
+        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/IAO_0000118"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="en">alternative label</owl:annotatedTarget>
+        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
+    </owl:Axiom>
     
 
 
@@ -107,7 +179,10 @@
 
     <!-- http://purl.obolibrary.org/obo/OHD_0000065 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/OHD_0000065"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/OHD_0000065">
+        <rdfs:label>ADA universal tooth number</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000118"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -212,6 +287,54 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
+        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000111"/>
+        <owl:annotatedTarget xml:lang="en">is part of</owl:annotatedTarget>
+        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <owl:annotatedTarget xml:lang="en">my brain is part of my body (continuant parthood, two material entities)</owl:annotatedTarget>
+        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <owl:annotatedTarget xml:lang="en">my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)</owl:annotatedTarget>
+        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <owl:annotatedTarget xml:lang="en">this day is part of this year (occurrent parthood)</owl:annotatedTarget>
+        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">a core relation that holds between a part and its whole</owl:annotatedTarget>
+        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <owl:annotatedTarget xml:lang="en">Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other.</owl:annotatedTarget>
+        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <owl:annotatedTarget xml:lang="en">Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/</owl:annotatedTarget>
+        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000116"/>
         <owl:annotatedTarget xml:lang="en">Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)
 
@@ -274,12 +397,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
         <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
@@ -330,48 +447,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://wiki.geneontology.org/Part_of</owl:annotatedTarget>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000111"/>
-        <owl:annotatedTarget xml:lang="en">is part of</owl:annotatedTarget>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000112"/>
-        <owl:annotatedTarget xml:lang="en">my brain is part of my body (continuant parthood, two material entities)</owl:annotatedTarget>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000112"/>
-        <owl:annotatedTarget xml:lang="en">my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)</owl:annotatedTarget>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000112"/>
-        <owl:annotatedTarget xml:lang="en">this day is part of this year (occurrent parthood)</owl:annotatedTarget>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">a core relation that holds between a part and its whole</owl:annotatedTarget>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000116"/>
-        <owl:annotatedTarget xml:lang="en">Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other.</owl:annotatedTarget>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000116"/>
-        <owl:annotatedTarget xml:lang="en">Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/</owl:annotatedTarget>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
     </owl:Axiom>
     
@@ -1077,11 +1152,11 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
                 <owl:allValuesFrom rdf:resource="http://example.com/left"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:nodeID="genid64"/>
+        <rdfs:subClassOf rdf:nodeID="genid73"/>
         <owl:disjointWith rdf:resource="http://example.com/right"/>
         <rdfs:label>Sum of left of bilateral anatomical entity</rdfs:label>
     </owl:Class>
-    <owl:Restriction rdf:nodeID="genid64">
+    <owl:Restriction rdf:nodeID="genid73">
         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85995"/>
         <owl:allValuesFrom rdf:resource="http://example.com/left"/>
     </owl:Restriction>
@@ -1094,7 +1169,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://example.com/left"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:nodeID="genid64"/>
+        <owl:annotatedTarget rdf:nodeID="genid73"/>
         <example:fma-translation-source>fma-part-module-to-owl</example:fma-translation-source>
     </owl:Axiom>
     <owl:Axiom>
@@ -1116,10 +1191,10 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
                 <owl:allValuesFrom rdf:resource="http://example.com/right"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:nodeID="genid69"/>
+        <rdfs:subClassOf rdf:nodeID="genid78"/>
         <rdfs:label>Sum of right of bilateral anatomical entity</rdfs:label>
     </owl:Class>
-    <owl:Restriction rdf:nodeID="genid69">
+    <owl:Restriction rdf:nodeID="genid78">
         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85995"/>
         <owl:allValuesFrom rdf:resource="http://example.com/right"/>
     </owl:Restriction>
@@ -1132,7 +1207,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://example.com/right"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:nodeID="genid69"/>
+        <owl:annotatedTarget rdf:nodeID="genid78"/>
         <example:fma-translation-source>fma-part-module-to-owl</example:fma-translation-source>
     </owl:Axiom>
     
@@ -1249,54 +1324,6 @@ subclasses: Primary molar tooth, Secondary molar tooth
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_maxillary_dentition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55740"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55746"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55748"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55794"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56113"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56670"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56546"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56548"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1310,54 +1337,6 @@ subclasses: Primary molar tooth, Secondary molar tooth
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85868"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_maxillary_dentition"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55796"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55818"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55820"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55822"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56111"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56667"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56552"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56554"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1375,54 +1354,6 @@ subclasses: Primary molar tooth, Secondary molar tooth
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_maxillary_dentition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55797"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55819"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55821"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55823"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56112"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56668"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56553"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56555"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1436,54 +1367,6 @@ subclasses: Primary molar tooth, Secondary molar tooth
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85868"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_maxillary_dentition"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55741"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55747"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55749"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55795"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56114"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56671"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56547"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56549"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1501,54 +1384,6 @@ subclasses: Primary molar tooth, Secondary molar tooth
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_mandibular_dentition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55854"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55862"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55864"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55866"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56123"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56682"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56520"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56522"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1562,54 +1397,6 @@ subclasses: Primary molar tooth, Secondary molar tooth
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85868"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_mandibular_dentition"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55855"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55863"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55865"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55867"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56124"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56683"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56521"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56523"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1627,54 +1414,6 @@ subclasses: Primary molar tooth, Secondary molar tooth
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_maxillary_dentition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55894"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55902"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55904"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55906"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56135"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56688"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56574"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56576"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1688,60 +1427,6 @@ subclasses: Primary molar tooth, Secondary molar tooth
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85868"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_maxillary_dentition"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55876"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55884"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55886"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55888"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56137"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56685"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56583"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56603"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56605"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1759,60 +1444,6 @@ subclasses: Primary molar tooth, Secondary molar tooth
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_maxillary_dentition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55877"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55885"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55887"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55889"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56138"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56686"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56584"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56604"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56606"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1826,54 +1457,6 @@ subclasses: Primary molar tooth, Secondary molar tooth
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85868"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_maxillary_dentition"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55895"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55903"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55905"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55907"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56136"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56689"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56575"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56577"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1891,54 +1474,6 @@ subclasses: Primary molar tooth, Secondary molar tooth
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_mandibular_dentition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55933"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55942"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55944"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55948"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56132"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56695"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56561"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56563"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1952,54 +1487,6 @@ subclasses: Primary molar tooth, Secondary molar tooth
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85868"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_mandibular_dentition"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55915"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55923"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55925"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55927"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56134"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56692"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56567"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56569"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2017,54 +1504,6 @@ subclasses: Primary molar tooth, Secondary molar tooth
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_mandibular_dentition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55914"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55922"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55924"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55926"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56133"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56691"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56566"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56568"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2078,54 +1517,6 @@ subclasses: Primary molar tooth, Secondary molar tooth
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85868"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_mandibular_dentition"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55932"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55941"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55943"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55947"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56131"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56694"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56560"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56562"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2143,66 +1534,6 @@ subclasses: Primary molar tooth, Secondary molar tooth
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_maxillary_dentition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56017"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56025"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56027"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56029"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56703"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_57152"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56626"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56628"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56630"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_57146"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2218,66 +1549,6 @@ subclasses: Primary molar tooth, Secondary molar tooth
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_maxillary_dentition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55990"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55999"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56009"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56011"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56700"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_57154"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56632"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56634"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56636"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_57150"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2289,74 +1560,8 @@ subclasses: Primary molar tooth, Secondary molar tooth
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FMA_55811"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56833"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85868"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_maxillary_dentition"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55964"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55975"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55978"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55980"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56697"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_57156"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56609"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56614"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56616"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56618"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2370,74 +1575,8 @@ subclasses: Primary molar tooth, Secondary molar tooth
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FMA_55811"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_57529"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85868"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_maxillary_dentition"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55965"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55976"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55979"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55981"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56698"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_57157"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56610"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56615"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56617"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56619"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2455,66 +1594,6 @@ subclasses: Primary molar tooth, Secondary molar tooth
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_maxillary_dentition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55992"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56000"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56010"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56012"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56701"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_57155"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56633"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56635"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56637"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_57151"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2528,66 +1607,6 @@ subclasses: Primary molar tooth, Secondary molar tooth
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85868"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_maxillary_dentition"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56018"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56026"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56028"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56030"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56704"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_57153"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56627"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56629"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56631"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_57147"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2605,60 +1624,6 @@ subclasses: Primary molar tooth, Secondary molar tooth
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_mandibular_dentition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56072"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56080"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56082"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56084"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56148"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56713"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56596"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56639"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56641"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2672,60 +1637,6 @@ subclasses: Primary molar tooth, Secondary molar tooth
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85868"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_mandibular_dentition"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56054"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56062"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56064"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56066"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56150"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56710"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56602"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56643"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56645"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2743,60 +1654,6 @@ subclasses: Primary molar tooth, Secondary molar tooth
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_mandibular_dentition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56036"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56044"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56046"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56048"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56154"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56707"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56649"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56653"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56655"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2810,60 +1667,6 @@ subclasses: Primary molar tooth, Secondary molar tooth
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85868"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_mandibular_dentition"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56035"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56043"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56045"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56047"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56153"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56706"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56648"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56652"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56654"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2881,54 +1684,6 @@ subclasses: Primary molar tooth, Secondary molar tooth
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_mandibular_dentition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56053"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56061"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56063"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56065"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56149"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56601"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56642"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56644"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2942,60 +1697,6 @@ subclasses: Primary molar tooth, Secondary molar tooth
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85868"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_mandibular_dentition"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56071"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56079"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56081"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56083"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56147"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56712"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56595"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56638"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56640"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3159,162 +1860,6 @@ subclasses: Left lower lateral secondary incisor tooth, Right lower lateral seco
     
 
 
-    <!-- http://purl.obolibrary.org/obo/FMA_55740 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55740"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55741 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55741"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55746 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55746"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55747 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55747"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55748 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55748"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55749 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55749"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55768 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55768"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55769 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55769"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55770 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55770"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55771 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55771"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55772 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55772"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55773 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55773"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55784 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55784"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55785 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55785"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55786 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55786"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55787 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55787"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55788 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55788"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55789 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55789"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55790 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55790"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55791 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55791"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55792 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55792"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55793 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55793"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55794 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55794"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55795 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55795"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55796 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55796"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55797 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55797"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/FMA_55798 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55798">
@@ -3324,54 +1869,6 @@ subclasses: Left lower lateral secondary incisor tooth, Right lower lateral seco
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85868"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_maxillary_dentition"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55840"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55846"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55848"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55850"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56121"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56679"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56524"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56526"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3387,54 +1884,6 @@ subclasses: Left lower lateral secondary incisor tooth, Right lower lateral seco
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85868"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_maxillary_dentition"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55841"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55847"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55849"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55851"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56122"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56680"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56525"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56527"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3651,1440 +2100,6 @@ subclasses: Right lower third secondary molar tooth, Left lower third secondary 
     
 
 
-    <!-- http://purl.obolibrary.org/obo/FMA_55818 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55818"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55819 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55819"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55820 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55820"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55821 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55821"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55822 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55822"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55823 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55823"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55840 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55840"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55841 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55841"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55846 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55846"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55847 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55847"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55848 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55848"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55849 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55849"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55850 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55850"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55851 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55851"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55854 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55854"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55855 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55855"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55862 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55862"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55863 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55863"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55864 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55864"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55865 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55865"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55866 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55866"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55867 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55867"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55876 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55876"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55877 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55877"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55884 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55884"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55885 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55885"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55886 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55886"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55887 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55887"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55888 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55888"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55889 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55889"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55894 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55894"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55895 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55895"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55902 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55902"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55903 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55903"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55904 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55904"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55905 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55905"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55906 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55906"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55907 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55907"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55914 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55914"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55915 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55915"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55922 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55922"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55923 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55923"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55924 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55924"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55925 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55925"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55926 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55926"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55927 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55927"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55932 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55932"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55933 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55933"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55941 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55941"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55942 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55942"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55943 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55943"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55944 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55944"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55947 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55947"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55948 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55948"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55964 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55964"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55965 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55965"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55975 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55975"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55976 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55976"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55978 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55978"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55979 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55979"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55980 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55980"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55981 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55981"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55990 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55990"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55992 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55992"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_55999 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55999"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56000 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56000"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56009 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56009"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56010 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56010"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56011 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56011"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56012 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56012"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56017 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56017"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56018 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56018"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56025 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56025"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56026 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56026"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56027 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56027"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56028 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56028"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56029 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56029"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56030 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56030"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56035 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56035"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56036 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56036"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56043 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56043"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56044 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56044"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56045 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56045"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56046 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56046"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56047 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56047"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56048 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56048"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56053 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56053"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56054 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56054"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56061 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56061"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56062 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56062"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56063 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56063"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56064 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56064"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56065 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56065"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56066 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56066"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56071 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56071"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56072 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56072"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56079 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56079"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56080 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56080"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56081 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56081"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56082 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56082"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56083 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56083"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56084 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56084"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56111 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56111"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56112 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56112"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56113 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56113"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56114 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56114"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56115 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56115"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56116 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56116"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56117 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56117"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56118 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56118"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56121 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56121"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56122 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56122"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56123 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56123"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56124 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56124"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56131 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56131"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56132 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56132"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56133 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56133"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56134 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56134"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56135 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56135"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56136 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56136"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56137 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56137"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56138 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56138"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56147 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56147"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56148 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56148"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56149 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56149"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56150 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56150"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56153 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56153"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56154 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56154"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56520 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56520"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56521 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56521"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56522 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56522"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56523 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56523"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56524 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56524"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56525 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56525"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56526 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56526"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56527 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56527"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56534 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56534"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56535 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56535"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56536 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56536"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56537 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56537"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56540 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56540"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56541 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56541"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56542 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56542"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56543 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56543"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56546 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56546"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56547 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56547"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56548 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56548"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56549 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56549"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56552 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56552"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56553 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56553"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56554 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56554"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56555 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56555"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56560 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56560"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56561 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56561"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56562 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56562"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56563 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56563"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56566 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56566"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56567 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56567"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56568 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56568"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56569 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56569"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56574 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56574"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56575 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56575"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56576 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56576"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56577 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56577"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56583 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56583"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56584 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56584"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56595 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56595"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56596 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56596"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56601 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56601"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56602 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56602"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56603 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56603"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56604 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56604"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56605 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56605"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56606 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56606"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56609 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56609"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56610 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56610"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56614 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56614"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56615 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56615"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56616 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56616"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56617 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56617"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56618 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56618"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56619 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56619"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56626 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56626"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56627 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56627"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56628 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56628"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56629 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56629"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56630 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56630"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56631 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56631"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56632 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56632"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56633 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56633"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56634 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56634"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56635 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56635"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56636 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56636"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56637 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56637"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56638 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56638"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56639 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56639"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56640 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56640"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56641 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56641"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56642 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56642"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56643 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56643"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56644 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56644"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56645 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56645"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56648 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56648"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56649 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56649"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56652 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56652"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56653 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56653"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56654 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56654"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56655 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56655"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56667 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56667"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56668 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56668"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56670 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56670"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56671 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56671"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56673 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56673"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56674 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56674"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56676 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56676"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56679 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56679"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56680 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56680"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56682 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56682"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56683 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56683"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56685 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56685"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56686 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56686"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56688 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56688"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56689 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56689"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56691 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56691"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56692 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56692"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56694 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56694"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56695 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56695"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56697 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56697"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56698 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56698"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56700 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56700"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56701 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56701"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56703 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56703"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56704 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56704"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56706 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56706"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56707 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56707"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56710 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56710"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56712 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56712"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56713 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56713"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_56833 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56833"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/FMA_57140 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57140">
@@ -5094,54 +2109,6 @@ subclasses: Right lower third secondary molar tooth, Left lower third secondary 
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85868"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_mandibular_dentition"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55784"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55786"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55788"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55790"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56117"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56676"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56534"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56536"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -5159,48 +2126,6 @@ subclasses: Right lower third secondary molar tooth, Left lower third secondary 
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_mandibular_dentition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55785"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55787"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55789"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55791"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56118"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56535"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56537"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -5214,54 +2139,6 @@ subclasses: Right lower third secondary molar tooth, Left lower third secondary 
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85868"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_mandibular_dentition"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55768"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55770"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55772"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55792"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56115"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56673"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56540"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56542"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -5279,121 +2156,7 @@ subclasses: Right lower third secondary molar tooth, Left lower third secondary 
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_no_fmaid_Secondary_mandibular_dentition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55769"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55771"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55773"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_55793"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56116"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85925"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56674"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56541"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85996"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_56543"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_57146 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57146"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_57147 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57147"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_57150 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57150"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_57151 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57151"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_57152 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57152"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_57153 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57153"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_57154 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57154"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_57155 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57155"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_57156 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57156"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_57157 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57157"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FMA_57529 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57529"/>
     
 
 
@@ -6395,8 +3158,7 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothNumbering"/>
-        <rdfs:comment>Criar os diferentes tipos como entidades?</rdfs:comment>
-        <rdfs:label>FDI tooth number</rdfs:label>
+        <rdfs:label xml:lang="en">FDI tooth number</rdfs:label>
     </owl:Class>
     
 
@@ -7228,6 +3990,424 @@ physical state: Solid</obo:IAO_0000116>
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55707"/>
         <rdfs:label xml:lang="en">32</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55681"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55680"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_18">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_21">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_22">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_23 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_23">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_24">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_25 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_25">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_26 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_26">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_27 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_27">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_28 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_28">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_31 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_31">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_32">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_33 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_33">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_34 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_34">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_35">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_36 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_36">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_37 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_37">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_38 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_38">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_41 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_41">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_42 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_42">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_43 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_43">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_44 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_44">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_45 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_45">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_46 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_46">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_47 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_47">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_48 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_48">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_51 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_51">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_52 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_52">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_53 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_53">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_54 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_54">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_55 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_55">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_61 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_61">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_62 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_62">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_63 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_63">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_64 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_64">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_65 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_65">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_71 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_71">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_72 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_72">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_73 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_73">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_74 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_74">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_75 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_75">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_81 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_81">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_82 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_82">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_83 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_83">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_84 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_84">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_85 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_85">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
     </owl:NamedIndividual>
     
 
