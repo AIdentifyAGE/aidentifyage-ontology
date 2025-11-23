@@ -2392,15 +2392,6 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     
 
 
-    <!-- http://aidentifyage.com/ontologies/AIDAge#DemirjianDataReferenceStudy -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#DemirjianDataReferenceStudy">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#DataReferenceStudy"/>
-        <owl:disjointWith rdf:resource="http://aidentifyage.com/ontologies/AIDAge#LeeDataReferenceStudy"/>
-    </owl:Class>
-    
-
-
     <!-- http://aidentifyage.com/ontologies/AIDAge#DemirjianMaturityScoring -->
 
     <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#DemirjianMaturityScoring">
@@ -2413,38 +2404,6 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         </rdfs:subClassOf>
         <terms:description xml:lang="en">Represents a given maturity reference table from where tooth maturity scores are retrieved</terms:description>
         <rdfs:label xml:lang="en">Demirjian Maturity Scoring</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://aidentifyage.com/ontologies/AIDAge#DemirjianReferenceStudy -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#DemirjianReferenceStudy">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ReferenceStudy"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasData"/>
-                <owl:someValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#DemirjianDataReferenceStudy"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://aidentifyage.com/ontologies/AIDAge#LeeReferenceStudy"/>
-        <skos:definition xml:lang="en">Demirjian’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- http://aidentifyage.com/ontologies/AIDAge#DemirjianReferenceStudyResult -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#DemirjianReferenceStudyResult">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ReferenceStudyResult"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasReferenceStudy"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://aidentifyage.com/ontologies/AIDAge#DemirjianReferenceStudy"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://aidentifyage.com/ontologies/AIDAge#LeeReferenceStudyResult"/>
     </owl:Class>
     
 
@@ -2464,10 +2423,11 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasStage"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://aidentifyage.com/ontologies/AIDAge#DemirjianStages"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#DemirjianStages"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:description xml:lang="en">Defined phase in the process of tooth development, based on the Demirjian tooth development stages</terms:description>
+        <rdfs:label xml:lang="en">Demirjian Tooth Stage</rdfs:label>
     </owl:Class>
     
 
@@ -2600,6 +2560,12 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ScoringMethod"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasToothStage"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#DemirjianStages"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasMaturityScore"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="http://aidentifyage.com/ontologies/AIDAge#DemirjianMaturityScoring"/>
@@ -2661,8 +2627,13 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <!-- http://aidentifyage.com/ontologies/AIDAge#ForensicExpertPerson -->
 
     <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#ForensicExpertPerson">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
         <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#has_role"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#ForensicExpertRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#forensicExpertID"/>
@@ -2679,8 +2650,13 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <!-- http://aidentifyage.com/ontologies/AIDAge#ForensicIndividualCasePerson -->
 
     <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#ForensicIndividualCasePerson">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
         <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#has_role"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#ForensicIndividualCaseRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#providedBirthDate"/>
@@ -2709,45 +2685,46 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <terms:description xml:lang="en">Forensic Individual Case Person</terms:description>
         <terms:description xml:lang="en">Represents an individual undergoing a medico-legal examination for age assessment purposes</terms:description>
+        <rdfs:label xml:lang="en">Forensic Individual Case Person</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://aidentifyage.com/ontologies/AIDAge#GeiserScoring -->
+    <!-- http://aidentifyage.com/ontologies/AIDAge#GleiserScoring -->
 
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#GeiserScoring">
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#GleiserScoring">
         <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ScoringStage"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasToothStage"/>
-                <owl:someValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#GeiserToothStage"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#GleiserToothStage"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://aidentifyage.com/ontologies/AIDAge#GeiserStages -->
+    <!-- http://aidentifyage.com/ontologies/AIDAge#GleiserStages -->
 
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#GeiserStages">
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#GleiserStages">
         <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#Stage"/>
     </owl:Class>
     
 
 
-    <!-- http://aidentifyage.com/ontologies/AIDAge#GeiserToothStage -->
+    <!-- http://aidentifyage.com/ontologies/AIDAge#GleiserToothStage -->
 
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#GeiserToothStage">
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#GleiserToothStage">
         <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ToothStage"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasStage"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://aidentifyage.com/ontologies/AIDAge#GeiserStages"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#GleiserStages"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:description xml:lang="en">Defined phase in the process of tooth development, based on the Gleiser tooth development stages</terms:description>
+        <rdfs:label xml:lang="en">Gleiser Tooth Stage</rdfs:label>
     </owl:Class>
     
 
@@ -2768,7 +2745,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasToothStage"/>
-                <owl:someValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#HavvikkoToothStage"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#HavvikkoToothStage"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2790,10 +2767,11 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasStage"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://aidentifyage.com/ontologies/AIDAge#HavvikkoStages"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#HavvikkoStages"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:description xml:lang="en">Defined phase in the process of tooth development, based on the Havvikko tooth development stages</terms:description>
+        <rdfs:label xml:lang="en">Havvikko Tooth Stage</rdfs:label>
     </owl:Class>
     
 
@@ -2819,7 +2797,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasToothStage"/>
-                <owl:someValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#KullmanToothStage"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#KullmanToothStage"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2841,48 +2819,11 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasStage"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://aidentifyage.com/ontologies/AIDAge#KullmanStages"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#KullmanStages"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://aidentifyage.com/ontologies/AIDAge#LeeDataReferenceStudy -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#LeeDataReferenceStudy">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#DataReferenceStudy"/>
-    </owl:Class>
-    
-
-
-    <!-- http://aidentifyage.com/ontologies/AIDAge#LeeReferenceStudy -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#LeeReferenceStudy">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ReferenceStudy"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasData"/>
-                <owl:someValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#LeeDataReferenceStudy"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <skos:definition xml:lang="en">Lee’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- http://aidentifyage.com/ontologies/AIDAge#LeeReferenceStudyResult -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#LeeReferenceStudyResult">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ReferenceStudyResult"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasReferenceStudy"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://aidentifyage.com/ontologies/AIDAge#LeeReferenceStudy"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <terms:description xml:lang="en">Defined phase in the process of tooth development, based on the Kullman tooth development stages</terms:description>
+        <rdfs:label xml:lang="en">Kullman Tooth Stage</rdfs:label>
     </owl:Class>
     
 
@@ -2954,7 +2895,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasToothStage"/>
-                <owl:someValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#MoorreesFanningHuntToothStage"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#MoorreesFanningHuntToothStage"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2976,18 +2917,11 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasStage"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://aidentifyage.com/ontologies/AIDAge#MoorreesFanningHuntStages"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#MoorreesFanningHuntStages"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://aidentifyage.com/ontologies/AIDAge#MorreessFanningHuntToothStage -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#MorreessFanningHuntToothStage">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ToothStage"/>
+        <terms:description xml:lang="en">Defined phase in the process of tooth development, based on the Moorrees, Fanning and Hunt tooth development stages</terms:description>
+        <rdfs:label xml:lang="en">Moorrees, Fanning and Hunt Tooth Stage</rdfs:label>
     </owl:Class>
     
 
@@ -3068,6 +3002,12 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasScoring"/>
+                <owl:someValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ScoringMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#author"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -3095,13 +3035,6 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasReferenceStudy"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ReferenceStudy"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasScoring"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ScoringMethod"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3231,7 +3164,8 @@ I.e. represents a set of ToothStage</terms:description>
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/FMA_12516"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <skos:definition xml:lang="en">Defined phase in the process of tooth development, characterized by specific and observable morphological and radiographic criteria of crown and/or root formation and mineralization, used as a reproducible unit for age estimation</skos:definition>
+        <terms:description xml:lang="en">Defined phase in the process of tooth development, characterized by specific and observable morphological and radiographic criteria of crown and/or root formation and mineralization, used as a reproducible unit for age estimation</terms:description>
+        <rdfs:label xml:lang="en">Tooth Stage</rdfs:label>
     </owl:Class>
     
 
@@ -3415,6 +3349,125 @@ I.e. represents a set of ToothStage</terms:description>
     
 
 
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#DemirjianReferenceStudy -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#DemirjianReferenceStudy">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ReferenceStudy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasScoring"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#DentalMaturityScore"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">Represents a Reference Study that is based on the Demirjian tooth development and maturity scoring system stages</terms:description>
+        <rdfs:label xml:lang="en">Demirjian Reference Study</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#ForensicExpertRole -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#ForensicExpertRole">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <owl:disjointWith rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#ForensicIndividualCaseRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#ForensicIndividualCaseRole -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#ForensicIndividualCaseRole">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#GarnReferenceStudy -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#GarnReferenceStudy">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ReferenceStudy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasScoring"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#GarnScoring"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">Represents a Reference Study that is based on the Garn tooth development and maturity scoring system stages</terms:description>
+        <rdfs:label xml:lang="en">Garn Reference Study</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#GarnScoring -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#GarnScoring">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ScoringStage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasToothStage"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#GarnStages"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#GarnStages -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#GarnStages">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#Stage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#GarnToothStage -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#GarnToothStage">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ToothStage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasStage"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#GarnStages"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">Defined phase in the process of tooth development, based on the Garn tooth development stages</terms:description>
+        <rdfs:label xml:lang="en">Garn Tooth Stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#GleiserReferenceStudy -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#GleiserReferenceStudy">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ReferenceStudy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasScoring"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#GleiserScoring"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">Represents a Reference Study that is based on the Gleiser tooth development and maturity scoring system stages</terms:description>
+        <rdfs:label xml:lang="en">Gleiser Reference Study</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#HaavikkoReferenceStudy -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#HaavikkoReferenceStudy">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ReferenceStudy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasScoring"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#HavvikkoScoring"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">Represents a Reference Study that is based on the Havvikko tooth development and maturity scoring system stages</terms:description>
+        <rdfs:label xml:lang="en">Haviikoo Reference Study</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#InferenceRun -->
 
     <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#InferenceRun">
@@ -3437,7 +3490,24 @@ I.e. represents a set of ToothStage</terms:description>
                 <owl:someValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#ModelOutput"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:description xml:lang="en">Represents a given Inference Run performed by an Machine Learning (ML) model</terms:description>
         <rdfs:label>Inference Run</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#KullmanReferenceStudy -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#KullmanReferenceStudy">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ReferenceStudy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasScoring"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#KullmanScoring"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">Represents a Reference Study that is based on the Kullman tooth development and maturity scoring system stages</terms:description>
+        <rdfs:label xml:lang="en">Kullman Reference Study</rdfs:label>
     </owl:Class>
     
 
@@ -3450,11 +3520,190 @@ I.e. represents a set of ToothStage</terms:description>
     
 
 
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#MincerReferenceStudy -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#MincerReferenceStudy">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ReferenceStudy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasScoring"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#MincerScoring"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">Represents a Reference Study that is based on the Mincer tooth development and maturity scoring system stages</terms:description>
+        <rdfs:label xml:lang="en">Mincer Reference Study</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#MincerScoring -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#MincerScoring">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ScoringStage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasToothStage"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#MincerStages"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#MincerStages -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#MincerStages">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#Stage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#MincerToothStage -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#MincerToothStage">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ToothStage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasStage"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#MincerStages"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">Defined phase in the process of tooth development, based on the Mincer tooth development stages</terms:description>
+        <rdfs:label xml:lang="en">Mincer Tooth Stage</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#ModelOutput -->
 
     <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#ModelOutput">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/mls#InformationEntity"/>
+        <terms:description xml:lang="en">Represents an output given by a Machine Learning (ML) model after performing an Inference Run</terms:description>
         <rdfs:label>Model Output</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#MoorreesFanningHuntReferenceStudy -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#MoorreesFanningHuntReferenceStudy">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ReferenceStudy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasScoring"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#MoorreesFanningHuntScoring"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">Represents a Reference Study that is based on the Moorrees, Fanning, and Hunt tooth development and maturity scoring system stages</terms:description>
+        <rdfs:label xml:lang="en">Moorrees, Fanning and Hunt Reference Study</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#NollaReferenceStudy -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#NollaReferenceStudy">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ReferenceStudy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasScoring"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#NollaScoring"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">Represents a Reference Study that is based on the Nolla tooth development and maturity scoring system stages</terms:description>
+        <rdfs:label xml:lang="en">Nolla Reference Study</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#NollaScoring -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#NollaScoring">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ScoringStage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasToothStage"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#NollaStages"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#NollaStages -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#NollaStages">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#Stage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#NollaToothStage -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#NollaToothStage">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ToothStage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasStage"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#NollaStages"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">Defined phase in the process of tooth development, based on the Nolla tooth development stages</terms:description>
+        <rdfs:label xml:lang="en">Nolla Tooth Stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#WillemsReferenceStudy -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#WillemsReferenceStudy">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ReferenceStudy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasScoring"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#WillemsScoring"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">Represents a Reference Study that is based on the Willems tooth development and maturity scoring system stages</terms:description>
+        <rdfs:label xml:lang="en">Willems Reference Study</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#WillemsScoring -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#WillemsScoring">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ScoringStage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasToothStage"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#WillemsStages"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#WillemsStages -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#WillemsStages">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#Stage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#WillemsToothStage -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#WillemsToothStage">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ToothStage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasStage"/>
+                <owl:allValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#WillemsStages"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">Defined phase in the process of tooth development, based on the Willems tooth development stages</terms:description>
+        <rdfs:label xml:lang="en">Willems Tooth Stage</rdfs:label>
     </owl:Class>
     
 
@@ -6667,29 +6916,41 @@ I.e. represents a set of ToothStage</terms:description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#DemirjianStages"/>
-            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#GeiserStages"/>
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#GleiserStages"/>
             <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#HavvikkoStages"/>
             <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#KullmanStages"/>
             <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#MoorreesFanningHuntStages"/>
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#GarnStages"/>
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#MincerStages"/>
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#NollaStages"/>
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#WillemsStages"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#DemirjianToothStage"/>
-            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#GeiserToothStage"/>
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#GleiserToothStage"/>
             <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#HavvikkoToothStage"/>
             <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#KullmanToothStage"/>
             <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#MoorreesFanningHuntToothStage"/>
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#GarnToothStage"/>
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#MincerToothStage"/>
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#NollaToothStage"/>
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#WillemsToothStage"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#GeiserScoring"/>
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#GleiserScoring"/>
             <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#HavvikkoScoring"/>
             <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#KullmanScoring"/>
             <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#MoorreesFanningHuntScoring"/>
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#GarnScoring"/>
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#MincerScoring"/>
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#NollaScoring"/>
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#WillemsScoring"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -6702,6 +6963,20 @@ I.e. represents a set of ToothStage</terms:description>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002582"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002584"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0003327"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#DemirjianReferenceStudy"/>
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#GarnReferenceStudy"/>
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#GleiserReferenceStudy"/>
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#HaavikkoReferenceStudy"/>
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#KullmanReferenceStudy"/>
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#MincerReferenceStudy"/>
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#MoorreesFanningHuntReferenceStudy"/>
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#NollaReferenceStudy"/>
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#WillemsReferenceStudy"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
