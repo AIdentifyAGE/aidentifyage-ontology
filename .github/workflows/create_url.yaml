@@ -1,4 +1,4 @@
-name: Create Redirect URL for the raw ontology file
+name: Create Folder and index.html on Tag Release
 
 on:
   push:
@@ -20,6 +20,11 @@ jobs:
       - name: Create folder and index.html for tag
         run: |
           TAG_NAME=${GITHUB_REF##*/}
+          echo "Detected tag: $TAG_NAME"
+          if [ "$TAG_NAME" = "main" ]; then
+            echo "Skipping folder creation for 'main' tag"
+            exit 0
+          fi
           echo "Creating folder and index.html for tag: $TAG_NAME"
           mkdir -p "docs/$TAG_NAME"
           cat << EOF > "docs/$TAG_NAME/index.html"
@@ -39,4 +44,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/$TAG_NAME
           git commit -m "Add index.html for tag $TAG_NAME"
-          git push origin HEAD:$TAG_NAME
+          git push origin HEAD:main
