@@ -1,9 +1,7 @@
 name: Create Tag HTML File
 
 on:
-  push:
-    tags:
-      - '*'   # triggers on any new tag
+  workflow_dispatch:   # allows manual run
 
 jobs:
   create-html:
@@ -20,14 +18,14 @@ jobs:
           VERSION="${GITHUB_REF_NAME}"  # tag name
           mkdir -p "$VERSION"
           cat > "$VERSION/index.html" <<EOF
-          <!DOCTYPE html>
-          <html>
-            <head>
-              <meta http-equiv="refresh" content="0; URL=https://raw.githubusercontent.com/AIdentifyAGE/aidentifyage-ontology/$VERSION/AIdentifyAGE.owl" />
-            </head>
-            <body></body>
-          </html>
-          EOF
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; URL=https://raw.githubusercontent.com/AIdentifyAGE/aidentifyage-ontology/$VERSION/AIdentifyAGE.owl" />
+  </head>
+  <body></body>
+</html>
+EOF
 
       # Step 3: Commit and push changes
       - name: Commit and push new folder
