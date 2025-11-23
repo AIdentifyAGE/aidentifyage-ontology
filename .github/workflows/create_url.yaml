@@ -21,8 +21,8 @@ jobs:
         run: |
           TAG_NAME=${GITHUB_REF##*/}
           echo "Creating folder and index.html for tag: $TAG_NAME"
-          mkdir -p "releases/$TAG_NAME"
-          cat << EOF > "releases/$TAG_NAME/index.html"
+          mkdir -p "docs/$TAG_NAME"
+          cat << EOF > "docs/$TAG_NAME/index.html"
           <!DOCTYPE html>
           <html>
             <head>
