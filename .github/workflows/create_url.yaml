@@ -1,46 +1,42 @@
-name: Create Tag HTML File
-
-permissions:
-  contents: write
+name: Create Redirect URL for the raw ontology file
 
 on:
-  workflow_dispatch:   # allows manual run
+  push:
+    tags:
+      - '*'   # triggers on any tag push
+  workflow_dispatch:
+
+permissions:
+  contents: write   # allow committing back to the repo
 
 jobs:
-  create-html:
+  create-folder-and-file:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Step 2: Create folder and index.html file
-      - name: Create folder and index.html
+      - name: Create folder and index.html for tag
         run: |
-          VERSION="${GITHUB_REF_NAME}"  # tag name
-          mkdir -p "$VERSION"
-          cat > "$VERSION/index.html" <<EOF
+          TAG_NAME=${GITHUB_REF##*/}
+          echo "Creating folder and index.html for tag: $TAG_NAME"
+          mkdir -p "releases/$TAG_NAME"
+          cat << EOF > "releases/$TAG_NAME/index.html"
           <!DOCTYPE html>
           <html>
             <head>
-              <meta http-equiv="refresh" content="0; URL=https://raw.githubusercontent.com/AIdentifyAGE/aidentifyage-ontology/$VERSION/AIdentifyAGE.owl" />
+              <meta http-equiv="refresh" content="0; URL=https://raw.githubusercontent.com/AIdentifyAGE/aidentifyage-ontology/$TAG_NAME/AIdentifyAGE.owl" />
             </head>
             <body></body>
           </html>
           EOF
 
-      # Step 3: Commit and push changes
-      - name: Commit and push new folder
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit and push folder + file
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-      
-          git add "$GITHUB_REF_NAME/index.html"
-          git commit -m "Add index.html for tag $GITHUB_REF_NAME" || echo "No changes to commit"
-      
-          # Push using the GitHub Actions token
-          git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:${GITHUB_REF_NAME}
-      
+          TAG_NAME=${GITHUB_REF##*/}
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add releases/$TAG_NAME
+          git commit -m "Add index.html for tag $TAG_NAME"
+          git push origin HEAD:$TAG_NAME
