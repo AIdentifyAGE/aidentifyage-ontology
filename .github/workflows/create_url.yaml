@@ -1,5 +1,8 @@
 name: Create Tag HTML File
 
+permissions:
+  contents: write
+
 on:
   workflow_dispatch:   # allows manual run
 
