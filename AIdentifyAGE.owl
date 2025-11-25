@@ -46,7 +46,7 @@ Cátia Vaz</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal>v1.0.0-beta</Literal>
+        <Literal>v1.0.1-beta</Literal>
     </Annotation>
     <Declaration>
         <Class IRI="http://aidentifyage.com/ontologies/AIdentifyAGE#OrthodonticAppliances"/>
@@ -58,16 +58,79 @@ Cátia Vaz</Literal>
         <Class abbreviatedIRI="obo:BFO_0000023"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="obo:FMA_12516"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:FMA_269582"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:FMA_269584"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:IAO_0000009"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:IAO_0000027"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:IAO_0000030"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:IAO_0000100"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:IAO_0000104"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:IAO_0000109"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:OBI_0000938"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:OGMS_0000123"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:UBERON_0000165"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="terms:Agent"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="terms:Location"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="terms:LocationPeriodOrJurisdiction"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://schema.org/Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://snomed.info/id/363680008"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rdfs:Class"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/mls#InformationEntity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/mls#Model"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/mls#Process"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/mls#Quality"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="foaf:Agent"/>
@@ -86,9 +149,6 @@ Cátia Vaz</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="#Braces"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Cameriere"/>
     </Declaration>
     <Declaration>
         <Class IRI="#CoefficientMaturityData"/>
@@ -185,9 +245,6 @@ Cátia Vaz</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="#Implant"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Index"/>
     </Declaration>
     <Declaration>
         <Class IRI="#InferenceRun"/>
@@ -383,6 +440,12 @@ Cátia Vaz</Literal>
         <ObjectProperty abbreviatedIRI="obo:member_of"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/mls#hasInput"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/mls#hasOutput"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#builtFrom"/>
     </Declaration>
     <Declaration>
@@ -468,6 +531,15 @@ Cátia Vaz</Literal>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#is_TreatmentOf"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="foaf:age"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="foaf:name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="foaf:sex"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#ageInterval"/>
@@ -1479,6 +1551,9 @@ Cátia Vaz</Literal>
         <AnnotationProperty abbreviatedIRI="terms:created"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty abbreviatedIRI="oboInOwl:creation_date"/>
     </Declaration>
     <Declaration>
@@ -1509,10 +1584,19 @@ Cátia Vaz</Literal>
         <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty abbreviatedIRI="prov:wasDerivedFrom"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="#synonym"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="terms:URI"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="http://aidentifyage.com/ontologies/AIdentifyAGE#OrthodonticAppliances"/>
@@ -1707,10 +1791,6 @@ Cátia Vaz</Literal>
     <SubClassOf>
         <Class IRI="#Braces"/>
         <Class IRI="http://aidentifyage.com/ontologies/AIdentifyAGE#OrthodonticAppliances"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Cameriere"/>
-        <Class IRI="#Index"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CoefficientMaturityData"/>
@@ -2664,15 +2744,6 @@ Cátia Vaz</Literal>
         <Class abbreviatedIRI="obo:FMA_269582"/>
     </SubClassOf>
     <DisjointClasses>
-        <Class abbreviatedIRI="obo:OBI_0000118"/>
-        <Class abbreviatedIRI="obo:OBI_0000251"/>
-        <Class abbreviatedIRI="obo:OBI_0002582"/>
-        <Class abbreviatedIRI="obo:OBI_0002584"/>
-        <Class abbreviatedIRI="obo:OBI_0003327"/>
-        <Class IRI="#DataCollection"/>
-        <Class IRI="#ReferenceStudy"/>
-    </DisjointClasses>
-    <DisjointClasses>
         <Class IRI="#AIRegDentalAgeAssessement"/>
         <Class IRI="#AIThresholdDentalAgeAssessment"/>
     </DisjointClasses>
@@ -2686,6 +2757,10 @@ Cátia Vaz</Literal>
         <Class IRI="#ScoringMethod"/>
         <Class IRI="#Stage"/>
         <Class IRI="#ToothStage"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DataCollection"/>
+        <Class IRI="#ReferenceStudy"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#DemirjianReferenceStudy"/>
@@ -4979,15 +5054,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         </Annotation>
         <AnnotationProperty abbreviatedIRI="obo:RO_0040042"/>
         <AbbreviatedIRI>obo:BFO_0000050</AbbreviatedIRI>
-        <AbbreviatedIRI>obo:BFO_0000019</AbbreviatedIRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="prov:wasDerivedFrom"/>
-            <IRI>http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl</IRI>
-        </Annotation>
-        <AnnotationProperty abbreviatedIRI="obo:RO_0040042"/>
-        <AbbreviatedIRI>obo:BFO_0000050</AbbreviatedIRI>
         <AbbreviatedIRI>obo:BFO_0000020</AbbreviatedIRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -7151,12 +7217,12 @@ I.e. represents a set of ToothStage</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
-        <AnonymousIndividual nodeID="_:genid2147486218"/>
+        <AnonymousIndividual nodeID="_:genid2147483648"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
-        <AnonymousIndividual nodeID="_:genid2147486219"/>
+        <AnonymousIndividual nodeID="_:genid2147483649"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
     </AnnotationAssertion>
     <SubAnnotationPropertyOf>
