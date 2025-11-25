@@ -389,7 +389,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
@@ -456,12 +455,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0040042"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0040042"/>
         <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
     </owl:Axiom>
@@ -473,14 +466,14 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -1014,7 +1007,6 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000417">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000005"/>
         <obo:IAO_0000111>achieves_planned_objective</obo:IAO_0000111>
         <obo:IAO_0000112>A cell sorting process achieves the objective specification &apos;material separation objective&apos;</obo:IAO_0000112>
         <obo:IAO_0000115>This relation obtains between a planned process and a objective specification when the criteria specified in the objective specification are met at the end of the planned process.</obo:IAO_0000115>
@@ -1408,12 +1400,6 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     </owl:ObjectProperty>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002323"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000117"/>
-        <owl:annotatedTarget rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002323"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000232"/>
         <owl:annotatedTarget>Do not use this relation directly. It is ended as a grouping for a diverse set of relations, all involving parthood or connectivity relationships</owl:annotatedTarget>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
@@ -1446,6 +1432,12 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002323"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A mereological relationship or a topological relationship</owl:annotatedTarget>
+        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002323"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000117"/>
+        <owl:annotatedTarget rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
     </owl:Axiom>
     
@@ -1528,12 +1520,12 @@ This data property provides a means to query for missing tooth roots. Since a mi
                 <owl:allValuesFrom rdf:resource="http://example.com/left"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:nodeID="genid107"/>
+        <rdfs:subClassOf rdf:nodeID="genid106"/>
         <owl:disjointWith rdf:resource="http://example.com/right"/>
         <rdfs:isDefinedBy rdf:resource="http://example.com.owl"/>
         <rdfs:label>Sum of left of bilateral anatomical entity</rdfs:label>
     </owl:Class>
-    <owl:Restriction rdf:nodeID="genid107">
+    <owl:Restriction rdf:nodeID="genid106">
         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85995"/>
         <owl:allValuesFrom rdf:resource="http://example.com/left"/>
     </owl:Restriction>
@@ -1546,7 +1538,7 @@ This data property provides a means to query for missing tooth roots. Since a mi
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://example.com/left"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:nodeID="genid107"/>
+        <owl:annotatedTarget rdf:nodeID="genid106"/>
         <example:fma-translation-source>fma-part-module-to-owl</example:fma-translation-source>
     </owl:Axiom>
     <owl:Axiom>
@@ -1568,11 +1560,11 @@ This data property provides a means to query for missing tooth roots. Since a mi
                 <owl:allValuesFrom rdf:resource="http://example.com/right"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:nodeID="genid112"/>
+        <rdfs:subClassOf rdf:nodeID="genid111"/>
         <rdfs:isDefinedBy rdf:resource="http://example.com.owl"/>
         <rdfs:label>Sum of right of bilateral anatomical entity</rdfs:label>
     </owl:Class>
-    <owl:Restriction rdf:nodeID="genid112">
+    <owl:Restriction rdf:nodeID="genid111">
         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/FMA_85995"/>
         <owl:allValuesFrom rdf:resource="http://example.com/right"/>
     </owl:Restriction>
@@ -1585,7 +1577,7 @@ This data property provides a means to query for missing tooth roots. Since a mi
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://example.com/right"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:nodeID="genid112"/>
+        <owl:annotatedTarget rdf:nodeID="genid111"/>
         <example:fma-translation-source>fma-part-module-to-owl</example:fma-translation-source>
     </owl:Axiom>
     
@@ -28248,30 +28240,6 @@ subclasses: Labial surface enamel of tooth, Incisal surface enamel of tooth, Lin
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000005 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000005">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
-        <obo:IAO_0000111 xml:lang="en">objective specification</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">In the protocol of a ChIP assay the objective specification says to identify protein and DNA interaction.</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
-        <obo:IAO_0000115 xml:lang="en">A directive information entity that describes an intended process endpoint. When part of a plan specification the concretization is realized in a planned process in which the bearer tries to effect the world so that the process endpoint is achieved.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">2009-03-16: original definition when imported from OBI read: &quot;objective is an non realizable information entity which can serve as that  proper part of a plan towards which the realization of the plan is directed.&quot;</obo:IAO_0000116>
-        <obo:IAO_0000116 xml:lang="en">2014-03-31: In the example of usage (&quot;In the protocol of a ChIP assay the objective specification says to identify protein and DNA interaction&quot;) there is a protocol which is the ChIP assay protocol. In addition to being concretized on paper, the protocol can be concretized as a realizable entity, such as a plan that inheres in a person. The objective specification is the part that says that some protein and DNA interactions are identified. This is a specification of a process endpoint: the boundary in the process before which they are not identified and after which they are. During the realization of the plan, the goal is to get to the point of having the interactions, and participants in the realization of the plan try to do that.</obo:IAO_0000116>
-        <obo:IAO_0000116 xml:lang="en">Answers the question, why did you do this experiment?</obo:IAO_0000116>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Barry Smith</obo:IAO_0000117>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Bjoern Peters</obo:IAO_0000117>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Jennifer Fostel</obo:IAO_0000117>
-        <obo:IAO_0000118 xml:lang="en">goal specification</obo:IAO_0000118>
-        <obo:IAO_0000119 xml:lang="en">OBI Plan and Planned Process/Roles Branch</obo:IAO_0000119>
-        <obo:IAO_0000119 xml:lang="en">OBI_0000217</obo:IAO_0000119>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/ohd/imports/iao_import.owl"/>
-        <rdfs:label xml:lang="en">objective specification</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000009 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000009">
@@ -28353,17 +28321,6 @@ objectives is a planned process.</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0000047 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000047">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000094"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
         <obo:IAO_0000111 xml:lang="en">processed material</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">Examples include gel matrices, filter paper, parafilm and buffer solutions, mass spectrometer, tissue samples</obo:IAO_0000112>
@@ -28382,111 +28339,10 @@ objectives is a planned process.</obo:IAO_0000116>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/OBI_0000094 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000094">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000417"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000456"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000047"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000111>material processing</obo:IAO_0000111>
-        <obo:IAO_0000112>A cell lysis, production of a cloning vector, creating a buffer.</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
-        <obo:IAO_0000115 xml:lang="en">A planned process which results in physical changes in a specified input material</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Bjoern Peters</obo:IAO_0000117>
-        <obo:IAO_0000117>PERSON: Frank Gibson</obo:IAO_0000117>
-        <obo:IAO_0000117>PERSON: Jennifer Fostel</obo:IAO_0000117>
-        <obo:IAO_0000117>PERSON: Melanie Courtot</obo:IAO_0000117>
-        <obo:IAO_0000117>PERSON: Philippe Rocca Serra</obo:IAO_0000117>
-        <obo:IAO_0000118 xml:lang="en">material transformation</obo:IAO_0000118>
-        <obo:IAO_0000119 xml:lang="en">OBI branch derived</obo:IAO_0000119>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <rdfs:label xml:lang="en">material processing</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0000319 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000319">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
-        <obo:IAO_0000111>material to be added role</obo:IAO_0000111>
-        <obo:IAO_0000112>drug added to a buffer contained in a tube; substance injected into an animal;</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">material to be added role is a protocol participant role realized by a material which is added into a material bearing the target of material addition role in a material addition process</obo:IAO_0000115>
-        <obo:IAO_0000117>Role Branch</obo:IAO_0000117>
-        <obo:IAO_0000119>OBI</obo:IAO_0000119>
-        <obo:IAO_0000232>9 March 09 from discussion with PA branch</obo:IAO_0000232>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <rdfs:label xml:lang="en">material to be added role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0000456 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000456">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000005"/>
-        <obo:IAO_0000111>material transformation objective</obo:IAO_0000111>
-        <obo:IAO_0000112>The objective to create a mouse infected with LCM virus. The objective to create a defined solution of PBS.</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
-        <obo:IAO_0000115 xml:lang="en">an objective specifiction that creates an specific output object from input materials.</obo:IAO_0000115>
-        <obo:IAO_0000117>PERSON: Bjoern Peters</obo:IAO_0000117>
-        <obo:IAO_0000117>PERSON: Frank Gibson</obo:IAO_0000117>
-        <obo:IAO_0000117>PERSON: Jennifer Fostel</obo:IAO_0000117>
-        <obo:IAO_0000117>PERSON: Melanie Courtot</obo:IAO_0000117>
-        <obo:IAO_0000117>PERSON: Philippe Rocca-Serra</obo:IAO_0000117>
-        <obo:IAO_0000118 xml:lang="en">artifact  creation objective</obo:IAO_0000118>
-        <obo:IAO_0000119>GROUP: OBI PlanAndPlannedProcess Branch</obo:IAO_0000119>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <rdfs:label xml:lang="en">material transformation objective</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/OHD_0000000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000000">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OHD_0000191"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000047"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000053"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OHD_0000191"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A processed material that bears a dental restoration material role.</obo:IAO_0000115>
         <obo:IAO_0000118>restoration material</obo:IAO_0000118>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/ohd.owl"/>
@@ -28542,31 +28398,6 @@ A restored tooth typically results when a tooth with some type of pathological d
     
 
 
-    <!-- http://purl.obolibrary.org/obo/OHD_0000191 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000191">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000319"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000052"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A material to be added role that is born by a portion of material and is realized during a process in which the material plays a role in restoring the tooth. Dental restoration material roles are realized in processes that restore teeth.</obo:IAO_0000115>
-        <obo:IAO_0000116>Bill Duncan 12/11/2014:
-Changed definition to read that a &quot;portion of dental restoration material&quot; is realized by a &quot;tooth restoration procedure&quot;.</obo:IAO_0000116>
-        <obo:IAO_0000116>Bill Duncan 2023-10-17:
-A &apos;tooth&apos; in the definition may be natural or artificial. Also, the material bearing the role does not necessarily have to become part of the tooth.</obo:IAO_0000116>
-        <obo:IAO_0000116>Bill Duncan 2023-10-17:
-Widened the definition to include other materials used in restoration processes (e.g., luting agents).</obo:IAO_0000116>
-        <obo:IAO_0000116>Titus Schleyer 1/1/2014: updated definition</obo:IAO_0000116>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/ohd.owl"/>
-        <rdfs:label>dental restoration material role</rdfs:label>
-        <rdfs:label xml:lang="en">dental restoration material role</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/OHD_0000206 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000206">
@@ -28591,17 +28422,6 @@ Widened the definition to include other materials used in restoration processes 
     <!-- http://purl.obolibrary.org/obo/OHD_0000301 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000301">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000047"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000053"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OHD_0000314"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000047"/>
         <obo:IAO_0000115>a processed material that bears a prothetic role</obo:IAO_0000115>
         <obo:IAO_0000117>Bill Duncan</obo:IAO_0000117>
@@ -28622,12 +28442,6 @@ Widened the definition to include other materials used in restoration processes 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000302">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000206"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000301"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000053"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OHD_0000315"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>a prosthesis that has been fabricated for use as a substitute for a natural tooth</obo:IAO_0000115>
         <obo:IAO_0000116>usually made of porcelain or plastic </obo:IAO_0000116>
         <obo:IAO_0000117>Bill Duncan</obo:IAO_0000117>
@@ -28680,44 +28494,6 @@ Widened the definition to include other materials used in restoration processes 
         <obo:IAO_0000117>Bill Duncan</obo:IAO_0000117>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/ohd.owl"/>
         <rdfs:label>Posterior Tooth</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OHD_0000314 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000314">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000319"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000052"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000112>A glass eye (see  http://en.wikipedia.org/wiki/Ocular_prosthesis)</obo:IAO_0000112>
-        <obo:IAO_0000112>A prothetic hand (see http://bebionic.com)</obo:IAO_0000112>
-        <obo:IAO_0000115>A material to be added role that inheres in a material entity that replaces some missing body part.</obo:IAO_0000115>
-        <obo:IAO_0000116>Bill Duncan / Alan Ruttenber 12/16/2014:
-
-Prosthics may be either functional for non-functional. For example, a glass eye bears a prosthetic role, but it does not see. </obo:IAO_0000116>
-        <obo:IAO_0000117>Alan Ruttenberg</obo:IAO_0000117>
-        <obo:IAO_0000117>Bill Dunan</obo:IAO_0000117>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/ohd.owl"/>
-        <rdfs:label>prosthetic role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OHD_0000315 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000315">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000314"/>
-        <obo:IAO_0000112>A prosthic hand</obo:IAO_0000112>
-        <obo:IAO_0000115>A prosthetic role that is realized by activities in which the material entity (bearing the role) is used a manner that is similar to how the body part that the prosthesis replaces would be used.</obo:IAO_0000115>
-        <obo:IAO_0000117>Alan Ruttenberg</obo:IAO_0000117>
-        <obo:IAO_0000117>Bill Duncan</obo:IAO_0000117>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/ohd.owl"/>
-        <rdfs:label>functional prosthetic role</rdfs:label>
     </owl:Class>
     
 
