@@ -32,8 +32,9 @@ Ana Rodrigues
 Cristiana Palmela Pereira
 Alexandre Francisco
 Cátia Vaz""" ;
-                                                        terms:description "Base Ontology for use in AIdentifyAGE Project" ;
-                                                        owl:versionInfo "v1.0.0-beta" .
+                                                        terms:description "The AIdentifyAGE ontology provides a comprehensive vocabulary description for forensic age assessment using dental biological markers, promoting the transparent assessment processes in forensic odontology and age diagnostics. It formalizes expert knowledge according to IOFOS, AGFAD, ABFO, ADA and ISO standards, ensuring semantic interoperability and ethical AI integration. This ontology is a work in progress developed under the AIdentifyAGE project (FCT Grant 2024.07444.IACDC), within the national investment RE-C05-i08 – More Digital Science, measure RE-C05-i08.M04 – Support to R&D projects for advanced cybersecurity, artificial intelligence and data science systems in public administration. This work is being developed in collaboration with researchers from the University of Lisbon (Portugal), the University of Münster (Germany), and the University of Zagreb (Croatia), within the framework of the AIdentifyAGE international consortium., Base Ontology for use in AIdentifyAGE Project"@en ;
+                                                        terms:issued "25/11/2025" ;
+                                                        owl:versionInfo "v1.0.1-beta" .
 
 #################################################################
 #    Annotation properties
@@ -783,6 +784,10 @@ terms:contributor rdf:type owl:AnnotationProperty .
 terms:created rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/description
+terms:description rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.geneontology.org/formats/oboInOwl#creation_date
 oboInOwl:creation_date rdf:type owl:AnnotationProperty .
 
@@ -823,12 +828,28 @@ oboInOwl:shorthand rdf:type owl:AnnotationProperty .
 owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/ns/prov#wasDerivedFrom
 prov:wasDerivedFrom rdf:type owl:AnnotationProperty .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#synonym
 :synonym rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://purl.org/dc/terms/URI
+terms:URI rdf:type rdfs:Datatype .
 
 
 #################################################################
@@ -854,7 +875,6 @@ A continuant cannot be part of an occurrent: use 'participates in'. An occurrent
                                obo:BFO_0000003 ,
                                obo:BFO_0000004 ,
                                obo:BFO_0000017 ,
-                               obo:BFO_0000019 ,
                                obo:BFO_0000020 ,
                                obo:BFO_0000031 ;
                 oboInOwl:inSubset obo:valid_for_go_annotation_extension ,
@@ -985,13 +1005,6 @@ A continuant cannot be part of an occurrent: use 'participates in'. An occurrent
 [ rdf:type owl:Axiom ;
    owl:annotatedSource obo:BFO_0000050 ;
    owl:annotatedProperty obo:RO_0040042 ;
-   owl:annotatedTarget obo:BFO_0000019 ;
-   prov:wasDerivedFrom <http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl>
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource obo:BFO_0000050 ;
-   owl:annotatedProperty obo:RO_0040042 ;
    owl:annotatedTarget obo:BFO_0000020 ;
    prov:wasDerivedFrom <http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl>
  ] .
@@ -1087,13 +1100,6 @@ A continuant cannot have an occurrent as part: use 'participates in'. An occurre
                                   obo:valid_for_gocam ;
                 rdfs:isDefinedBy <http://purl.obolibrary.org/obo/ohd/imports/ro_import.owl> ;
                 rdfs:label "has part"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource obo:BFO_0000051 ;
-   owl:annotatedProperty rdfs:subPropertyOf ;
-   owl:annotatedTarget obo:RO_0002131 ;
-   prov:wasDerivedFrom <http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl>
- ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource obo:BFO_0000051 ;
@@ -1199,6 +1205,13 @@ A continuant cannot have an occurrent as part: use 'participates in'. An occurre
    owl:annotatedSource obo:BFO_0000051 ;
    owl:annotatedProperty rdf:type ;
    owl:annotatedTarget owl:ObjectProperty ;
+   prov:wasDerivedFrom <http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl>
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource obo:BFO_0000051 ;
+   owl:annotatedProperty rdfs:subPropertyOf ;
+   owl:annotatedTarget obo:RO_0002131 ;
    prov:wasDerivedFrom <http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl>
  ] .
 
@@ -1514,6 +1527,14 @@ obo:RO_0002323 rdf:type owl:ObjectProperty ;
 obo:member_of rdf:type owl:ObjectProperty .
 
 
+###  http://www.w3.org/ns/mls#hasInput
+<http://www.w3.org/ns/mls#hasInput> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/mls#hasOutput
+<http://www.w3.org/ns/mls#hasOutput> rdf:type owl:ObjectProperty .
+
+
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#builtFrom
 :builtFrom rdf:type owl:ObjectProperty ;
            rdfs:range obo:IAO_0000100 .
@@ -1694,15 +1715,18 @@ obo:member_of rdf:type owl:ObjectProperty .
 #################################################################
 
 ###  http://xmlns.com/foaf/0.1/age
-foaf:age skos:prefLabel "Provided Age" .
+foaf:age rdf:type owl:DatatypeProperty ;
+         skos:prefLabel "Provided Age" .
 
 
 ###  http://xmlns.com/foaf/0.1/name
-foaf:name rdfs:range xsd:string .
+foaf:name rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:string .
 
 
 ###  http://xmlns.com/foaf/0.1/sex
-foaf:sex rdfs:label "sex" .
+foaf:sex rdf:type owl:DatatypeProperty ;
+         rdfs:label "sex" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#ageInterval
@@ -2006,7 +2030,8 @@ obo:BFO_0000023 rdf:type owl:Class .
 
 
 ###  http://purl.obolibrary.org/obo/FMA_12516
-obo:FMA_12516 rdfs:subClassOf [ rdf:type owl:Restriction ;
+obo:FMA_12516 rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty :hasTreatment ;
                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
                                 owl:onClass :TreatmentOption
@@ -2014,8 +2039,53 @@ obo:FMA_12516 rdfs:subClassOf [ rdf:type owl:Restriction ;
               skos:definition "Hard structure composed of dentine and pulp, usually covered partially with enamel and cementum, anchored in the alveolar bone, serving in mastication, phonetics, and aesthetics"@en .
 
 
+###  http://purl.obolibrary.org/obo/FMA_269582
+obo:FMA_269582 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FMA_269584
+obo:FMA_269584 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000009
+obo:IAO_0000009 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000027
+obo:IAO_0000027 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000030
+obo:IAO_0000030 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000100
+obo:IAO_0000100 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000104
+obo:IAO_0000104 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000109
+obo:IAO_0000109 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000938
+obo:OBI_0000938 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/OGMS_0000123
+obo:OGMS_0000123 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/UBERON_0000165
+obo:UBERON_0000165 rdf:type owl:Class .
+
+
 ###  http://purl.org/dc/dcam/VocabularyEncodingScheme
-<http://purl.org/dc/dcam/VocabularyEncodingScheme> rdfs:subClassOf :DCTerms .
+<http://purl.org/dc/dcam/VocabularyEncodingScheme> rdf:type owl:Class ;
+                                                   rdfs:subClassOf :DCTerms .
 
 
 ###  http://purl.org/dc/terms/Agent
@@ -2024,7 +2094,8 @@ terms:Agent rdf:type owl:Class ;
 
 
 ###  http://purl.org/dc/terms/Location
-terms:Location rdfs:subClassOf [ rdf:type owl:Restriction ;
+terms:Location rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                  owl:onProperty :locationName ;
                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                  owl:onDataRange xsd:string
@@ -2032,7 +2103,8 @@ terms:Location rdfs:subClassOf [ rdf:type owl:Restriction ;
 
 
 ###  http://purl.org/dc/terms/LocationPeriodOrJurisdiction
-terms:LocationPeriodOrJurisdiction rdfs:subClassOf :DCTerms .
+terms:LocationPeriodOrJurisdiction rdf:type owl:Class ;
+                                   rdfs:subClassOf :DCTerms .
 
 
 ###  http://schema.org/Person
@@ -2041,7 +2113,8 @@ terms:LocationPeriodOrJurisdiction rdfs:subClassOf :DCTerms .
 
 
 ###  http://snomed.info/id/363680008
-<http://snomed.info/id/363680008> rdfs:subClassOf [ rdf:type owl:Restriction ;
+<http://snomed.info/id/363680008> rdf:type owl:Class ;
+                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                     owl:onProperty :radiographicImageURI ;
                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                     owl:onDataRange terms:URI
@@ -2054,7 +2127,8 @@ terms:LocationPeriodOrJurisdiction rdfs:subClassOf :DCTerms .
 
 
 ###  http://www.w3.org/2000/01/rdf-schema#Class
-rdfs:Class rdfs:subClassOf :DCTerms .
+rdfs:Class rdf:type owl:Class ;
+           rdfs:subClassOf :DCTerms .
 
 
 ###  http://www.w3.org/2000/10/swap/pim/contact#Person
@@ -2068,15 +2142,22 @@ rdfs:Class rdfs:subClassOf :DCTerms .
 
 
 ###  http://www.w3.org/ns/mls#InformationEntity
-<http://www.w3.org/ns/mls#InformationEntity> rdfs:subClassOf :MLSchema .
+<http://www.w3.org/ns/mls#InformationEntity> rdf:type owl:Class ;
+                                             rdfs:subClassOf :MLSchema .
+
+
+###  http://www.w3.org/ns/mls#Model
+<http://www.w3.org/ns/mls#Model> rdf:type owl:Class .
 
 
 ###  http://www.w3.org/ns/mls#Process
-<http://www.w3.org/ns/mls#Process> rdfs:subClassOf :MLSchema .
+<http://www.w3.org/ns/mls#Process> rdf:type owl:Class ;
+                                   rdfs:subClassOf :MLSchema .
 
 
 ###  http://www.w3.org/ns/mls#Quality
-<http://www.w3.org/ns/mls#Quality> rdfs:subClassOf :MLSchema .
+<http://www.w3.org/ns/mls#Quality> rdf:type owl:Class ;
+                                   rdfs:subClassOf :MLSchema .
 
 
 ###  http://xmlns.com/foaf/0.1/Agent
@@ -2183,11 +2264,6 @@ foaf:Person rdf:type owl:Class .
         rdfs:subClassOf <http://aidentifyage.com/ontologies/AIdentifyAGE#OrthodonticAppliances> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Cameriere
-:Cameriere rdf:type owl:Class ;
-           rdfs:subClassOf :Index .
-
-
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#CoefficientMaturityData
 :CoefficientMaturityData rdf:type owl:Class ;
                          rdfs:subClassOf obo:IAO_0000027 ,
@@ -2212,6 +2288,7 @@ foaf:Person rdf:type owl:Class .
                                   owl:onProperty :contains_legal_exam_data ;
                                   owl:someValuesFrom :MedicalLegalExamData
                                 ] ;
+                owl:disjointWith :ReferenceStudy ;
                 terms:description "Represents a set of Legal Medical Exams Data" ;
                 rdfs:label "Data Collection"@en .
 
@@ -2631,10 +2708,6 @@ foaf:Person rdf:type owl:Class .
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Implant
 :Implant rdf:type owl:Class ;
          rdfs:subClassOf :TreatmentOption .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Index
-:Index rdf:type owl:Class .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#InferenceRun
@@ -4775,18 +4848,6 @@ obo:FMA_55637 :synonym "Bicuspid Tooth" .
 #################################################################
 #    General axioms
 #################################################################
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( obo:OBI_0000118
-                obo:OBI_0000251
-                obo:OBI_0002582
-                obo:OBI_0002584
-                obo:OBI_0003327
-                :DataCollection
-                :ReferenceStudy
-              )
-] .
-
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :CoefficientMaturityData

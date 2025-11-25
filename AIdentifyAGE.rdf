@@ -33,8 +33,9 @@ Ana Rodrigues
 Cristiana Palmela Pereira
 Alexandre Francisco
 Cátia Vaz</terms:contributor>
-        <terms:description>Base Ontology for use in AIdentifyAGE Project</terms:description>
-        <owl:versionInfo>v1.0.0-beta</owl:versionInfo>
+        <terms:description xml:lang="en">The AIdentifyAGE ontology provides a comprehensive vocabulary description for forensic age assessment using dental biological markers, promoting the transparent assessment processes in forensic odontology and age diagnostics. It formalizes expert knowledge according to IOFOS, AGFAD, ABFO, ADA and ISO standards, ensuring semantic interoperability and ethical AI integration. This ontology is a work in progress developed under the AIdentifyAGE project (FCT Grant 2024.07444.IACDC), within the national investment RE-C05-i08 – More Digital Science, measure RE-C05-i08.M04 – Support to R&amp;D projects for advanced cybersecurity, artificial intelligence and data science systems in public administration. This work is being developed in collaboration with researchers from the University of Lisbon (Portugal), the University of Münster (Germany), and the University of Zagreb (Croatia), within the framework of the AIdentifyAGE international consortium., Base Ontology for use in AIdentifyAGE Project</terms:description>
+        <terms:issued>25/11/2025</terms:issued>
+        <owl:versionInfo>v1.0.1-beta</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -772,6 +773,12 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#creation_date -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
@@ -832,6 +839,18 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
     <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom"/>
@@ -841,6 +860,23 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#synonym -->
 
     <owl:AnnotationProperty rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#synonym"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/URI -->
+
+    <rdfs:Datatype rdf:about="http://purl.org/dc/terms/URI"/>
     
 
 
@@ -875,7 +911,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
@@ -990,12 +1025,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0040042"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0040042"/>
         <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
     </owl:Axiom>
@@ -1086,12 +1115,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     </owl:ObjectProperty>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000111"/>
         <owl:annotatedTarget xml:lang="en">has part</owl:annotatedTarget>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
@@ -1180,6 +1203,12 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
         <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl"/>
     </owl:Axiom>
     
@@ -1526,6 +1555,18 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     
 
 
+    <!-- http://www.w3.org/ns/mls#hasInput -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/mls#hasInput"/>
+    
+
+
+    <!-- http://www.w3.org/ns/mls#hasOutput -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/mls#hasOutput"/>
+    
+
+
     <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#builtFrom -->
 
     <owl:ObjectProperty rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#builtFrom">
@@ -1798,25 +1839,25 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <!-- http://xmlns.com/foaf/0.1/age -->
 
-    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/age">
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/age">
         <skos:prefLabel>Provided Age</skos:prefLabel>
-    </rdf:Description>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://xmlns.com/foaf/0.1/name -->
 
-    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </rdf:Description>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://xmlns.com/foaf/0.1/sex -->
 
-    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/sex">
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/sex">
         <rdfs:label>sex</rdfs:label>
-    </rdf:Description>
+    </owl:DatatypeProperty>
     
 
 
@@ -2284,7 +2325,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <!-- http://purl.obolibrary.org/obo/FMA_12516 -->
 
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FMA_12516">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_12516">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#hasTreatment"/>
@@ -2293,15 +2334,81 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:definition xml:lang="en">Hard structure composed of dentine and pulp, usually covered partially with enamel and cementum, anchored in the alveolar bone, serving in mastication, phonetics, and aesthetics</skos:definition>
-    </rdf:Description>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_269582 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_269582"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_269584 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_269584"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000009"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000027 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000027"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000100 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000100"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000104 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000104"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000109 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000109"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000938 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000938"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OGMS_0000123 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000123"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000165 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000165"/>
     
 
 
     <!-- http://purl.org/dc/dcam/VocabularyEncodingScheme -->
 
-    <rdf:Description rdf:about="http://purl.org/dc/dcam/VocabularyEncodingScheme">
+    <owl:Class rdf:about="http://purl.org/dc/dcam/VocabularyEncodingScheme">
         <rdfs:subClassOf rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#DCTerms"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
@@ -2315,7 +2422,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <!-- http://purl.org/dc/terms/Location -->
 
-    <rdf:Description rdf:about="http://purl.org/dc/terms/Location">
+    <owl:Class rdf:about="http://purl.org/dc/terms/Location">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#locationName"/>
@@ -2323,15 +2430,15 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://purl.org/dc/terms/LocationPeriodOrJurisdiction -->
 
-    <rdf:Description rdf:about="http://purl.org/dc/terms/LocationPeriodOrJurisdiction">
+    <owl:Class rdf:about="http://purl.org/dc/terms/LocationPeriodOrJurisdiction">
         <rdfs:subClassOf rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#DCTerms"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
@@ -2345,7 +2452,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <!-- http://snomed.info/id/363680008 -->
 
-    <rdf:Description rdf:about="http://snomed.info/id/363680008">
+    <owl:Class rdf:about="http://snomed.info/id/363680008">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#radiographicImageURI"/>
@@ -2360,15 +2467,15 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://www.w3.org/2000/01/rdf-schema#Class -->
 
-    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class">
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Class">
         <rdfs:subClassOf rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#DCTerms"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
@@ -2390,25 +2497,31 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <!-- http://www.w3.org/ns/mls#InformationEntity -->
 
-    <rdf:Description rdf:about="http://www.w3.org/ns/mls#InformationEntity">
+    <owl:Class rdf:about="http://www.w3.org/ns/mls#InformationEntity">
         <rdfs:subClassOf rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#MLSchema"/>
-    </rdf:Description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/mls#Model -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/mls#Model"/>
     
 
 
     <!-- http://www.w3.org/ns/mls#Process -->
 
-    <rdf:Description rdf:about="http://www.w3.org/ns/mls#Process">
+    <owl:Class rdf:about="http://www.w3.org/ns/mls#Process">
         <rdfs:subClassOf rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#MLSchema"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://www.w3.org/ns/mls#Quality -->
 
-    <rdf:Description rdf:about="http://www.w3.org/ns/mls#Quality">
+    <owl:Class rdf:about="http://www.w3.org/ns/mls#Quality">
         <rdfs:subClassOf rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#MLSchema"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
@@ -2563,14 +2676,6 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Cameriere -->
-
-    <owl:Class rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Cameriere">
-        <rdfs:subClassOf rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Index"/>
-    </owl:Class>
-    
-
-
     <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#CoefficientMaturityData -->
 
     <owl:Class rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#CoefficientMaturityData">
@@ -2606,6 +2711,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
                 <owl:someValuesFrom rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#MedicalLegalExamData"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#ReferenceStudy"/>
         <terms:description>Represents a set of Legal Medical Exams Data</terms:description>
         <rdfs:label xml:lang="en">Data Collection</rdfs:label>
     </owl:Class>
@@ -3221,12 +3327,6 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <owl:Class rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Implant">
         <rdfs:subClassOf rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#TreatmentOption"/>
     </owl:Class>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Index -->
-
-    <owl:Class rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Index"/>
     
 
 
@@ -6906,18 +7006,6 @@ I.e. represents a set of ToothStage</terms:description>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000118"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000251"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002582"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002584"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0003327"/>
-            <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#DataCollection"/>
-            <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#ReferenceStudy"/>
-        </owl:members>
-    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">

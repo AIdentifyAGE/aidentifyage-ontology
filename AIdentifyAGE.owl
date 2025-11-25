@@ -25,13 +25,13 @@
     <Prefix name="protege" IRI="http://protege.stanford.edu/plugins/owl/protege#"/>
     <Prefix name="oboInOwl" IRI="http://www.geneontology.org/formats/oboInOwl#"/>
     <Prefix name="AIdentifyAGE" IRI="https://aidentifyage.github.io/aidentifyage-ontology/AIdentifyAGE#"/>
-    <Import>https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/dev/extending_ontologies/obi_subset.owl</Import>
-    <Import>https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/dev/extending_ontologies/ohd_subset.owl</Import>
-    <Import>https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/dev/extending_ontologies/iao_subset.owl</Import>
-    <Import>https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/dev/extending_ontologies/dc_terms_subset.owl</Import>
-    <Import>https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/dev/extending_ontologies/snomed_subset.owl</Import>
-    <Import>https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/dev/extending_ontologies/MLSchema.ttl</Import>
-    <Import>https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/dev/extending_ontologies/foaf_subset.owl</Import>
+    <Import>http://purl.obolibrary.org/obo/obi.owl</Import>
+    <Import>http://purl.obolibrary.org/obo/ohd.owl</Import>
+    <Import>http://purl.obolibrary.org/obo/iao/iao-main.owl</Import>
+    <Import>http://purl.org/dc/terms</Import>
+    <Import>http://snomed.info/sct/900000000000207008</Import>
+    <Import>http://www.w3.org/2016/03/mls#</Import>
+    <Import>http://xmlns.com/foaf/0.1/</Import>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="terms:contributor"/>
         <Literal>Renato Marcelo
@@ -42,7 +42,11 @@ Cátia Vaz</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
-        <Literal>Base Ontology for use in AIdentifyAGE Project</Literal>
+        <Literal xml:lang="en">The AIdentifyAGE ontology provides a comprehensive vocabulary description for forensic age assessment using dental biological markers, promoting the transparent assessment processes in forensic odontology and age diagnostics. It formalizes expert knowledge according to IOFOS, AGFAD, ABFO, ADA and ISO standards, ensuring semantic interoperability and ethical AI integration. This ontology is a work in progress developed under the AIdentifyAGE project (FCT Grant 2024.07444.IACDC), within the national investment RE-C05-i08 – More Digital Science, measure RE-C05-i08.M04 – Support to R&amp;D projects for advanced cybersecurity, artificial intelligence and data science systems in public administration. This work is being developed in collaboration with researchers from the University of Lisbon (Portugal), the University of Münster (Germany), and the University of Zagreb (Croatia), within the framework of the AIdentifyAGE international consortium., Base Ontology for use in AIdentifyAGE Project</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:issued"/>
+        <Literal>25/11/2025</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
