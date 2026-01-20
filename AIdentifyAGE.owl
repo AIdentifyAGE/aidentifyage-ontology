@@ -46,11 +46,11 @@ Cátia Vaz</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="terms:issued"/>
-        <Literal>19/01/2026</Literal>
+        <Literal>20/01/2026</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal>v1.0.5-beta</Literal>
+        <Literal>v1.0.6-beta</Literal>
     </Annotation>
     <Declaration>
         <Class abbreviatedIRI="obo:BFO_0000023"/>
