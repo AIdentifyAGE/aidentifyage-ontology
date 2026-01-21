@@ -33,8 +33,8 @@ Cristiana Palmela Pereira
 Alexandre Francisco
 Cátia Vaz""" ;
                                            terms:description "The AIdentifyAGE ontology provides a comprehensive vocabulary description for forensic age assessment using dental biological markers, promoting the transparent assessment processes in forensic odontology and age diagnostics. It formalizes expert knowledge according to IOFOS, AGFAD, ABFO, ADA and ISO standards, ensuring semantic interoperability and ethical AI integration. This ontology is a work in progress developed under the AIdentifyAGE project (FCT Grant 2024.07444.IACDC), within the national investment RE-C05-i08 – More Digital Science, measure RE-C05-i08.M04 – Support to R&D projects for advanced cybersecurity, artificial intelligence and data science systems in public administration. This work is being developed in collaboration with researchers from the University of Lisbon (Portugal), the University of Münster (Germany), and the University of Zagreb (Croatia), within the framework of the AIdentifyAGE international consortium., Base Ontology for use in AIdentifyAGE Project"@en ;
-                                           terms:issued "20/01/2026" ;
-                                           owl:versionInfo "v1.0.6-beta" .
+                                           terms:issued "21/01/2026" ;
+                                           owl:versionInfo "v1.0.7-beta" .
 
 #################################################################
 #    Annotation properties
@@ -2116,6 +2116,13 @@ AIdentifyAGE:studyYear rdf:type owl:DatatypeProperty ;
                        rdfs:label "Study Year"@en .
 
 
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#toothLabel
+AIdentifyAGE:toothLabel rdf:type owl:DatatypeProperty ;
+                        rdfs:range xsd:string ;
+                        terms:description "Label attributed to a given Dental Classification System entity"@en ;
+                        rdfs:label "Tooth Label"@en .
+
+
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#upperQuartileAge
 AIdentifyAGE:upperQuartileAge rdf:type owl:DatatypeProperty ;
                               rdfs:subPropertyOf owl:topDataProperty ;
@@ -2271,7 +2278,7 @@ AIdentifyAGE:AIDentalAgeAssessment rdf:type owl:Class ;
                                                      owl:onProperty AIdentifyAGE:probabilityGivenAge ;
                                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                                    ] ;
-                                   terms:description "Represents the final age assessment report results, produced by using dental information to relate it with chronological age, based on AI/ML methods"@en ;
+                                   terms:description "Dental age assessment performed by artificial intelligence systems using dental data to estimate age, either by producing a continuous numerical estimation of chronological age through regression models or by assigning an individual to predefined legal age thresholds through classification models"@en ;
                                    rdfs:label "AI Dental Age Assessment"@en .
 
 
@@ -2357,6 +2364,7 @@ AIdentifyAGE:BhatReferenceStudy rdf:type owl:Class ;
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Braces
 AIdentifyAGE:Braces rdf:type owl:Class ;
                     rdfs:subClassOf AIdentifyAGE:OrthodonticAppliances ;
+                    terms:description "Orthodontic appliances, typically brackets and wires, that apply gentle, continuous pressure to straighten misaligned teeth and correct bite problems (malocclusions) like overbites, underbites, and gaps, improving both dental health and appearance"@en ;
                     rdfs:label "Braces"@en .
 
 
@@ -2606,6 +2614,8 @@ AIdentifyAGE:DentalRestoration rdf:type owl:Class ;
                                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                  owl:onDataRange xsd:string
                                                ] ;
+                               terms:description "A procedure and/or its result by which the lost structure of a tooth is replaced in order to restore its form, function, and integrity."@en ;
+                               terms:source "ISO/DIS 1942 — Dentistry — Vocabulary"@en ;
                                rdfs:label "Dental Restoration"@en .
 
 
@@ -2614,12 +2624,6 @@ AIdentifyAGE:FDIDentalClassificationSystem rdf:type owl:Class ;
                                            rdfs:subClassOf obo:IAO_0000009 ;
                                            terms:description "It establishes that each tooth is identified with a two-digit number. Note: ISO 3950:2016 Dentistry — Designation system for teeth and areas of the oral cavity"@en ;
                                            rdfs:label "FDI Dental Classification System"@en .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FixedProstodonticRehabilitation
-AIdentifyAGE:FixedProstodonticRehabilitation rdf:type owl:Class ;
-                                             rdfs:subClassOf AIdentifyAGE:TreatmentOption ;
-                                             rdfs:label "Fixed Prostodontic Rehabilitation" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#ForensicExpertPerson
@@ -2804,9 +2808,12 @@ AIdentifyAGE:HavvikkoToothStage rdf:type owl:Class ;
                                 rdfs:label "Havvikko Tooth Stage"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Implant
-AIdentifyAGE:Implant rdf:type owl:Class ;
-                     rdfs:subClassOf AIdentifyAGE:TreatmentOption .
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Implants
+AIdentifyAGE:Implants rdf:type owl:Class ;
+                      rdfs:subClassOf AIdentifyAGE:TreatmentOption ;
+                      terms:description "A device intended to be placed surgically in the jawbone or other craniofacial bone to provide support and/or retention for a dental prosthesis."@en ;
+                      terms:source "ISO 16443 — Dentistry — Implants"@en ;
+                      rdfs:label "Implants"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#InferenceRun
@@ -2943,6 +2950,8 @@ AIdentifyAGE:MincerReferenceStudy rdf:type owl:Class ;
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#MissingTooth
 AIdentifyAGE:MissingTooth rdf:type owl:Class ;
                           rdfs:subClassOf AIdentifyAGE:TreatmentOption ;
+                          terms:description "A tooth that is absent from the dental arch, either because it failed to develop (congenital absence) or because it was lost after eruption due to extraction, trauma, or disease." ;
+                          terms:source "ISO/DIS 1942 — Dentistry — Vocabulary"@en ;
                           rdfs:label "Missing Tooth" .
 
 
@@ -3069,6 +3078,7 @@ AIdentifyAGE:OlzeReferenceStudy rdf:type owl:Class ;
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#OrthodonticAppliances
 AIdentifyAGE:OrthodonticAppliances rdf:type owl:Class ;
                                    rdfs:subClassOf AIdentifyAGE:TreatmentOption ;
+                                   terms:description "Devices used in orthodontic treatment to correct or prevent malocclusion by applying controlled forces to move teeth, modify jaw growth, or maintain tooth position"@en ;
                                    rdfs:label "Orthodontic Appliances" .
 
 
@@ -3197,6 +3207,7 @@ AIdentifyAGE:RequestingEntity rdf:type owl:Class ;
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#RootCanalTreatment
 AIdentifyAGE:RootCanalTreatment rdf:type owl:Class ;
                                 rdfs:subClassOf AIdentifyAGE:TreatmentOption ;
+                                terms:description "A dental procedure involving the removal of diseased or necrotic pulp tissue, followed by cleaning, shaping, disinfection, and obturation of the root canal system, with the aim of eliminating infection and preventing reinfection while preserving the tooth."@en ;
                                 rdfs:label "Root Canal Treatment"@en .
 
 
@@ -3256,7 +3267,7 @@ AIdentifyAGE:ToothStage rdf:type owl:Class ;
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#TreatmentOption
 AIdentifyAGE:TreatmentOption rdf:type owl:Class ;
                              rdfs:subClassOf obo:IAO_0000104 ;
-                             terms:description "Represents all the possible dentistry/medical dentistry treatment options that can be present in person's teeth"@en ;
+                             terms:description "Possible therapeutic approach or intervention available for managing a medical or dental condition, selected based on clinical indication, patient needs, and professional judgment"@en ;
                              rdfs:label "Treatment Option" .
 
 
@@ -3419,7 +3430,7 @@ obo:FMA_57143 rdf:type owl:NamedIndividual .
 ###  http://purl.obolibrary.org/obo/OHD_0000101
 obo:OHD_0000101 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_18 ;
-                rdfs:label "1"@en .
+                AIdentifyAGE:toothLabel "1" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_18
@@ -3427,8 +3438,7 @@ obo:OHD_0000101 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000102
 obo:OHD_0000102 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_17 ;
-                obo:IAO_0000136 obo:FMA_55697 ;
-                rdfs:label "2"@en .
+                AIdentifyAGE:toothLabel "2" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_17
@@ -3436,8 +3446,7 @@ obo:OHD_0000102 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000103
 obo:OHD_0000103 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_16 ;
-                obo:IAO_0000136 obo:FMA_55698 ;
-                rdfs:label "3"@en .
+                AIdentifyAGE:toothLabel "3" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_16
@@ -3445,8 +3454,7 @@ obo:OHD_0000103 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000104
 obo:OHD_0000104 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_15 ;
-                obo:IAO_0000136 obo:FMA_55688 ;
-                rdfs:label "4"@en .
+                AIdentifyAGE:toothLabel "4" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_15
@@ -3454,8 +3462,7 @@ obo:OHD_0000104 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000105
 obo:OHD_0000105 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_14 ;
-                obo:IAO_0000136 obo:FMA_55689 ;
-                rdfs:label "5"@en .
+                AIdentifyAGE:toothLabel "5" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_14
@@ -3463,8 +3470,7 @@ obo:OHD_0000105 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000106
 obo:OHD_0000106 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_13 ;
-                obo:IAO_0000136 obo:FMA_55798 ;
-                rdfs:label "6"@en .
+                AIdentifyAGE:toothLabel "6" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_13
@@ -3472,8 +3478,7 @@ obo:OHD_0000106 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000107
 obo:OHD_0000107 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_12 ;
-                obo:IAO_0000136 obo:FMA_55680 ;
-                rdfs:label "7"@en .
+                AIdentifyAGE:toothLabel "7" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_12
@@ -3481,7 +3486,7 @@ obo:OHD_0000107 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000108
 obo:OHD_0000108 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_11 ;
-                rdfs:label "8"@en .
+                AIdentifyAGE:toothLabel "8" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_11
@@ -3489,7 +3494,7 @@ obo:OHD_0000108 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000109
 obo:OHD_0000109 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_21 ;
-                rdfs:label "9"@en .
+                AIdentifyAGE:toothLabel "9" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_21
@@ -3497,7 +3502,7 @@ obo:OHD_0000109 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000110
 obo:OHD_0000110 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_22 ;
-                rdfs:label "10"@en .
+                AIdentifyAGE:toothLabel "10" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_22
@@ -3505,7 +3510,7 @@ obo:OHD_0000110 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000111
 obo:OHD_0000111 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_23 ;
-                rdfs:label "11"@en .
+                AIdentifyAGE:toothLabel "11" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_23
@@ -3513,7 +3518,7 @@ obo:OHD_0000111 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000112
 obo:OHD_0000112 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_24 ;
-                rdfs:label "12"@en .
+                AIdentifyAGE:toothLabel "12" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_24
@@ -3521,7 +3526,7 @@ obo:OHD_0000112 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000113
 obo:OHD_0000113 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_25 ;
-                rdfs:label "13"@en .
+                AIdentifyAGE:toothLabel "13" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_25
@@ -3529,7 +3534,7 @@ obo:OHD_0000113 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000114
 obo:OHD_0000114 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_26 ;
-                rdfs:label "14"@en .
+                AIdentifyAGE:toothLabel "14" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_26
@@ -3537,7 +3542,7 @@ obo:OHD_0000114 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000115
 obo:OHD_0000115 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_27 ;
-                rdfs:label "15"@en .
+                AIdentifyAGE:toothLabel "15" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_27
@@ -3545,7 +3550,7 @@ obo:OHD_0000115 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000116
 obo:OHD_0000116 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_28 ;
-                rdfs:label "16"@en .
+                AIdentifyAGE:toothLabel "16" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_28
@@ -3553,7 +3558,7 @@ obo:OHD_0000116 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000117
 obo:OHD_0000117 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_38 ;
-                rdfs:label "17"@en .
+                AIdentifyAGE:toothLabel "17" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_38
@@ -3561,7 +3566,7 @@ obo:OHD_0000117 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000118
 obo:OHD_0000118 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_37 ;
-                rdfs:label "18"@en .
+                AIdentifyAGE:toothLabel "18" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_37
@@ -3569,7 +3574,7 @@ obo:OHD_0000118 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000119
 obo:OHD_0000119 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_36 ;
-                rdfs:label "19"@en .
+                AIdentifyAGE:toothLabel "19" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_36
@@ -3577,8 +3582,7 @@ obo:OHD_0000119 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000120
 obo:OHD_0000120 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_35 ;
-                obo:IAO_0000136 obo:FMA_55692 ;
-                rdfs:label "20"@en .
+                AIdentifyAGE:toothLabel "20" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_35
@@ -3586,8 +3590,7 @@ obo:OHD_0000120 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000121
 obo:OHD_0000121 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_34 ;
-                obo:IAO_0000136 obo:FMA_55693 ;
-                rdfs:label "21"@en .
+                AIdentifyAGE:toothLabel "21" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_34
@@ -3595,7 +3598,7 @@ obo:OHD_0000121 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000122
 obo:OHD_0000122 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_33 ;
-                rdfs:label "22"@en .
+                AIdentifyAGE:toothLabel "22" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_33
@@ -3603,8 +3606,7 @@ obo:OHD_0000122 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000123
 obo:OHD_0000123 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_32 ;
-                obo:IAO_0000136 obo:FMA_57141 ;
-                rdfs:label "23"@en .
+                AIdentifyAGE:toothLabel "23" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_32
@@ -3612,8 +3614,7 @@ obo:OHD_0000123 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000124
 obo:OHD_0000124 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_31 ;
-                obo:IAO_0000136 obo:FMA_57143 ;
-                rdfs:label "24"@en .
+                AIdentifyAGE:toothLabel "24" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_31
@@ -3621,8 +3622,7 @@ obo:OHD_0000124 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000125
 obo:OHD_0000125 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_41 ;
-                obo:IAO_0000136 obo:FMA_57142 ;
-                rdfs:label "25"@en .
+                AIdentifyAGE:toothLabel "25" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_41
@@ -3630,8 +3630,7 @@ obo:OHD_0000125 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000126
 obo:OHD_0000126 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_42 ;
-                obo:IAO_0000136 obo:FMA_57140 ;
-                rdfs:label "26"@en .
+                AIdentifyAGE:toothLabel "26" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_42
@@ -3639,8 +3638,7 @@ obo:OHD_0000126 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000127
 obo:OHD_0000127 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_43 ;
-                obo:IAO_0000136 obo:FMA_55686 ;
-                rdfs:label "27"@en .
+                AIdentifyAGE:toothLabel "27" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_43
@@ -3648,8 +3646,7 @@ obo:OHD_0000127 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000128
 obo:OHD_0000128 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_44 ;
-                obo:IAO_0000136 obo:FMA_55694 ;
-                rdfs:label "28"@en .
+                AIdentifyAGE:toothLabel "28" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_44
@@ -3657,8 +3654,7 @@ obo:OHD_0000128 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000129
 obo:OHD_0000129 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_45 ;
-                obo:IAO_0000136 obo:FMA_55695 ;
-                rdfs:label "29"@en .
+                AIdentifyAGE:toothLabel "29" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_45
@@ -3666,8 +3662,7 @@ obo:OHD_0000129 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000130
 obo:OHD_0000130 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_46 ;
-                obo:IAO_0000136 obo:FMA_55705 ;
-                rdfs:label "30"@en .
+                AIdentifyAGE:toothLabel "30" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_46
@@ -3675,8 +3670,7 @@ obo:OHD_0000130 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000131
 obo:OHD_0000131 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_47 ;
-                obo:IAO_0000136 obo:FMA_55706 ;
-                rdfs:label "31"@en .
+                AIdentifyAGE:toothLabel "31" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_47
@@ -3684,8 +3678,7 @@ obo:OHD_0000131 rdf:type owl:NamedIndividual ;
 ###  http://purl.obolibrary.org/obo/OHD_0000132
 obo:OHD_0000132 rdf:type owl:NamedIndividual ;
                 owl:sameAs AIdentifyAGE:FDI_48 ;
-                obo:IAO_0000136 obo:FMA_55707 ;
-                rdfs:label "32"@en .
+                AIdentifyAGE:toothLabel "32" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_48
@@ -3767,392 +3760,458 @@ AIdentifyAGE:F rdf:type owl:NamedIndividual ;
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_11
 AIdentifyAGE:FDI_11 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#1+> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏌> ;
-                    obo:IAO_0000136 obo:FMA_55681 .
+                    owl:sameAs AIdentifyAGE:Haderup_1Plus ,
+                               AIdentifyAGE:Palmer_RU1 ;
+                    obo:IAO_0000136 obo:FMA_55681 ;
+                    AIdentifyAGE:toothLabel "11" ;
+                    rdfs:label "FDI11" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#1+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_1Plus
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏌
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU1
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_12
 AIdentifyAGE:FDI_12 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#2+> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏌> ;
-                    obo:IAO_0000136 obo:FMA_55680 .
+                    owl:sameAs AIdentifyAGE:Haderup_2Plus ,
+                               AIdentifyAGE:Palmer_RU2 ;
+                    obo:IAO_0000136 obo:FMA_55680 ;
+                    AIdentifyAGE:toothLabel "12" ;
+                    rdfs:label "FDI12" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#2+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_2Plus
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏌
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU2
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_13
 AIdentifyAGE:FDI_13 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#3+> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏌> ;
-                    obo:IAO_0000136 obo:FMA_55798 .
+                    owl:sameAs AIdentifyAGE:Haderup_3Plus ,
+                               AIdentifyAGE:Palmer_RU3 ;
+                    obo:IAO_0000136 obo:FMA_55798 ;
+                    AIdentifyAGE:toothLabel "13" ;
+                    rdfs:label "FDI13" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#3+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_3Plus
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏌
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU3
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_14
 AIdentifyAGE:FDI_14 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#4+> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏌> ;
-                    obo:IAO_0000136 obo:FMA_55689 .
+                    owl:sameAs AIdentifyAGE:Haderup_4Plus ,
+                               AIdentifyAGE:Palmer_RU4 ;
+                    obo:IAO_0000136 obo:FMA_55689 ;
+                    AIdentifyAGE:toothLabel "14" ;
+                    rdfs:label "FDI14" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#4+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_4Plus
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏌
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU4
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_15
 AIdentifyAGE:FDI_15 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#5+> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏌> ;
-                    obo:IAO_0000136 obo:FMA_55688 .
+                    owl:sameAs AIdentifyAGE:Haderup_5Plus ,
+                               AIdentifyAGE:Palmer_RU5 ;
+                    obo:IAO_0000136 obo:FMA_55688 ;
+                    AIdentifyAGE:toothLabel "15" ;
+                    rdfs:label "FDI15" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#5+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_5Plus
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏌
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU5
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_16
 AIdentifyAGE:FDI_16 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#6+> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏌> ;
-                    obo:IAO_0000136 obo:FMA_55698 .
+                    owl:sameAs AIdentifyAGE:Haderup_6Plus ,
+                               AIdentifyAGE:Palmer_RU6 ;
+                    obo:IAO_0000136 obo:FMA_55698 ;
+                    AIdentifyAGE:toothLabel "16" ;
+                    rdfs:label "FDI16" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#6+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_6Plus
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏌
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU6
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_17
 AIdentifyAGE:FDI_17 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#7+> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏌> ;
-                    obo:IAO_0000136 obo:FMA_55697 .
+                    owl:sameAs AIdentifyAGE:Haderup_7Plus ,
+                               AIdentifyAGE:Palmer_RU7 ;
+                    obo:IAO_0000136 obo:FMA_55697 ;
+                    AIdentifyAGE:toothLabel "17" ;
+                    rdfs:label "FDI17" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#7+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_7Plus
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏌
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU7
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_18
 AIdentifyAGE:FDI_18 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#8+> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏌> ;
-                    obo:IAO_0000136 obo:FMA_55696 .
+                    owl:sameAs AIdentifyAGE:Haderup_8Plus ,
+                               AIdentifyAGE:Palmer_RU8 ;
+                    obo:IAO_0000136 obo:FMA_55696 ;
+                    AIdentifyAGE:toothLabel "18" ;
+                    rdfs:label "FDI18" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#8+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_8Plus
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏌
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU8
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_21
 AIdentifyAGE:FDI_21 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#+1> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿1> ;
-                    obo:IAO_0000136 obo:FMA_55682 .
+                    owl:sameAs AIdentifyAGE:Haderup_Plus1 ,
+                               AIdentifyAGE:Palmer_LU1 ;
+                    obo:IAO_0000136 obo:FMA_55682 ;
+                    AIdentifyAGE:toothLabel "21" ;
+                    rdfs:label "FDI21" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+1
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus1
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿1
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU1
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_22
 AIdentifyAGE:FDI_22 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#+2> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿2> ;
-                    obo:IAO_0000136 obo:FMA_55683 .
+                    owl:sameAs AIdentifyAGE:Haderup_Plus2 ,
+                               AIdentifyAGE:Palmer_LU2 ;
+                    obo:IAO_0000136 obo:FMA_55683 ;
+                    AIdentifyAGE:toothLabel "22" ;
+                    rdfs:label "FDI22" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+2
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus2
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿2
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU2
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_23
 AIdentifyAGE:FDI_23 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#+3> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿3> ;
-                    obo:IAO_0000136 obo:FMA_55799 .
+                    owl:sameAs AIdentifyAGE:Haderup_Plus3 ,
+                               AIdentifyAGE:Palmer_LU3 ;
+                    obo:IAO_0000136 obo:FMA_55799 ;
+                    AIdentifyAGE:toothLabel "23" ;
+                    rdfs:label "FDI23" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+3
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus3
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿3
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU3
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_24
 AIdentifyAGE:FDI_24 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#+4> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿4> ;
-                    obo:IAO_0000136 obo:FMA_55690 .
+                    owl:sameAs AIdentifyAGE:Haderup_Plus4 ,
+                               AIdentifyAGE:Palmer_LU4 ;
+                    obo:IAO_0000136 obo:FMA_55690 ;
+                    AIdentifyAGE:toothLabel "24" ;
+                    rdfs:label "FDI24" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+4
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus4
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿4
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU4
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_25
 AIdentifyAGE:FDI_25 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#+5> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿5> ;
-                    obo:IAO_0000136 obo:FMA_55691 .
+                    owl:sameAs AIdentifyAGE:Haderup_Plus5 ,
+                               AIdentifyAGE:Palmer_LU5 ;
+                    obo:IAO_0000136 obo:FMA_55691 ;
+                    AIdentifyAGE:toothLabel "25" ;
+                    rdfs:label "FDI25" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+5
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus5
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿5
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU5
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_26
 AIdentifyAGE:FDI_26 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#+6> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿6> ;
-                    obo:IAO_0000136 obo:FMA_55699 .
+                    owl:sameAs AIdentifyAGE:Haderup_Plus6 ,
+                               AIdentifyAGE:Palmer_LU6 ;
+                    obo:IAO_0000136 obo:FMA_55699 ;
+                    AIdentifyAGE:toothLabel "26" ;
+                    rdfs:label "FDI26" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+6
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus6
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿6
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU6
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_27
 AIdentifyAGE:FDI_27 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#+7> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿7> ;
-                    obo:IAO_0000136 obo:FMA_55700 .
+                    owl:sameAs AIdentifyAGE:Haderup_Plus7 ,
+                               AIdentifyAGE:Palmer_LU7 ;
+                    obo:IAO_0000136 obo:FMA_55700 ;
+                    AIdentifyAGE:toothLabel "27" ;
+                    rdfs:label "FDI27" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+7
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus7
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿7
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU7
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_28
 AIdentifyAGE:FDI_28 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#+8> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿8> ;
-                    obo:IAO_0000136 obo:FMA_55701 .
+                    owl:sameAs AIdentifyAGE:Haderup_Plus8 ,
+                               AIdentifyAGE:Palmer_LU8 ;
+                    obo:IAO_0000136 obo:FMA_55701 ;
+                    AIdentifyAGE:toothLabel "28" ;
+                    rdfs:label "FDI28" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+8
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus8
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿8
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU8
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_31
 AIdentifyAGE:FDI_31 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#-1> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾1> ;
-                    obo:IAO_0000136 obo:FMA_57143 .
+                    owl:sameAs AIdentifyAGE:Haderup_Minus1 ,
+                               AIdentifyAGE:Palmer_LL1 ;
+                    obo:IAO_0000136 obo:FMA_57143 ;
+                    AIdentifyAGE:toothLabel "31" ;
+                    rdfs:label "FDI31" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-1
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus1
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾1
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL1
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_32
 AIdentifyAGE:FDI_32 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#-2> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾2> ;
-                    obo:IAO_0000136 obo:FMA_57141 .
+                    owl:sameAs AIdentifyAGE:Haderup_Minus2 ,
+                               AIdentifyAGE:Palmer_LL2 ;
+                    obo:IAO_0000136 obo:FMA_57141 ;
+                    AIdentifyAGE:toothLabel "32" ;
+                    rdfs:label "FDI32" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-2
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus2
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾2
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL2
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_33
 AIdentifyAGE:FDI_33 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#-3> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾3> ;
-                    obo:IAO_0000136 obo:FMA_55687 .
+                    owl:sameAs AIdentifyAGE:Haderup_Minus3 ,
+                               AIdentifyAGE:Palmer_LL3 ;
+                    obo:IAO_0000136 obo:FMA_55687 ;
+                    AIdentifyAGE:toothLabel "33" ;
+                    rdfs:label "FDI33" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-3
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus3
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾3
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL3
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_34
 AIdentifyAGE:FDI_34 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#-4> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾4> ;
-                    obo:IAO_0000136 obo:FMA_55693 .
+                    owl:sameAs AIdentifyAGE:Haderup_Minus4 ,
+                               AIdentifyAGE:Palmer_LL4 ;
+                    obo:IAO_0000136 obo:FMA_55693 ;
+                    AIdentifyAGE:toothLabel "34" ;
+                    rdfs:label "FDI34" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-4
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus4
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾4
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL4
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_35
 AIdentifyAGE:FDI_35 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#-5> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾5> ;
-                    obo:IAO_0000136 obo:FMA_55692 .
+                    owl:sameAs AIdentifyAGE:Haderup_Minus5 ,
+                               AIdentifyAGE:Palmer_LL5 ;
+                    obo:IAO_0000136 obo:FMA_55692 ;
+                    AIdentifyAGE:toothLabel "35" ;
+                    rdfs:label "FDI35" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-5
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus5
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾5
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL5
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_36
 AIdentifyAGE:FDI_36 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#-6> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾6> ;
-                    obo:IAO_0000136 obo:FMA_55704 .
+                    owl:sameAs AIdentifyAGE:Haderup_Minus6 ,
+                               AIdentifyAGE:Palmer_LL6 ;
+                    obo:IAO_0000136 obo:FMA_55704 ;
+                    AIdentifyAGE:toothLabel "36" ;
+                    rdfs:label "FDI36" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-6
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus6
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾6
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL6
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_37
 AIdentifyAGE:FDI_37 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#-7> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾7> ;
-                    obo:IAO_0000136 obo:FMA_55703 .
+                    owl:sameAs AIdentifyAGE:Haderup_Minus7 ,
+                               AIdentifyAGE:Palmer_LL7 ;
+                    obo:IAO_0000136 obo:FMA_55703 ;
+                    AIdentifyAGE:toothLabel "37" ;
+                    rdfs:label "FDI37" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-7
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus7
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾7
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL7
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_38
 AIdentifyAGE:FDI_38 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#-8> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾8> ;
-                    obo:IAO_0000136 obo:FMA_55702 .
+                    owl:sameAs AIdentifyAGE:Haderup_Minus8 ,
+                               AIdentifyAGE:Palmer_LL8 ;
+                    obo:IAO_0000136 obo:FMA_55702 ;
+                    AIdentifyAGE:toothLabel "38" ;
+                    rdfs:label "FDI38" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-8
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus8
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾8
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL8
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_41
 AIdentifyAGE:FDI_41 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#1-> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏋> ;
-                    obo:IAO_0000136 obo:FMA_57142 .
+                    owl:sameAs AIdentifyAGE:Haderup_1Minus ,
+                               AIdentifyAGE:Palmer_RL1 ;
+                    obo:IAO_0000136 obo:FMA_57142 ;
+                    AIdentifyAGE:toothLabel "41" ;
+                    rdfs:label "FDI41" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#1-
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_1Minus
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏋
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL1
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_42
 AIdentifyAGE:FDI_42 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#2-> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏋> ;
-                    obo:IAO_0000136 obo:FMA_57140 .
+                    owl:sameAs AIdentifyAGE:Haderup_2Minus ,
+                               AIdentifyAGE:Palmer_RL2 ;
+                    obo:IAO_0000136 obo:FMA_57140 ;
+                    AIdentifyAGE:toothLabel "42" ;
+                    rdfs:label "FDI42" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#2-
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_2Minus
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏋
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL2
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_43
 AIdentifyAGE:FDI_43 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#3-> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏋> ;
-                    obo:IAO_0000136 obo:FMA_55686 .
+                    owl:sameAs AIdentifyAGE:Haderup_3Minus ,
+                               AIdentifyAGE:Palmer_RL3 ;
+                    obo:IAO_0000136 obo:FMA_55686 ;
+                    AIdentifyAGE:toothLabel "43" ;
+                    rdfs:label "FDI43" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#3-
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_3Minus
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏋
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL3
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_44
 AIdentifyAGE:FDI_44 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#4-> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏋> ;
-                    obo:IAO_0000136 obo:FMA_55694 .
+                    owl:sameAs AIdentifyAGE:Haderup_4Minus ,
+                               AIdentifyAGE:Palmer_RL4 ;
+                    obo:IAO_0000136 obo:FMA_55694 ;
+                    AIdentifyAGE:toothLabel "44" ;
+                    rdfs:label "FDI44" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#4-
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_4Minus
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏋
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL4
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_45
 AIdentifyAGE:FDI_45 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#5-> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏋> ;
-                    obo:IAO_0000136 obo:FMA_55695 .
+                    owl:sameAs AIdentifyAGE:Haderup_5Minus ,
+                               AIdentifyAGE:Palmer_RL5 ;
+                    obo:IAO_0000136 obo:FMA_55695 ;
+                    AIdentifyAGE:toothLabel "45" ;
+                    rdfs:label "FDI45" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#5-
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_5Minus
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏋
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL5
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_46
 AIdentifyAGE:FDI_46 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#6-> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏋> ;
-                    obo:IAO_0000136 obo:FMA_55705 .
+                    owl:sameAs AIdentifyAGE:Haderup_6Minus ,
+                               AIdentifyAGE:Palmer_RL6 ;
+                    obo:IAO_0000136 obo:FMA_55705 ;
+                    AIdentifyAGE:toothLabel "46" ;
+                    rdfs:label "FDI46" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#6-
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_6Minus
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏋
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL6
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_47
 AIdentifyAGE:FDI_47 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#7-> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏋> ;
-                    obo:IAO_0000136 obo:FMA_55706 .
+                    owl:sameAs AIdentifyAGE:Haderup_7Minus ,
+                               AIdentifyAGE:Palmer_RL7 ;
+                    obo:IAO_0000136 obo:FMA_55706 ;
+                    AIdentifyAGE:toothLabel "47" ;
+                    rdfs:label "FDI47" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#7-
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_7Minus
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏋
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL7
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_48
 AIdentifyAGE:FDI_48 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#8-> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏋> ;
-                    obo:IAO_0000136 obo:FMA_55707 .
+                    owl:sameAs AIdentifyAGE:Haderup_8Minus ,
+                               AIdentifyAGE:Palmer_RL8 ;
+                    obo:IAO_0000136 obo:FMA_55707 ;
+                    AIdentifyAGE:toothLabel "48" ;
+                    rdfs:label "FDI48" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#8-
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_8Minus
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏋
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL8
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_51
 AIdentifyAGE:FDI_51 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
                     owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#01+> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#A⏌> .
+                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#A⏌> ;
+                    AIdentifyAGE:toothLabel "51" ;
+                    rdfs:label "FDI51" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#01+
@@ -4163,7 +4222,9 @@ AIdentifyAGE:FDI_51 rdf:type owl:NamedIndividual ,
 AIdentifyAGE:FDI_52 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
                     owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#02+> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#B⏌> .
+                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#B⏌> ;
+                    AIdentifyAGE:toothLabel "52" ;
+                    rdfs:label "FDI52" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#02+
@@ -4174,7 +4235,9 @@ AIdentifyAGE:FDI_52 rdf:type owl:NamedIndividual ,
 AIdentifyAGE:FDI_53 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
                     owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#03+> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#C⏌> .
+                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#C⏌> ;
+                    AIdentifyAGE:toothLabel "53" ;
+                    rdfs:label "FDI53" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#03+
@@ -4185,7 +4248,9 @@ AIdentifyAGE:FDI_53 rdf:type owl:NamedIndividual ,
 AIdentifyAGE:FDI_54 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
                     owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#04+> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#D⏌> .
+                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#D⏌> ;
+                    AIdentifyAGE:toothLabel "54" ;
+                    rdfs:label "FDI54" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#04+
@@ -4196,7 +4261,9 @@ AIdentifyAGE:FDI_54 rdf:type owl:NamedIndividual ,
 AIdentifyAGE:FDI_55 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
                     owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#05+> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#E⏌> .
+                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#E⏌> ;
+                    AIdentifyAGE:toothLabel "55" ;
+                    rdfs:label "FDI55" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#05+
@@ -4206,11 +4273,13 @@ AIdentifyAGE:FDI_55 rdf:type owl:NamedIndividual ,
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_61
 AIdentifyAGE:FDI_61 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#+01> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿A> .
+                    owl:sameAs AIdentifyAGE:Haderup_Plus01 ,
+                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿A> ;
+                    AIdentifyAGE:toothLabel "61" ;
+                    rdfs:label "FDI61" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+01
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus01
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿A
 
@@ -4218,13 +4287,15 @@ AIdentifyAGE:FDI_61 rdf:type owl:NamedIndividual ,
 AIdentifyAGE:FDI_62 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
                     owl:sameAs AIdentifyAGE:G ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#+02> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿B> .
+                               AIdentifyAGE:Haderup_Plus02 ,
+                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿B> ;
+                    AIdentifyAGE:toothLabel "62" ;
+                    rdfs:label "FDI62" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#G
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+02
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus02
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿B
 
@@ -4232,111 +4303,127 @@ AIdentifyAGE:FDI_62 rdf:type owl:NamedIndividual ,
 AIdentifyAGE:FDI_63 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
                     owl:sameAs AIdentifyAGE:H ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#+03> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿C> .
+                               AIdentifyAGE:Haderup_Plus03 ,
+                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿C> ;
+                    AIdentifyAGE:toothLabel "63" ;
+                    rdfs:label "FDI63" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#H
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+03
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus03
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿C
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_64
 AIdentifyAGE:FDI_64 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs AIdentifyAGE:I ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#+04> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿D> .
+                    owl:sameAs AIdentifyAGE:Haderup_Plus04 ,
+                               AIdentifyAGE:I ,
+                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿D> ;
+                    AIdentifyAGE:toothLabel "64" ;
+                    rdfs:label "FDI64" .
 
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus04
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#I
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+04
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿D
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_65
 AIdentifyAGE:FDI_65 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs AIdentifyAGE:J ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#+05> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿E> .
+                    owl:sameAs AIdentifyAGE:Haderup_Plus05 ,
+                               AIdentifyAGE:J ,
+                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿E> ;
+                    AIdentifyAGE:toothLabel "65" ;
+                    rdfs:label "FDI65" .
 
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus05
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#J
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+05
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿E
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_71
 AIdentifyAGE:FDI_71 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs AIdentifyAGE:O ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#-01> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾A> .
+                    owl:sameAs AIdentifyAGE:Haderup_Minus01 ,
+                               AIdentifyAGE:O ,
+                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾A> ;
+                    AIdentifyAGE:toothLabel "71" ;
+                    rdfs:label "FDI71" .
 
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus01
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#O
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-01
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾A
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_72
 AIdentifyAGE:FDI_72 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs AIdentifyAGE:N ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#-02> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾B> .
+                    owl:sameAs AIdentifyAGE:Haderup_Minus02 ,
+                               AIdentifyAGE:N ,
+                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾B> ;
+                    AIdentifyAGE:toothLabel "72" ;
+                    rdfs:label "FDI72" .
 
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus02
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#N
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-02
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾B
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_73
 AIdentifyAGE:FDI_73 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs AIdentifyAGE:M ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#-03> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾C> .
+                    owl:sameAs AIdentifyAGE:Haderup_Minus03 ,
+                               AIdentifyAGE:M ,
+                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾C> ;
+                    AIdentifyAGE:toothLabel "73" ;
+                    rdfs:label "FDI73" .
 
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus03
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#M
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-03
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾C
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_74
 AIdentifyAGE:FDI_74 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs AIdentifyAGE:L ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#-04> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾D> .
+                    owl:sameAs AIdentifyAGE:Haderup_Minus04 ,
+                               AIdentifyAGE:L ,
+                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾D> ;
+                    AIdentifyAGE:toothLabel "74" ;
+                    rdfs:label "FDI74" .
 
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus04
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#L
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-04
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾D
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_75
 AIdentifyAGE:FDI_75 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
-                    owl:sameAs AIdentifyAGE:K ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#-05> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾E> .
+                    owl:sameAs AIdentifyAGE:Haderup_Minus05 ,
+                               AIdentifyAGE:K ,
+                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾E> ;
+                    AIdentifyAGE:toothLabel "75" ;
+                    rdfs:label "FDI75" .
 
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus05
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#K
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-05
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾E
 
@@ -4345,7 +4432,9 @@ AIdentifyAGE:FDI_81 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
                     owl:sameAs AIdentifyAGE:P ,
                                <https://aidentifyage.github.io/ontology/AIdentifyAGE#01-> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#A⏋> .
+                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#A⏋> ;
+                    AIdentifyAGE:toothLabel "81" ;
+                    rdfs:label "FDI81" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#P
@@ -4359,7 +4448,9 @@ AIdentifyAGE:FDI_82 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
                     owl:sameAs AIdentifyAGE:Q ,
                                <https://aidentifyage.github.io/ontology/AIdentifyAGE#02-> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#B⏋> .
+                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#B⏋> ;
+                    AIdentifyAGE:toothLabel "82" ;
+                    rdfs:label "FDI82" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Q
@@ -4373,7 +4464,9 @@ AIdentifyAGE:FDI_83 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
                     owl:sameAs AIdentifyAGE:R ,
                                <https://aidentifyage.github.io/ontology/AIdentifyAGE#03-> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#C⏋> .
+                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#C⏋> ;
+                    AIdentifyAGE:toothLabel "83" ;
+                    rdfs:label "FDI83" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#R
@@ -4387,7 +4480,9 @@ AIdentifyAGE:FDI_84 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
                     owl:sameAs AIdentifyAGE:S ,
                                <https://aidentifyage.github.io/ontology/AIdentifyAGE#04-> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#D⏋> .
+                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#D⏋> ;
+                    AIdentifyAGE:toothLabel "84" ;
+                    rdfs:label "FDI84" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#S
@@ -4401,7 +4496,9 @@ AIdentifyAGE:FDI_85 rdf:type owl:NamedIndividual ,
                              AIdentifyAGE:FDIDentalClassificationSystem ;
                     owl:sameAs AIdentifyAGE:T ,
                                <https://aidentifyage.github.io/ontology/AIdentifyAGE#05-> ,
-                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#E⏋> .
+                               <https://aidentifyage.github.io/ontology/AIdentifyAGE#E⏋> ;
+                    AIdentifyAGE:toothLabel "85" ;
+                    rdfs:label "FDI85" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#T
@@ -4416,6 +4513,332 @@ AIdentifyAGE:G rdf:type owl:NamedIndividual .
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#H
 AIdentifyAGE:H rdf:type owl:NamedIndividual .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_1Minus
+AIdentifyAGE:Haderup_1Minus rdf:type owl:NamedIndividual ,
+                                     AIdentifyAGE:HaderupDentalClassificationSystem ;
+                            obo:IAO_0000136 obo:FMA_57142 ;
+                            AIdentifyAGE:toothLabel "1Minus" ;
+                            rdfs:label "1-" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_1Plus
+AIdentifyAGE:Haderup_1Plus rdf:type owl:NamedIndividual ,
+                                    AIdentifyAGE:HaderupDentalClassificationSystem ;
+                           obo:IAO_0000136 obo:FMA_55681 ;
+                           AIdentifyAGE:toothLabel "1Plus" ;
+                           rdfs:label "1+" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_2Minus
+AIdentifyAGE:Haderup_2Minus rdf:type owl:NamedIndividual ,
+                                     AIdentifyAGE:HaderupDentalClassificationSystem ;
+                            obo:IAO_0000136 obo:FMA_57140 ;
+                            AIdentifyAGE:toothLabel "2Minus" ;
+                            rdfs:label "2-" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_2Plus
+AIdentifyAGE:Haderup_2Plus rdf:type owl:NamedIndividual ,
+                                    AIdentifyAGE:HaderupDentalClassificationSystem ;
+                           obo:IAO_0000136 obo:FMA_55680 ;
+                           AIdentifyAGE:toothLabel "2Plus" ;
+                           rdfs:label "2+" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_3Minus
+AIdentifyAGE:Haderup_3Minus rdf:type owl:NamedIndividual ,
+                                     AIdentifyAGE:HaderupDentalClassificationSystem ;
+                            obo:IAO_0000136 obo:FMA_55686 ;
+                            AIdentifyAGE:toothLabel "3Minus" ;
+                            rdfs:label "3-" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_3Plus
+AIdentifyAGE:Haderup_3Plus rdf:type owl:NamedIndividual ,
+                                    AIdentifyAGE:HaderupDentalClassificationSystem ;
+                           obo:IAO_0000136 obo:FMA_55798 ;
+                           AIdentifyAGE:toothLabel "3Plus" ;
+                           rdfs:label "3+" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_4Minus
+AIdentifyAGE:Haderup_4Minus rdf:type owl:NamedIndividual ,
+                                     AIdentifyAGE:HaderupDentalClassificationSystem ;
+                            obo:IAO_0000136 obo:FMA_55694 ;
+                            AIdentifyAGE:toothLabel "4Minus" ;
+                            rdfs:label "4-" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_4Plus
+AIdentifyAGE:Haderup_4Plus rdf:type owl:NamedIndividual ,
+                                    AIdentifyAGE:HaderupDentalClassificationSystem ;
+                           obo:IAO_0000136 obo:FMA_55689 ;
+                           AIdentifyAGE:toothLabel "4Plus" ;
+                           rdfs:label "4+" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_5Minus
+AIdentifyAGE:Haderup_5Minus rdf:type owl:NamedIndividual ,
+                                     AIdentifyAGE:HaderupDentalClassificationSystem ;
+                            obo:IAO_0000136 obo:FMA_55695 ;
+                            AIdentifyAGE:toothLabel "5Minus" ;
+                            rdfs:label "5-" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_5Plus
+AIdentifyAGE:Haderup_5Plus rdf:type owl:NamedIndividual ,
+                                    AIdentifyAGE:HaderupDentalClassificationSystem ;
+                           obo:IAO_0000136 obo:FMA_55688 ;
+                           AIdentifyAGE:toothLabel "5Plus" ;
+                           rdfs:label "5+" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_6Minus
+AIdentifyAGE:Haderup_6Minus rdf:type owl:NamedIndividual ,
+                                     AIdentifyAGE:HaderupDentalClassificationSystem ;
+                            obo:IAO_0000136 obo:FMA_55705 ;
+                            AIdentifyAGE:toothLabel "6Minus" ;
+                            rdfs:label "6-" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_6Plus
+AIdentifyAGE:Haderup_6Plus rdf:type owl:NamedIndividual ,
+                                    AIdentifyAGE:HaderupDentalClassificationSystem ;
+                           obo:IAO_0000136 obo:FMA_55698 ;
+                           AIdentifyAGE:toothLabel "6Plus" ;
+                           rdfs:label "6+" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_7Minus
+AIdentifyAGE:Haderup_7Minus rdf:type owl:NamedIndividual ,
+                                     AIdentifyAGE:HaderupDentalClassificationSystem ;
+                            obo:IAO_0000136 obo:FMA_55706 ;
+                            AIdentifyAGE:toothLabel "7Minus" ;
+                            rdfs:label "7-" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_7Plus
+AIdentifyAGE:Haderup_7Plus rdf:type owl:NamedIndividual ,
+                                    AIdentifyAGE:HaderupDentalClassificationSystem ;
+                           obo:IAO_0000136 obo:FMA_55697 ;
+                           AIdentifyAGE:toothLabel "7Plus" ;
+                           rdfs:label "7+" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_8Minus
+AIdentifyAGE:Haderup_8Minus rdf:type owl:NamedIndividual ,
+                                     AIdentifyAGE:HaderupDentalClassificationSystem ;
+                            obo:IAO_0000136 obo:FMA_55707 ;
+                            AIdentifyAGE:toothLabel "8Minus" ;
+                            rdfs:label "8-" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_8Plus
+AIdentifyAGE:Haderup_8Plus rdf:type owl:NamedIndividual ,
+                                    AIdentifyAGE:HaderupDentalClassificationSystem ;
+                           obo:IAO_0000136 obo:FMA_55696 ;
+                           AIdentifyAGE:toothLabel "8Plus" ;
+                           rdfs:label "8+" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus01
+AIdentifyAGE:Haderup_Minus01 rdf:type owl:NamedIndividual ,
+                                      AIdentifyAGE:HaderupDentalClassificationSystem ;
+                             AIdentifyAGE:toothLabel "Minus01" ;
+                             rdfs:label "-01" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus02
+AIdentifyAGE:Haderup_Minus02 rdf:type owl:NamedIndividual ,
+                                      AIdentifyAGE:HaderupDentalClassificationSystem ;
+                             AIdentifyAGE:toothLabel "Minus02" ;
+                             rdfs:label "-02" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus03
+AIdentifyAGE:Haderup_Minus03 rdf:type owl:NamedIndividual ,
+                                      AIdentifyAGE:HaderupDentalClassificationSystem ;
+                             AIdentifyAGE:toothLabel "Minus03" ;
+                             rdfs:label "-03" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus04
+AIdentifyAGE:Haderup_Minus04 rdf:type owl:NamedIndividual ,
+                                      AIdentifyAGE:HaderupDentalClassificationSystem ;
+                             AIdentifyAGE:toothLabel "Minus04" ;
+                             rdfs:label "-04" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus05
+AIdentifyAGE:Haderup_Minus05 rdf:type owl:NamedIndividual ,
+                                      AIdentifyAGE:HaderupDentalClassificationSystem ;
+                             AIdentifyAGE:toothLabel "Minus05" ;
+                             rdfs:label "-05" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus1
+AIdentifyAGE:Haderup_Minus1 rdf:type owl:NamedIndividual ,
+                                     AIdentifyAGE:HaderupDentalClassificationSystem ;
+                            obo:IAO_0000136 obo:FMA_57143 ;
+                            AIdentifyAGE:toothLabel "Minus1" ;
+                            rdfs:label "-1" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus2
+AIdentifyAGE:Haderup_Minus2 rdf:type owl:NamedIndividual ,
+                                     AIdentifyAGE:HaderupDentalClassificationSystem ;
+                            obo:IAO_0000136 obo:FMA_57141 ;
+                            AIdentifyAGE:toothLabel "Minus2" ;
+                            rdfs:label "-2" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus3
+AIdentifyAGE:Haderup_Minus3 rdf:type owl:NamedIndividual ,
+                                     AIdentifyAGE:HaderupDentalClassificationSystem ;
+                            obo:IAO_0000136 obo:FMA_55687 ;
+                            AIdentifyAGE:toothLabel "Minus3" ;
+                            rdfs:label "-3" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus4
+AIdentifyAGE:Haderup_Minus4 rdf:type owl:NamedIndividual ,
+                                     AIdentifyAGE:HaderupDentalClassificationSystem ;
+                            obo:IAO_0000136 obo:FMA_55693 ;
+                            AIdentifyAGE:toothLabel "Minus4" ;
+                            rdfs:label "-4" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus5
+AIdentifyAGE:Haderup_Minus5 rdf:type owl:NamedIndividual ,
+                                     AIdentifyAGE:HaderupDentalClassificationSystem ;
+                            obo:IAO_0000136 obo:FMA_55692 ;
+                            AIdentifyAGE:toothLabel "Minus5" ;
+                            rdfs:label "-5" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus6
+AIdentifyAGE:Haderup_Minus6 rdf:type owl:NamedIndividual ,
+                                     AIdentifyAGE:HaderupDentalClassificationSystem ;
+                            obo:IAO_0000136 obo:FMA_55704 ;
+                            AIdentifyAGE:toothLabel "Minus6" ;
+                            rdfs:label "-6" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus7
+AIdentifyAGE:Haderup_Minus7 rdf:type owl:NamedIndividual ,
+                                     AIdentifyAGE:HaderupDentalClassificationSystem ;
+                            obo:IAO_0000136 obo:FMA_55703 ;
+                            AIdentifyAGE:toothLabel "Minus7" ;
+                            rdfs:label "-7" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus8
+AIdentifyAGE:Haderup_Minus8 rdf:type owl:NamedIndividual ,
+                                     AIdentifyAGE:HaderupDentalClassificationSystem ;
+                            obo:IAO_0000136 obo:FMA_55702 ;
+                            AIdentifyAGE:toothLabel "Minus8" ;
+                            rdfs:label "-8" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus01
+AIdentifyAGE:Haderup_Plus01 rdf:type owl:NamedIndividual ,
+                                     AIdentifyAGE:HaderupDentalClassificationSystem ;
+                            AIdentifyAGE:toothLabel "Plus01" ;
+                            rdfs:label "+01" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus02
+AIdentifyAGE:Haderup_Plus02 rdf:type owl:NamedIndividual ,
+                                     AIdentifyAGE:HaderupDentalClassificationSystem ;
+                            AIdentifyAGE:toothLabel "Plus02" ;
+                            rdfs:label "+02" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus03
+AIdentifyAGE:Haderup_Plus03 rdf:type owl:NamedIndividual ,
+                                     AIdentifyAGE:HaderupDentalClassificationSystem ;
+                            AIdentifyAGE:toothLabel "Plus03" ;
+                            rdfs:label "+03" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus04
+AIdentifyAGE:Haderup_Plus04 rdf:type owl:NamedIndividual ,
+                                     AIdentifyAGE:HaderupDentalClassificationSystem ;
+                            AIdentifyAGE:toothLabel "Plus04" ;
+                            rdfs:label "+04" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus05
+AIdentifyAGE:Haderup_Plus05 rdf:type owl:NamedIndividual ,
+                                     AIdentifyAGE:HaderupDentalClassificationSystem ;
+                            AIdentifyAGE:toothLabel "Plus05" ;
+                            rdfs:label "+05" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus1
+AIdentifyAGE:Haderup_Plus1 rdf:type owl:NamedIndividual ,
+                                    AIdentifyAGE:HaderupDentalClassificationSystem ;
+                           obo:IAO_0000136 obo:FMA_55682 ;
+                           AIdentifyAGE:toothLabel "Plus1" ;
+                           rdfs:label "+1" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus2
+AIdentifyAGE:Haderup_Plus2 rdf:type owl:NamedIndividual ,
+                                    AIdentifyAGE:HaderupDentalClassificationSystem ;
+                           obo:IAO_0000136 obo:FMA_55683 ;
+                           AIdentifyAGE:toothLabel "Plus2" ;
+                           rdfs:label "+2" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus3
+AIdentifyAGE:Haderup_Plus3 rdf:type owl:NamedIndividual ,
+                                    AIdentifyAGE:HaderupDentalClassificationSystem ;
+                           obo:IAO_0000136 obo:FMA_55799 ;
+                           AIdentifyAGE:toothLabel "Plus3" ;
+                           rdfs:label "+3" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus4
+AIdentifyAGE:Haderup_Plus4 rdf:type owl:NamedIndividual ,
+                                    AIdentifyAGE:HaderupDentalClassificationSystem ;
+                           obo:IAO_0000136 obo:FMA_55690 ;
+                           AIdentifyAGE:toothLabel "Plus4" ;
+                           rdfs:label "+4" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus5
+AIdentifyAGE:Haderup_Plus5 rdf:type owl:NamedIndividual ,
+                                    AIdentifyAGE:HaderupDentalClassificationSystem ;
+                           obo:IAO_0000136 obo:FMA_55691 ;
+                           AIdentifyAGE:toothLabel "Plus5" ;
+                           rdfs:label "+5" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus6
+AIdentifyAGE:Haderup_Plus6 rdf:type owl:NamedIndividual ,
+                                    AIdentifyAGE:HaderupDentalClassificationSystem ;
+                           obo:IAO_0000136 obo:FMA_55699 ;
+                           AIdentifyAGE:toothLabel "Plus6" ;
+                           rdfs:label "+6" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus7
+AIdentifyAGE:Haderup_Plus7 rdf:type owl:NamedIndividual ,
+                                    AIdentifyAGE:HaderupDentalClassificationSystem ;
+                           obo:IAO_0000136 obo:FMA_55700 ;
+                           AIdentifyAGE:toothLabel "Plus7" ;
+                           rdfs:label "+7" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus8
+AIdentifyAGE:Haderup_Plus8 rdf:type owl:NamedIndividual ,
+                                    AIdentifyAGE:HaderupDentalClassificationSystem ;
+                           obo:IAO_0000136 obo:FMA_55701 ;
+                           AIdentifyAGE:toothLabel "Plus8" ;
+                           rdfs:label "+8" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#I
@@ -4470,6 +4893,262 @@ AIdentifyAGE:Olze2012ReferenceStudy rdf:type owl:NamedIndividual ,
 AIdentifyAGE:P rdf:type owl:NamedIndividual .
 
 
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL1
+AIdentifyAGE:Palmer_LL1 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_57143 ;
+                        AIdentifyAGE:toothLabel "LL1" ;
+                        rdfs:label "⎾1" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL2
+AIdentifyAGE:Palmer_LL2 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_57141 ;
+                        AIdentifyAGE:toothLabel "LL2" ;
+                        rdfs:label "⎾2" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL3
+AIdentifyAGE:Palmer_LL3 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55687 ;
+                        AIdentifyAGE:toothLabel "LL3" ;
+                        rdfs:label "⎾3" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL4
+AIdentifyAGE:Palmer_LL4 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55693 ;
+                        AIdentifyAGE:toothLabel "LL4" ;
+                        rdfs:label "⎾4" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL5
+AIdentifyAGE:Palmer_LL5 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55692 ;
+                        AIdentifyAGE:toothLabel "LL5" ;
+                        rdfs:label "⎾5" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL6
+AIdentifyAGE:Palmer_LL6 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55704 ;
+                        AIdentifyAGE:toothLabel "LL6" ;
+                        rdfs:label "⎾6" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL7
+AIdentifyAGE:Palmer_LL7 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55703 ;
+                        AIdentifyAGE:toothLabel "LL7" ;
+                        rdfs:label "⎾7" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL8
+AIdentifyAGE:Palmer_LL8 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55702 ;
+                        AIdentifyAGE:toothLabel "LL8" ;
+                        rdfs:label "⎾8" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU1
+AIdentifyAGE:Palmer_LU1 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55682 ;
+                        AIdentifyAGE:toothLabel "LU1" ;
+                        rdfs:label "⎿1" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU2
+AIdentifyAGE:Palmer_LU2 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55683 ;
+                        AIdentifyAGE:toothLabel "LU2" ;
+                        rdfs:label "⎿2" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU3
+AIdentifyAGE:Palmer_LU3 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55799 ;
+                        AIdentifyAGE:toothLabel "LU3" ;
+                        rdfs:label "⎿3" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU4
+AIdentifyAGE:Palmer_LU4 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55690 ;
+                        AIdentifyAGE:toothLabel "LU4" ;
+                        rdfs:label "⎿4" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU5
+AIdentifyAGE:Palmer_LU5 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55691 ;
+                        AIdentifyAGE:toothLabel "LU5" ;
+                        rdfs:label "⎿5" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU6
+AIdentifyAGE:Palmer_LU6 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55699 ;
+                        AIdentifyAGE:toothLabel "LU6" ;
+                        rdfs:label "⎿6" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU7
+AIdentifyAGE:Palmer_LU7 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55700 ;
+                        AIdentifyAGE:toothLabel "LU7" ;
+                        rdfs:label "⎿7" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU8
+AIdentifyAGE:Palmer_LU8 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55701 ;
+                        AIdentifyAGE:toothLabel "LU8" ;
+                        rdfs:label "⎿8" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL1
+AIdentifyAGE:Palmer_RL1 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_57142 ;
+                        AIdentifyAGE:toothLabel "RL1" ;
+                        rdfs:label "1⏋" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL2
+AIdentifyAGE:Palmer_RL2 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_57140 ;
+                        AIdentifyAGE:toothLabel "RL2" ;
+                        rdfs:label "2⏋" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL3
+AIdentifyAGE:Palmer_RL3 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55686 ;
+                        AIdentifyAGE:toothLabel "RL3" ;
+                        rdfs:label "3⏋" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL4
+AIdentifyAGE:Palmer_RL4 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55694 ;
+                        AIdentifyAGE:toothLabel "RL4" ;
+                        rdfs:label "4⏋" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL5
+AIdentifyAGE:Palmer_RL5 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55695 ;
+                        AIdentifyAGE:toothLabel "RL5" ;
+                        rdfs:label "5⏋" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL6
+AIdentifyAGE:Palmer_RL6 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55705 ;
+                        AIdentifyAGE:toothLabel "RL6" ;
+                        rdfs:label "6⏋" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL7
+AIdentifyAGE:Palmer_RL7 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55706 ;
+                        AIdentifyAGE:toothLabel "RL7" ;
+                        rdfs:label "7⏋" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL8
+AIdentifyAGE:Palmer_RL8 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55707 ;
+                        AIdentifyAGE:toothLabel "RL8" ;
+                        rdfs:label "8⏋" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU1
+AIdentifyAGE:Palmer_RU1 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55681 ;
+                        AIdentifyAGE:toothLabel "RU1" ;
+                        rdfs:label "1⏌" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU2
+AIdentifyAGE:Palmer_RU2 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55680 ;
+                        AIdentifyAGE:toothLabel "RU2" ;
+                        rdfs:label "2⏌" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU3
+AIdentifyAGE:Palmer_RU3 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55798 ;
+                        AIdentifyAGE:toothLabel "RU3" ;
+                        rdfs:label "3⏌" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU4
+AIdentifyAGE:Palmer_RU4 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55689 ;
+                        AIdentifyAGE:toothLabel "RU4" ;
+                        rdfs:label "4⏌" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU5
+AIdentifyAGE:Palmer_RU5 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55688 ;
+                        AIdentifyAGE:toothLabel "RU5" ;
+                        rdfs:label "5⏌" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU6
+AIdentifyAGE:Palmer_RU6 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55698 ;
+                        AIdentifyAGE:toothLabel "RU6" ;
+                        rdfs:label "6⏌" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU7
+AIdentifyAGE:Palmer_RU7 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55697 ;
+                        AIdentifyAGE:toothLabel "RU7" ;
+                        rdfs:label "7⏌" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU8
+AIdentifyAGE:Palmer_RU8 rdf:type owl:NamedIndividual ,
+                                 AIdentifyAGE:PalmerDentalClassificationSystem ;
+                        obo:IAO_0000136 obo:FMA_55696 ;
+                        AIdentifyAGE:toothLabel "RU8" ;
+                        rdfs:label "8⏌" .
+
+
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Q
 AIdentifyAGE:Q rdf:type owl:NamedIndividual .
 
@@ -4484,152 +5163,6 @@ AIdentifyAGE:S rdf:type owl:NamedIndividual .
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#T
 AIdentifyAGE:T rdf:type owl:NamedIndividual .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+01
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+01> rdf:type owl:NamedIndividual ,
-                                                                    AIdentifyAGE:HaderupDentalClassificationSystem .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+02
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+02> rdf:type owl:NamedIndividual ,
-                                                                    AIdentifyAGE:HaderupDentalClassificationSystem .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+03
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+03> rdf:type owl:NamedIndividual ,
-                                                                    AIdentifyAGE:HaderupDentalClassificationSystem .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+04
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+04> rdf:type owl:NamedIndividual ,
-                                                                    AIdentifyAGE:HaderupDentalClassificationSystem .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+05
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+05> rdf:type owl:NamedIndividual ,
-                                                                    AIdentifyAGE:HaderupDentalClassificationSystem .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+1
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+1> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55682 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+2
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+2> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55683 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+3
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+3> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55799 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+4
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+4> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55690 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+5
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+5> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55691 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+6
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+6> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55699 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+7
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+7> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55700 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+8
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+8> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55701 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-01
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-01> rdf:type owl:NamedIndividual ,
-                                                                    AIdentifyAGE:HaderupDentalClassificationSystem .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-02
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-02> rdf:type owl:NamedIndividual ,
-                                                                    AIdentifyAGE:HaderupDentalClassificationSystem .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-03
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-03> rdf:type owl:NamedIndividual ,
-                                                                    AIdentifyAGE:HaderupDentalClassificationSystem .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-04
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-04> rdf:type owl:NamedIndividual ,
-                                                                    AIdentifyAGE:HaderupDentalClassificationSystem .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-05
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-05> rdf:type owl:NamedIndividual ,
-                                                                    AIdentifyAGE:HaderupDentalClassificationSystem .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-1
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-1> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_57143 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-2
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-2> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_57141 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-3
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-3> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55687 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-4
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-4> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55693 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-5
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-5> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55692 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-6
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-6> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55704 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-7
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-7> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55703 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-8
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-8> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55702 .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#01+
@@ -4680,198 +5213,6 @@ AIdentifyAGE:T rdf:type owl:NamedIndividual .
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#05-
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#05-> rdf:type owl:NamedIndividual ,
                                                                     AIdentifyAGE:HaderupDentalClassificationSystem .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#1+
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#1+> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55681 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#1-
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#1-> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_57142 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏋
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏋> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_57142 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏌
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏌> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55681 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#2+
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#2+> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55680 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#2-
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#2-> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_57140 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏋
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏋> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_57140 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏌
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏌> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55680 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#3+
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#3+> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55798 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#3-
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#3-> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55686 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏋
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏋> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55686 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏌
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏌> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55798 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#4+
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#4+> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55689 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#4-
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#4-> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55694 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏋
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏋> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55694 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏌
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏌> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55689 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#5+
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#5+> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55688 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#5-
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#5-> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55695 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏋
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏋> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55695 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏌
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏌> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55688 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#6+
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#6+> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55698 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#6-
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#6-> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55705 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏋
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏋> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55705 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏌
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏌> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55698 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#7+
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#7+> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55697 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#7-
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#7-> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55706 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏋
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏋> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55706 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏌
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏌> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55697 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#8+
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#8+> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55696 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#8-
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#8-> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:HaderupDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55707 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏋
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏋> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55707 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏌
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏌> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55696 .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#A⏋
@@ -4949,54 +5290,6 @@ AIdentifyAGE:T rdf:type owl:NamedIndividual .
                                                                    AIdentifyAGE:PalmerDentalClassificationSystem .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾1
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾1> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_57143 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾2
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾2> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_57141 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾3
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾3> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55687 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾4
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾4> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55693 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾5
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾5> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55692 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾6
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾6> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55704 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾7
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾7> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55703 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾8
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾8> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55702 .
-
-
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿A
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿A> rdf:type owl:NamedIndividual ,
                                                                    AIdentifyAGE:PalmerDentalClassificationSystem .
@@ -5020,54 +5313,6 @@ AIdentifyAGE:T rdf:type owl:NamedIndividual .
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿E
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿E> rdf:type owl:NamedIndividual ,
                                                                    AIdentifyAGE:PalmerDentalClassificationSystem .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿1
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿1> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55682 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿2
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿2> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55683 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿3
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿3> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55799 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿4
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿4> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55690 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿5
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿5> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55691 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿6
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿6> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55699 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿7
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿7> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55700 .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿8
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿8> rdf:type owl:NamedIndividual ,
-                                                                   AIdentifyAGE:PalmerDentalClassificationSystem ;
-                                                          obo:IAO_0000136 obo:FMA_55701 .
 
 
 [ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger

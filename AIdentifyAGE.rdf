@@ -33,8 +33,8 @@ Cristiana Palmela Pereira
 Alexandre Francisco
 Cátia Vaz</terms:contributor>
         <terms:description xml:lang="en">The AIdentifyAGE ontology provides a comprehensive vocabulary description for forensic age assessment using dental biological markers, promoting the transparent assessment processes in forensic odontology and age diagnostics. It formalizes expert knowledge according to IOFOS, AGFAD, ABFO, ADA and ISO standards, ensuring semantic interoperability and ethical AI integration. This ontology is a work in progress developed under the AIdentifyAGE project (FCT Grant 2024.07444.IACDC), within the national investment RE-C05-i08 – More Digital Science, measure RE-C05-i08.M04 – Support to R&amp;D projects for advanced cybersecurity, artificial intelligence and data science systems in public administration. This work is being developed in collaboration with researchers from the University of Lisbon (Portugal), the University of Münster (Germany), and the University of Zagreb (Croatia), within the framework of the AIdentifyAGE international consortium., Base Ontology for use in AIdentifyAGE Project</terms:description>
-        <terms:issued>20/01/2026</terms:issued>
-        <owl:versionInfo>v1.0.6-beta</owl:versionInfo>
+        <terms:issued>21/01/2026</terms:issued>
+        <owl:versionInfo>v1.0.7-beta</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -2392,6 +2392,16 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
     
 
 
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#toothLabel -->
+
+    <owl:DatatypeProperty rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#toothLabel">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <terms:description xml:lang="en">Label attributed to a given Dental Classification System entity</terms:description>
+        <rdfs:label xml:lang="en">Tooth Label</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#upperQuartileAge -->
 
     <owl:DatatypeProperty rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#upperQuartileAge">
@@ -2638,7 +2648,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <terms:description xml:lang="en">Represents the final age assessment report results, produced by using dental information to relate it with chronological age, based on AI/ML methods</terms:description>
+        <terms:description xml:lang="en">Dental age assessment performed by artificial intelligence systems using dental data to estimate age, either by producing a continuous numerical estimation of chronological age through regression models or by assigning an individual to predefined legal age thresholds through classification models</terms:description>
         <rdfs:label xml:lang="en">AI Dental Age Assessment</rdfs:label>
     </owl:Class>
     
@@ -2760,6 +2770,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:Class rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Braces">
         <rdfs:subClassOf rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#OrthodonticAppliances"/>
+        <terms:description xml:lang="en">Orthodontic appliances, typically brackets and wires, that apply gentle, continuous pressure to straighten misaligned teeth and correct bite problems (malocclusions) like overbites, underbites, and gaps, improving both dental health and appearance</terms:description>
         <rdfs:label xml:lang="en">Braces</rdfs:label>
     </owl:Class>
     
@@ -3116,6 +3127,8 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:description xml:lang="en">A procedure and/or its result by which the lost structure of a tooth is replaced in order to restore its form, function, and integrity.</terms:description>
+        <terms:source xml:lang="en">ISO/DIS 1942 — Dentistry — Vocabulary</terms:source>
         <rdfs:label xml:lang="en">Dental Restoration</rdfs:label>
     </owl:Class>
     
@@ -3127,15 +3140,6 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000009"/>
         <terms:description xml:lang="en">It establishes that each tooth is identified with a two-digit number. Note: ISO 3950:2016 Dentistry — Designation system for teeth and areas of the oral cavity</terms:description>
         <rdfs:label xml:lang="en">FDI Dental Classification System</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#FixedProstodonticRehabilitation -->
-
-    <owl:Class rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FixedProstodonticRehabilitation">
-        <rdfs:subClassOf rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#TreatmentOption"/>
-        <rdfs:label>Fixed Prostodontic Rehabilitation</rdfs:label>
     </owl:Class>
     
 
@@ -3402,10 +3406,13 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Implant -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Implants -->
 
-    <owl:Class rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Implant">
+    <owl:Class rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Implants">
         <rdfs:subClassOf rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#TreatmentOption"/>
+        <terms:description xml:lang="en">A device intended to be placed surgically in the jawbone or other craniofacial bone to provide support and/or retention for a dental prosthesis.</terms:description>
+        <terms:source xml:lang="en">ISO 16443 — Dentistry — Implants</terms:source>
+        <rdfs:label xml:lang="en">Implants</rdfs:label>
     </owl:Class>
     
 
@@ -3603,6 +3610,8 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:Class rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#MissingTooth">
         <rdfs:subClassOf rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#TreatmentOption"/>
+        <terms:description>A tooth that is absent from the dental arch, either because it failed to develop (congenital absence) or because it was lost after eruption due to extraction, trauma, or disease.</terms:description>
+        <terms:source xml:lang="en">ISO/DIS 1942 — Dentistry — Vocabulary</terms:source>
         <rdfs:label>Missing Tooth</rdfs:label>
     </owl:Class>
     
@@ -3785,6 +3794,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:Class rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#OrthodonticAppliances">
         <rdfs:subClassOf rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#TreatmentOption"/>
+        <terms:description xml:lang="en">Devices used in orthodontic treatment to correct or prevent malocclusion by applying controlled forces to move teeth, modify jaw growth, or maintain tooth position</terms:description>
         <rdfs:label>Orthodontic Appliances</rdfs:label>
     </owl:Class>
     
@@ -3969,6 +3979,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:Class rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#RootCanalTreatment">
         <rdfs:subClassOf rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#TreatmentOption"/>
+        <terms:description xml:lang="en">A dental procedure involving the removal of diseased or necrotic pulp tissue, followed by cleaning, shaping, disinfection, and obturation of the root canal system, with the aim of eliminating infection and preventing reinfection while preserving the tooth.</terms:description>
         <rdfs:label xml:lang="en">Root Canal Treatment</rdfs:label>
     </owl:Class>
     
@@ -4054,7 +4065,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:Class rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#TreatmentOption">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
-        <terms:description xml:lang="en">Represents all the possible dentistry/medical dentistry treatment options that can be present in person&apos;s teeth</terms:description>
+        <terms:description xml:lang="en">Possible therapeutic approach or intervention available for managing a medical or dental condition, selected based on clinical indication, patient needs, and professional judgment</terms:description>
         <rdfs:label>Treatment Option</rdfs:label>
     </owl:Class>
     
@@ -4303,7 +4314,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000101">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_18"/>
-        <rdfs:label xml:lang="en">1</rdfs:label>
+        <AIdentifyAGE:toothLabel>1</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4318,8 +4329,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000102">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_17"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55697"/>
-        <rdfs:label xml:lang="en">2</rdfs:label>
+        <AIdentifyAGE:toothLabel>2</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4334,8 +4344,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000103">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_16"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55698"/>
-        <rdfs:label xml:lang="en">3</rdfs:label>
+        <AIdentifyAGE:toothLabel>3</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4350,8 +4359,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000104">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_15"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55688"/>
-        <rdfs:label xml:lang="en">4</rdfs:label>
+        <AIdentifyAGE:toothLabel>4</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4366,8 +4374,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000105">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_14"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55689"/>
-        <rdfs:label xml:lang="en">5</rdfs:label>
+        <AIdentifyAGE:toothLabel>5</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4382,8 +4389,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000106">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_13"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55798"/>
-        <rdfs:label xml:lang="en">6</rdfs:label>
+        <AIdentifyAGE:toothLabel>6</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4398,8 +4404,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000107">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_12"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55680"/>
-        <rdfs:label xml:lang="en">7</rdfs:label>
+        <AIdentifyAGE:toothLabel>7</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4414,7 +4419,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000108">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_11"/>
-        <rdfs:label xml:lang="en">8</rdfs:label>
+        <AIdentifyAGE:toothLabel>8</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4429,7 +4434,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000109">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_21"/>
-        <rdfs:label xml:lang="en">9</rdfs:label>
+        <AIdentifyAGE:toothLabel>9</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4444,7 +4449,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000110">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_22"/>
-        <rdfs:label xml:lang="en">10</rdfs:label>
+        <AIdentifyAGE:toothLabel>10</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4459,7 +4464,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000111">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_23"/>
-        <rdfs:label xml:lang="en">11</rdfs:label>
+        <AIdentifyAGE:toothLabel>11</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4474,7 +4479,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000112">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_24"/>
-        <rdfs:label xml:lang="en">12</rdfs:label>
+        <AIdentifyAGE:toothLabel>12</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4489,7 +4494,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000113">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_25"/>
-        <rdfs:label xml:lang="en">13</rdfs:label>
+        <AIdentifyAGE:toothLabel>13</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4504,7 +4509,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000114">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_26"/>
-        <rdfs:label xml:lang="en">14</rdfs:label>
+        <AIdentifyAGE:toothLabel>14</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4519,7 +4524,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000115">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_27"/>
-        <rdfs:label xml:lang="en">15</rdfs:label>
+        <AIdentifyAGE:toothLabel>15</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4534,7 +4539,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000116">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_28"/>
-        <rdfs:label xml:lang="en">16</rdfs:label>
+        <AIdentifyAGE:toothLabel>16</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4549,7 +4554,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000117">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_38"/>
-        <rdfs:label xml:lang="en">17</rdfs:label>
+        <AIdentifyAGE:toothLabel>17</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4564,7 +4569,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000118">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_37"/>
-        <rdfs:label xml:lang="en">18</rdfs:label>
+        <AIdentifyAGE:toothLabel>18</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4579,7 +4584,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000119">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_36"/>
-        <rdfs:label xml:lang="en">19</rdfs:label>
+        <AIdentifyAGE:toothLabel>19</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4594,8 +4599,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000120">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_35"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55692"/>
-        <rdfs:label xml:lang="en">20</rdfs:label>
+        <AIdentifyAGE:toothLabel>20</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4610,8 +4614,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000121">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_34"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55693"/>
-        <rdfs:label xml:lang="en">21</rdfs:label>
+        <AIdentifyAGE:toothLabel>21</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4626,7 +4629,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000122">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_33"/>
-        <rdfs:label xml:lang="en">22</rdfs:label>
+        <AIdentifyAGE:toothLabel>22</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4641,8 +4644,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000123">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_32"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57141"/>
-        <rdfs:label xml:lang="en">23</rdfs:label>
+        <AIdentifyAGE:toothLabel>23</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4657,8 +4659,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000124">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_31"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57143"/>
-        <rdfs:label xml:lang="en">24</rdfs:label>
+        <AIdentifyAGE:toothLabel>24</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4673,8 +4674,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000125">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_41"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57142"/>
-        <rdfs:label xml:lang="en">25</rdfs:label>
+        <AIdentifyAGE:toothLabel>25</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4689,8 +4689,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000126">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_42"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57140"/>
-        <rdfs:label xml:lang="en">26</rdfs:label>
+        <AIdentifyAGE:toothLabel>26</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4705,8 +4704,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000127">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_43"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55686"/>
-        <rdfs:label xml:lang="en">27</rdfs:label>
+        <AIdentifyAGE:toothLabel>27</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4721,8 +4719,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000128">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_44"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55694"/>
-        <rdfs:label xml:lang="en">28</rdfs:label>
+        <AIdentifyAGE:toothLabel>28</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4737,8 +4734,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000129">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_45"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55695"/>
-        <rdfs:label xml:lang="en">29</rdfs:label>
+        <AIdentifyAGE:toothLabel>29</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4753,8 +4749,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000130">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_46"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55705"/>
-        <rdfs:label xml:lang="en">30</rdfs:label>
+        <AIdentifyAGE:toothLabel>30</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4769,8 +4764,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000131">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_47"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55706"/>
-        <rdfs:label xml:lang="en">31</rdfs:label>
+        <AIdentifyAGE:toothLabel>31</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4785,8 +4779,7 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000132">
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_48"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55707"/>
-        <rdfs:label xml:lang="en">32</rdfs:label>
+        <AIdentifyAGE:toothLabel>32</AIdentifyAGE:toothLabel>
     </owl:NamedIndividual>
     
 
@@ -4933,22 +4926,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_11">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#1+"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏌"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_1Plus"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU1"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55681"/>
+        <AIdentifyAGE:toothLabel>11</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI11</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#1+ -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_1Plus -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#1+"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_1Plus"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏌ -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU1 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏌"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU1"/>
     
 
 
@@ -4956,22 +4951,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_12">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#2+"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏌"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_2Plus"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU2"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55680"/>
+        <AIdentifyAGE:toothLabel>12</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI12</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#2+ -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_2Plus -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#2+"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_2Plus"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏌ -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU2 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏌"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU2"/>
     
 
 
@@ -4979,22 +4976,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_13">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#3+"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏌"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_3Plus"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU3"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55798"/>
+        <AIdentifyAGE:toothLabel>13</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI13</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#3+ -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_3Plus -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#3+"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_3Plus"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏌ -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU3 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏌"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU3"/>
     
 
 
@@ -5002,22 +5001,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_14">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#4+"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏌"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_4Plus"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU4"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55689"/>
+        <AIdentifyAGE:toothLabel>14</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI14</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#4+ -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_4Plus -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#4+"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_4Plus"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏌ -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU4 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏌"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU4"/>
     
 
 
@@ -5025,22 +5026,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_15">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#5+"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏌"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_5Plus"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU5"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55688"/>
+        <AIdentifyAGE:toothLabel>15</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI15</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#5+ -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_5Plus -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#5+"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_5Plus"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏌ -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU5 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏌"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU5"/>
     
 
 
@@ -5048,22 +5051,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_16">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#6+"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏌"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_6Plus"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU6"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55698"/>
+        <AIdentifyAGE:toothLabel>16</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI16</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#6+ -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_6Plus -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#6+"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_6Plus"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏌ -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU6 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏌"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU6"/>
     
 
 
@@ -5071,22 +5076,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_17">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#7+"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏌"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_7Plus"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU7"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55697"/>
+        <AIdentifyAGE:toothLabel>17</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI17</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#7+ -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_7Plus -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#7+"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_7Plus"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏌ -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU7 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏌"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU7"/>
     
 
 
@@ -5094,22 +5101,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_18">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#8+"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏌"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_8Plus"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU8"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55696"/>
+        <AIdentifyAGE:toothLabel>18</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI18</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#8+ -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_8Plus -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#8+"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_8Plus"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏌ -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU8 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏌"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU8"/>
     
 
 
@@ -5117,22 +5126,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_21">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#+1"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿1"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus1"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU1"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55682"/>
+        <AIdentifyAGE:toothLabel>21</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI21</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+1 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus1 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+1"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus1"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿1 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU1 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿1"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU1"/>
     
 
 
@@ -5140,22 +5151,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_22">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#+2"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿2"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus2"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU2"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55683"/>
+        <AIdentifyAGE:toothLabel>22</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI22</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+2 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus2 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+2"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus2"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿2 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU2 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿2"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU2"/>
     
 
 
@@ -5163,22 +5176,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_23">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#+3"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿3"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus3"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU3"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55799"/>
+        <AIdentifyAGE:toothLabel>23</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI23</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+3 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus3 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+3"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus3"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿3 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU3 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿3"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU3"/>
     
 
 
@@ -5186,22 +5201,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_24">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#+4"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿4"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus4"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU4"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55690"/>
+        <AIdentifyAGE:toothLabel>24</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI24</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+4 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus4 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+4"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus4"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿4 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU4 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿4"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU4"/>
     
 
 
@@ -5209,22 +5226,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_25">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#+5"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿5"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus5"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU5"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55691"/>
+        <AIdentifyAGE:toothLabel>25</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI25</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+5 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus5 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+5"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus5"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿5 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU5 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿5"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU5"/>
     
 
 
@@ -5232,22 +5251,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_26">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#+6"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿6"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus6"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU6"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55699"/>
+        <AIdentifyAGE:toothLabel>26</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI26</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+6 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus6 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+6"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus6"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿6 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU6 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿6"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU6"/>
     
 
 
@@ -5255,22 +5276,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_27">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#+7"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿7"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus7"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU7"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55700"/>
+        <AIdentifyAGE:toothLabel>27</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI27</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+7 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus7 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+7"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus7"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿7 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU7 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿7"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU7"/>
     
 
 
@@ -5278,22 +5301,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_28">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#+8"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿8"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus8"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU8"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55701"/>
+        <AIdentifyAGE:toothLabel>28</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI28</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+8 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus8 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+8"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus8"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿8 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU8 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿8"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU8"/>
     
 
 
@@ -5301,22 +5326,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_31">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#-1"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾1"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus1"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL1"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57143"/>
+        <AIdentifyAGE:toothLabel>31</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI31</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-1 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus1 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-1"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus1"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾1 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL1 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾1"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL1"/>
     
 
 
@@ -5324,22 +5351,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_32">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#-2"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾2"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus2"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL2"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57141"/>
+        <AIdentifyAGE:toothLabel>32</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI32</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-2 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus2 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-2"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus2"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾2 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL2 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾2"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL2"/>
     
 
 
@@ -5347,22 +5376,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_33">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#-3"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾3"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus3"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL3"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55687"/>
+        <AIdentifyAGE:toothLabel>33</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI33</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-3 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus3 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-3"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus3"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾3 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL3 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾3"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL3"/>
     
 
 
@@ -5370,22 +5401,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_34">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#-4"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾4"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus4"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL4"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55693"/>
+        <AIdentifyAGE:toothLabel>34</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI34</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-4 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus4 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-4"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus4"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾4 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL4 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾4"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL4"/>
     
 
 
@@ -5393,22 +5426,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_35">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#-5"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾5"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus5"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL5"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55692"/>
+        <AIdentifyAGE:toothLabel>35</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI35</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-5 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus5 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-5"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus5"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾5 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL5 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾5"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL5"/>
     
 
 
@@ -5416,22 +5451,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_36">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#-6"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾6"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus6"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL6"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55704"/>
+        <AIdentifyAGE:toothLabel>36</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI36</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-6 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus6 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-6"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus6"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾6 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL6 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾6"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL6"/>
     
 
 
@@ -5439,22 +5476,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_37">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#-7"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾7"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus7"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL7"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55703"/>
+        <AIdentifyAGE:toothLabel>37</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI37</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-7 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus7 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-7"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus7"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾7 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL7 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾7"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL7"/>
     
 
 
@@ -5462,22 +5501,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_38">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#-8"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾8"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus8"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL8"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55702"/>
+        <AIdentifyAGE:toothLabel>38</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI38</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-8 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus8 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-8"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus8"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾8 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL8 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾8"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL8"/>
     
 
 
@@ -5485,22 +5526,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_41">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#1-"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏋"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_1Minus"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL1"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57142"/>
+        <AIdentifyAGE:toothLabel>41</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI41</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#1- -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_1Minus -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#1-"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_1Minus"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏋ -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL1 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏋"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL1"/>
     
 
 
@@ -5508,22 +5551,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_42">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#2-"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏋"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_2Minus"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL2"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57140"/>
+        <AIdentifyAGE:toothLabel>42</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI42</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#2- -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_2Minus -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#2-"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_2Minus"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏋ -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL2 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏋"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL2"/>
     
 
 
@@ -5531,22 +5576,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_43">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#3-"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏋"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_3Minus"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL3"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55686"/>
+        <AIdentifyAGE:toothLabel>43</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI43</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#3- -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_3Minus -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#3-"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_3Minus"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏋ -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL3 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏋"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL3"/>
     
 
 
@@ -5554,22 +5601,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_44">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#4-"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏋"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_4Minus"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL4"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55694"/>
+        <AIdentifyAGE:toothLabel>44</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI44</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#4- -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_4Minus -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#4-"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_4Minus"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏋ -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL4 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏋"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL4"/>
     
 
 
@@ -5577,22 +5626,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_45">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#5-"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏋"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_5Minus"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL5"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55695"/>
+        <AIdentifyAGE:toothLabel>45</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI45</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#5- -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_5Minus -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#5-"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_5Minus"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏋ -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL5 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏋"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL5"/>
     
 
 
@@ -5600,22 +5651,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_46">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#6-"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏋"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_6Minus"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL6"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55705"/>
+        <AIdentifyAGE:toothLabel>46</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI46</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#6- -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_6Minus -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#6-"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_6Minus"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏋ -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL6 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏋"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL6"/>
     
 
 
@@ -5623,22 +5676,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_47">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#7-"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏋"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_7Minus"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL7"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55706"/>
+        <AIdentifyAGE:toothLabel>47</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI47</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#7- -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_7Minus -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#7-"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_7Minus"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏋ -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL7 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏋"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL7"/>
     
 
 
@@ -5646,22 +5701,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_48">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#8-"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏋"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_8Minus"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL8"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55707"/>
+        <AIdentifyAGE:toothLabel>48</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI48</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#8- -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_8Minus -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#8-"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_8Minus"/>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏋ -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL8 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏋"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL8"/>
     
 
 
@@ -5671,6 +5728,8 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#01+"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#A⏌"/>
+        <AIdentifyAGE:toothLabel>51</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI51</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -5693,6 +5752,8 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#02+"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#B⏌"/>
+        <AIdentifyAGE:toothLabel>52</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI52</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -5715,6 +5776,8 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#03+"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#C⏌"/>
+        <AIdentifyAGE:toothLabel>53</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI53</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -5737,6 +5800,8 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#04+"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#D⏌"/>
+        <AIdentifyAGE:toothLabel>54</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI54</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -5759,6 +5824,8 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#05+"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#E⏌"/>
+        <AIdentifyAGE:toothLabel>55</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI55</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -5779,15 +5846,17 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_61">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#+01"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus01"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿A"/>
+        <AIdentifyAGE:toothLabel>61</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI61</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+01 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus01 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+01"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus01"/>
     
 
 
@@ -5802,8 +5871,10 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_62">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#G"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#+02"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus02"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿B"/>
+        <AIdentifyAGE:toothLabel>62</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI62</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -5814,9 +5885,9 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+02 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus02 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+02"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus02"/>
     
 
 
@@ -5831,8 +5902,10 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_63">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#H"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#+03"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus03"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿C"/>
+        <AIdentifyAGE:toothLabel>63</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI63</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -5843,9 +5916,9 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+03 -->
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus03 -->
 
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+03"/>
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus03"/>
     
 
 
@@ -5859,22 +5932,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_64">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus04"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#I"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#+04"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿D"/>
+        <AIdentifyAGE:toothLabel>64</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI64</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus04 -->
+
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus04"/>
     
 
 
     <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#I -->
 
     <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#I"/>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+04 -->
-
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+04"/>
     
 
 
@@ -5888,22 +5963,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_65">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus05"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#J"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#+05"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿E"/>
+        <AIdentifyAGE:toothLabel>65</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI65</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus05 -->
+
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus05"/>
     
 
 
     <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#J -->
 
     <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#J"/>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+05 -->
-
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+05"/>
     
 
 
@@ -5917,22 +5994,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_71">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus01"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#O"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#-01"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾A"/>
+        <AIdentifyAGE:toothLabel>71</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI71</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus01 -->
+
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus01"/>
     
 
 
     <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#O -->
 
     <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#O"/>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-01 -->
-
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-01"/>
     
 
 
@@ -5946,22 +6025,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_72">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus02"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#N"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#-02"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾B"/>
+        <AIdentifyAGE:toothLabel>72</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI72</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus02 -->
+
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus02"/>
     
 
 
     <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#N -->
 
     <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#N"/>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-02 -->
-
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-02"/>
     
 
 
@@ -5975,22 +6056,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_73">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus03"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#M"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#-03"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾C"/>
+        <AIdentifyAGE:toothLabel>73</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI73</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus03 -->
+
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus03"/>
     
 
 
     <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#M -->
 
     <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#M"/>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-03 -->
-
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-03"/>
     
 
 
@@ -6004,22 +6087,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_74">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus04"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#L"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#-04"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾D"/>
+        <AIdentifyAGE:toothLabel>74</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI74</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus04 -->
+
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus04"/>
     
 
 
     <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#L -->
 
     <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#L"/>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-04 -->
-
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-04"/>
     
 
 
@@ -6033,22 +6118,24 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_75">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#FDIDentalClassificationSystem"/>
+        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus05"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#K"/>
-        <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#-05"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾E"/>
+        <AIdentifyAGE:toothLabel>75</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI75</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus05 -->
+
+    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus05"/>
     
 
 
     <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#K -->
 
     <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#K"/>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-05 -->
-
-    <rdf:Description rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-05"/>
     
 
 
@@ -6065,6 +6152,8 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#P"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#01-"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#A⏋"/>
+        <AIdentifyAGE:toothLabel>81</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI81</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6094,6 +6183,8 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#Q"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#02-"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#B⏋"/>
+        <AIdentifyAGE:toothLabel>82</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI82</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6123,6 +6214,8 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#R"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#03-"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#C⏋"/>
+        <AIdentifyAGE:toothLabel>83</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI83</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6152,6 +6245,8 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#S"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#04-"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#D⏋"/>
+        <AIdentifyAGE:toothLabel>84</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI84</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6181,6 +6276,8 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#T"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#05-"/>
         <owl:sameAs rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#E⏋"/>
+        <AIdentifyAGE:toothLabel>85</AIdentifyAGE:toothLabel>
+        <rdfs:label>FDI85</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6212,6 +6309,458 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
     <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#H -->
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#H"/>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_1Minus -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_1Minus">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57142"/>
+        <AIdentifyAGE:toothLabel>1Minus</AIdentifyAGE:toothLabel>
+        <rdfs:label>1-</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_1Plus -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_1Plus">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55681"/>
+        <AIdentifyAGE:toothLabel>1Plus</AIdentifyAGE:toothLabel>
+        <rdfs:label>1+</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_2Minus -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_2Minus">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57140"/>
+        <AIdentifyAGE:toothLabel>2Minus</AIdentifyAGE:toothLabel>
+        <rdfs:label>2-</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_2Plus -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_2Plus">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55680"/>
+        <AIdentifyAGE:toothLabel>2Plus</AIdentifyAGE:toothLabel>
+        <rdfs:label>2+</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_3Minus -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_3Minus">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55686"/>
+        <AIdentifyAGE:toothLabel>3Minus</AIdentifyAGE:toothLabel>
+        <rdfs:label>3-</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_3Plus -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_3Plus">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55798"/>
+        <AIdentifyAGE:toothLabel>3Plus</AIdentifyAGE:toothLabel>
+        <rdfs:label>3+</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_4Minus -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_4Minus">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55694"/>
+        <AIdentifyAGE:toothLabel>4Minus</AIdentifyAGE:toothLabel>
+        <rdfs:label>4-</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_4Plus -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_4Plus">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55689"/>
+        <AIdentifyAGE:toothLabel>4Plus</AIdentifyAGE:toothLabel>
+        <rdfs:label>4+</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_5Minus -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_5Minus">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55695"/>
+        <AIdentifyAGE:toothLabel>5Minus</AIdentifyAGE:toothLabel>
+        <rdfs:label>5-</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_5Plus -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_5Plus">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55688"/>
+        <AIdentifyAGE:toothLabel>5Plus</AIdentifyAGE:toothLabel>
+        <rdfs:label>5+</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_6Minus -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_6Minus">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55705"/>
+        <AIdentifyAGE:toothLabel>6Minus</AIdentifyAGE:toothLabel>
+        <rdfs:label>6-</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_6Plus -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_6Plus">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55698"/>
+        <AIdentifyAGE:toothLabel>6Plus</AIdentifyAGE:toothLabel>
+        <rdfs:label>6+</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_7Minus -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_7Minus">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55706"/>
+        <AIdentifyAGE:toothLabel>7Minus</AIdentifyAGE:toothLabel>
+        <rdfs:label>7-</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_7Plus -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_7Plus">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55697"/>
+        <AIdentifyAGE:toothLabel>7Plus</AIdentifyAGE:toothLabel>
+        <rdfs:label>7+</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_8Minus -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_8Minus">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55707"/>
+        <AIdentifyAGE:toothLabel>8Minus</AIdentifyAGE:toothLabel>
+        <rdfs:label>8-</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_8Plus -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_8Plus">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55696"/>
+        <AIdentifyAGE:toothLabel>8Plus</AIdentifyAGE:toothLabel>
+        <rdfs:label>8+</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus01 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus01">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <AIdentifyAGE:toothLabel>Minus01</AIdentifyAGE:toothLabel>
+        <rdfs:label>-01</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus02 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus02">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <AIdentifyAGE:toothLabel>Minus02</AIdentifyAGE:toothLabel>
+        <rdfs:label>-02</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus03 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus03">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <AIdentifyAGE:toothLabel>Minus03</AIdentifyAGE:toothLabel>
+        <rdfs:label>-03</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus04 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus04">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <AIdentifyAGE:toothLabel>Minus04</AIdentifyAGE:toothLabel>
+        <rdfs:label>-04</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus05 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus05">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <AIdentifyAGE:toothLabel>Minus05</AIdentifyAGE:toothLabel>
+        <rdfs:label>-05</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus1 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus1">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57143"/>
+        <AIdentifyAGE:toothLabel>Minus1</AIdentifyAGE:toothLabel>
+        <rdfs:label>-1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus2 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus2">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57141"/>
+        <AIdentifyAGE:toothLabel>Minus2</AIdentifyAGE:toothLabel>
+        <rdfs:label>-2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus3 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus3">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55687"/>
+        <AIdentifyAGE:toothLabel>Minus3</AIdentifyAGE:toothLabel>
+        <rdfs:label>-3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus4 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus4">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55693"/>
+        <AIdentifyAGE:toothLabel>Minus4</AIdentifyAGE:toothLabel>
+        <rdfs:label>-4</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus5 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus5">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55692"/>
+        <AIdentifyAGE:toothLabel>Minus5</AIdentifyAGE:toothLabel>
+        <rdfs:label>-5</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus6 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus6">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55704"/>
+        <AIdentifyAGE:toothLabel>Minus6</AIdentifyAGE:toothLabel>
+        <rdfs:label>-6</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus7 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus7">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55703"/>
+        <AIdentifyAGE:toothLabel>Minus7</AIdentifyAGE:toothLabel>
+        <rdfs:label>-7</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus8 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Minus8">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55702"/>
+        <AIdentifyAGE:toothLabel>Minus8</AIdentifyAGE:toothLabel>
+        <rdfs:label>-8</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus01 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus01">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <AIdentifyAGE:toothLabel>Plus01</AIdentifyAGE:toothLabel>
+        <rdfs:label>+01</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus02 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus02">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <AIdentifyAGE:toothLabel>Plus02</AIdentifyAGE:toothLabel>
+        <rdfs:label>+02</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus03 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus03">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <AIdentifyAGE:toothLabel>Plus03</AIdentifyAGE:toothLabel>
+        <rdfs:label>+03</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus04 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus04">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <AIdentifyAGE:toothLabel>Plus04</AIdentifyAGE:toothLabel>
+        <rdfs:label>+04</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus05 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus05">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <AIdentifyAGE:toothLabel>Plus05</AIdentifyAGE:toothLabel>
+        <rdfs:label>+05</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus1 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus1">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55682"/>
+        <AIdentifyAGE:toothLabel>Plus1</AIdentifyAGE:toothLabel>
+        <rdfs:label>+1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus2 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus2">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55683"/>
+        <AIdentifyAGE:toothLabel>Plus2</AIdentifyAGE:toothLabel>
+        <rdfs:label>+2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus3 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus3">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55799"/>
+        <AIdentifyAGE:toothLabel>Plus3</AIdentifyAGE:toothLabel>
+        <rdfs:label>+3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus4 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus4">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55690"/>
+        <AIdentifyAGE:toothLabel>Plus4</AIdentifyAGE:toothLabel>
+        <rdfs:label>+4</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus5 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus5">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55691"/>
+        <AIdentifyAGE:toothLabel>Plus5</AIdentifyAGE:toothLabel>
+        <rdfs:label>+5</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus6 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus6">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55699"/>
+        <AIdentifyAGE:toothLabel>Plus6</AIdentifyAGE:toothLabel>
+        <rdfs:label>+6</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus7 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus7">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55700"/>
+        <AIdentifyAGE:toothLabel>Plus7</AIdentifyAGE:toothLabel>
+        <rdfs:label>+7</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus8 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup_Plus8">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55701"/>
+        <AIdentifyAGE:toothLabel>Plus8</AIdentifyAGE:toothLabel>
+        <rdfs:label>+8</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
@@ -6295,6 +6844,358 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
     
 
 
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL1 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL1">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57143"/>
+        <AIdentifyAGE:toothLabel>LL1</AIdentifyAGE:toothLabel>
+        <rdfs:label>⎾1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL2 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL2">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57141"/>
+        <AIdentifyAGE:toothLabel>LL2</AIdentifyAGE:toothLabel>
+        <rdfs:label>⎾2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL3 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL3">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55687"/>
+        <AIdentifyAGE:toothLabel>LL3</AIdentifyAGE:toothLabel>
+        <rdfs:label>⎾3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL4 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL4">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55693"/>
+        <AIdentifyAGE:toothLabel>LL4</AIdentifyAGE:toothLabel>
+        <rdfs:label>⎾4</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL5 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL5">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55692"/>
+        <AIdentifyAGE:toothLabel>LL5</AIdentifyAGE:toothLabel>
+        <rdfs:label>⎾5</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL6 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL6">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55704"/>
+        <AIdentifyAGE:toothLabel>LL6</AIdentifyAGE:toothLabel>
+        <rdfs:label>⎾6</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL7 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL7">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55703"/>
+        <AIdentifyAGE:toothLabel>LL7</AIdentifyAGE:toothLabel>
+        <rdfs:label>⎾7</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL8 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LL8">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55702"/>
+        <AIdentifyAGE:toothLabel>LL8</AIdentifyAGE:toothLabel>
+        <rdfs:label>⎾8</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU1 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU1">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55682"/>
+        <AIdentifyAGE:toothLabel>LU1</AIdentifyAGE:toothLabel>
+        <rdfs:label>⎿1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU2 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU2">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55683"/>
+        <AIdentifyAGE:toothLabel>LU2</AIdentifyAGE:toothLabel>
+        <rdfs:label>⎿2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU3 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU3">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55799"/>
+        <AIdentifyAGE:toothLabel>LU3</AIdentifyAGE:toothLabel>
+        <rdfs:label>⎿3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU4 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU4">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55690"/>
+        <AIdentifyAGE:toothLabel>LU4</AIdentifyAGE:toothLabel>
+        <rdfs:label>⎿4</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU5 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU5">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55691"/>
+        <AIdentifyAGE:toothLabel>LU5</AIdentifyAGE:toothLabel>
+        <rdfs:label>⎿5</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU6 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU6">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55699"/>
+        <AIdentifyAGE:toothLabel>LU6</AIdentifyAGE:toothLabel>
+        <rdfs:label>⎿6</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU7 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU7">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55700"/>
+        <AIdentifyAGE:toothLabel>LU7</AIdentifyAGE:toothLabel>
+        <rdfs:label>⎿7</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU8 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_LU8">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55701"/>
+        <AIdentifyAGE:toothLabel>LU8</AIdentifyAGE:toothLabel>
+        <rdfs:label>⎿8</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL1 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL1">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57142"/>
+        <AIdentifyAGE:toothLabel>RL1</AIdentifyAGE:toothLabel>
+        <rdfs:label>1⏋</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL2 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL2">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57140"/>
+        <AIdentifyAGE:toothLabel>RL2</AIdentifyAGE:toothLabel>
+        <rdfs:label>2⏋</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL3 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL3">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55686"/>
+        <AIdentifyAGE:toothLabel>RL3</AIdentifyAGE:toothLabel>
+        <rdfs:label>3⏋</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL4 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL4">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55694"/>
+        <AIdentifyAGE:toothLabel>RL4</AIdentifyAGE:toothLabel>
+        <rdfs:label>4⏋</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL5 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL5">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55695"/>
+        <AIdentifyAGE:toothLabel>RL5</AIdentifyAGE:toothLabel>
+        <rdfs:label>5⏋</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL6 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL6">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55705"/>
+        <AIdentifyAGE:toothLabel>RL6</AIdentifyAGE:toothLabel>
+        <rdfs:label>6⏋</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL7 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL7">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55706"/>
+        <AIdentifyAGE:toothLabel>RL7</AIdentifyAGE:toothLabel>
+        <rdfs:label>7⏋</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL8 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RL8">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55707"/>
+        <AIdentifyAGE:toothLabel>RL8</AIdentifyAGE:toothLabel>
+        <rdfs:label>8⏋</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU1 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU1">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55681"/>
+        <AIdentifyAGE:toothLabel>RU1</AIdentifyAGE:toothLabel>
+        <rdfs:label>1⏌</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU2 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU2">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55680"/>
+        <AIdentifyAGE:toothLabel>RU2</AIdentifyAGE:toothLabel>
+        <rdfs:label>2⏌</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU3 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU3">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55798"/>
+        <AIdentifyAGE:toothLabel>RU3</AIdentifyAGE:toothLabel>
+        <rdfs:label>3⏌</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU4 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU4">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55689"/>
+        <AIdentifyAGE:toothLabel>RU4</AIdentifyAGE:toothLabel>
+        <rdfs:label>4⏌</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU5 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU5">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55688"/>
+        <AIdentifyAGE:toothLabel>RU5</AIdentifyAGE:toothLabel>
+        <rdfs:label>5⏌</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU6 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU6">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55698"/>
+        <AIdentifyAGE:toothLabel>RU6</AIdentifyAGE:toothLabel>
+        <rdfs:label>6⏌</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU7 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU7">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55697"/>
+        <AIdentifyAGE:toothLabel>RU7</AIdentifyAGE:toothLabel>
+        <rdfs:label>7⏌</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU8 -->
+
+    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Palmer_RU8">
+        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55696"/>
+        <AIdentifyAGE:toothLabel>RU8</AIdentifyAGE:toothLabel>
+        <rdfs:label>8⏌</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#Q -->
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#Q"/>
@@ -6316,230 +7217,6 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
     <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#T -->
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#T"/>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+01 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+01">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+02 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+02">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+03 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+03">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+04 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+04">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+05 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+05">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+1 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+1">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55682"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+2 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+2">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55683"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+3 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+3">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55799"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+4 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+4">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55690"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+5 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+5">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55691"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+6 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+6">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55699"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+7 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+7">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55700"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#+8 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#+8">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55701"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-01 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-01">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-02 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-02">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-03 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-03">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-04 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-04">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-05 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-05">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-1 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-1">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57143"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-2 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-2">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57141"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-3 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-3">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55687"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-4 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-4">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55693"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-5 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-5">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55692"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-6 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-6">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55704"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-7 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-7">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55703"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#-8 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#-8">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55702"/>
-    </owl:NamedIndividual>
     
 
 
@@ -6619,294 +7296,6 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#05-">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#1+ -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#1+">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55681"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#1- -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#1-">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57142"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏋ -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏋">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57142"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏌ -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏌">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55681"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#2+ -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#2+">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55680"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#2- -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#2-">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57140"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏋ -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏋">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57140"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏌ -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏌">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55680"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#3+ -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#3+">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55798"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#3- -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#3-">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55686"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏋ -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏋">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55686"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏌ -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏌">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55798"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#4+ -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#4+">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55689"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#4- -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#4-">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55694"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏋ -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏋">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55694"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏌ -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏌">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55689"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#5+ -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#5+">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55688"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#5- -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#5-">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55695"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏋ -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏋">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55695"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏌ -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏌">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55688"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#6+ -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#6+">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55698"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#6- -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#6-">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55705"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏋ -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏋">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55705"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏌ -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏌">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55698"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#7+ -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#7+">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55697"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#7- -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#7-">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55706"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏋ -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏋">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55706"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏌ -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏌">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55697"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#8+ -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#8+">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55696"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#8- -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#8-">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55707"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏋ -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏋">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55707"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏌ -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏌">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55696"/>
     </owl:NamedIndividual>
     
 
@@ -7031,78 +7420,6 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
     
 
 
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾1 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾1">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57143"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾2 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾2">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57141"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾3 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾3">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55687"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾4 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾4">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55693"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾5 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾5">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55692"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾6 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾6">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55704"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾7 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾7">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55703"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾8 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾8">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55702"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿A -->
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿A">
@@ -7139,78 +7456,6 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿E">
         <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿1 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿1">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55682"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿2 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿2">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55683"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿3 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿3">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55799"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿4 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿4">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55690"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿5 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿5">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55691"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿6 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿6">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55699"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿7 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿7">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55700"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿8 -->
-
-    <owl:NamedIndividual rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿8">
-        <rdf:type rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55701"/>
     </owl:NamedIndividual>
     <rdf:Description>
         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>

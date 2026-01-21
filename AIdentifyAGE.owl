@@ -46,11 +46,11 @@ Cátia Vaz</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="terms:issued"/>
-        <Literal>20/01/2026</Literal>
+        <Literal>21/01/2026</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal>v1.0.6-beta</Literal>
+        <Literal>v1.0.7-beta</Literal>
     </Annotation>
     <Declaration>
         <Class abbreviatedIRI="obo:BFO_0000023"/>
@@ -170,9 +170,6 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#FDIDentalClassificationSystem"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/AIdentifyAGE#FixedProstodonticRehabilitation"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="/AIdentifyAGE#ForensicExpertPerson"/>
     </Declaration>
     <Declaration>
@@ -221,7 +218,7 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#HavvikkoToothStage"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/AIdentifyAGE#Implant"/>
+        <Class IRI="/AIdentifyAGE#Implants"/>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#InferenceRun"/>
@@ -657,6 +654,9 @@ Cátia Vaz</Literal>
         <DataProperty IRI="/AIdentifyAGE#studyYear"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/AIdentifyAGE#upperQuartileAge"/>
     </Declaration>
     <Declaration>
@@ -1056,6 +1056,132 @@ Cátia Vaz</Literal>
         <NamedIndividual IRI="/AIdentifyAGE#H"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_1Minus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_1Plus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_2Minus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_2Plus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_3Minus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_3Plus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_4Minus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_4Plus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_5Minus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_5Plus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_6Minus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_6Plus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_7Minus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_7Plus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_8Minus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_8Plus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus02"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus03"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus04"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus05"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus02"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus03"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus04"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus05"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus8"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="/AIdentifyAGE#I"/>
     </Declaration>
     <Declaration>
@@ -1092,6 +1218,102 @@ Cátia Vaz</Literal>
         <NamedIndividual IRI="/AIdentifyAGE#P"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU8"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="/AIdentifyAGE#Q"/>
     </Declaration>
     <Declaration>
@@ -1102,84 +1324,6 @@ Cátia Vaz</Literal>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/AIdentifyAGE#T"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#+01"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#+02"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#+03"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#+04"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#+05"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#+1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#+2"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#+3"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#+4"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#+5"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#+6"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#+7"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#+8"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#-01"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#-02"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#-03"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#-04"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#-05"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#-1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#-2"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#-3"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#-4"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#-5"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#-6"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#-7"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#-8"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/AIdentifyAGE#01+"/>
@@ -1210,102 +1354,6 @@ Cátia Vaz</Literal>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/AIdentifyAGE#05-"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#1+"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#1-"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#1⏋"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#1⏌"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#2+"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#2-"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#2⏋"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#2⏌"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#3+"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#3-"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#3⏋"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#3⏌"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#4+"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#4-"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#4⏋"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#4⏌"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#5+"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#5-"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#5⏋"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#5⏌"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#6+"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#6-"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#6⏋"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#6⏌"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#7+"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#7-"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#7⏋"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#7⏌"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#8+"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#8-"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#8⏋"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#8⏌"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/AIdentifyAGE#A⏋"/>
@@ -1353,30 +1401,6 @@ Cátia Vaz</Literal>
         <NamedIndividual IRI="/AIdentifyAGE#⎾E"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾2"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾3"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾4"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾5"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾6"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾7"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾8"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="/AIdentifyAGE#⎿A"/>
     </Declaration>
     <Declaration>
@@ -1390,30 +1414,6 @@ Cátia Vaz</Literal>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/AIdentifyAGE#⎿E"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿2"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿3"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿4"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿5"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿6"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿7"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿8"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="example:fma-translation-source"/>
@@ -2061,10 +2061,6 @@ Cátia Vaz</Literal>
         <Class abbreviatedIRI="obo:IAO_0000009"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#FixedProstodonticRehabilitation"/>
-        <Class IRI="/AIdentifyAGE#TreatmentOption"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="/AIdentifyAGE#ForensicExpertPerson"/>
         <Class abbreviatedIRI="foaf:Person"/>
     </SubClassOf>
@@ -2240,7 +2236,7 @@ Cátia Vaz</Literal>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#Implant"/>
+        <Class IRI="/AIdentifyAGE#Implants"/>
         <Class IRI="/AIdentifyAGE#TreatmentOption"/>
     </SubClassOf>
     <SubClassOf>
@@ -2943,6 +2939,174 @@ Cátia Vaz</Literal>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_85"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_1Minus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_1Plus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_2Minus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_2Plus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_3Minus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_3Plus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_4Minus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_4Plus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_5Minus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_5Plus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_6Minus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_6Plus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_7Minus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_7Plus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_8Minus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_8Plus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus02"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus03"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus04"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus05"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus02"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus03"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus04"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus05"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus8"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="/AIdentifyAGE#OlzeReferenceStudy"/>
         <NamedIndividual IRI="/AIdentifyAGE#Olze2003ReferenceStudy"/>
     </ClassAssertion>
@@ -2959,108 +3123,132 @@ Cátia Vaz</Literal>
         <NamedIndividual IRI="/AIdentifyAGE#Olze2012ReferenceStudy"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+01"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+02"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL2"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+03"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL3"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+04"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL4"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+05"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL5"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+1"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL6"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+2"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL7"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+3"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL8"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+4"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+5"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU2"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+6"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU3"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+7"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU4"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+8"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU5"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-01"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU6"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-02"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU7"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-03"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU8"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-04"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-05"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL2"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-1"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL3"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-2"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL4"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-3"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL5"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-4"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL6"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-5"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL7"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-6"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL8"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-7"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-8"/>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU8"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
@@ -3101,134 +3289,6 @@ Cátia Vaz</Literal>
     <ClassAssertion>
         <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
         <NamedIndividual IRI="/AIdentifyAGE#05-"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#1+"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#1-"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#1⏋"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#1⏌"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#2+"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#2-"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#2⏋"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#2⏌"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#3+"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#3-"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#3⏋"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#3⏌"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#4+"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#4-"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#4⏋"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#4⏌"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#5+"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#5-"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#5⏋"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#5⏌"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#6+"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#6-"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#6⏋"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#6⏌"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#7+"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#7-"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#7⏋"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#7⏌"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#8+"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#8-"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#8⏋"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#8⏌"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
@@ -3292,38 +3352,6 @@ Cátia Vaz</Literal>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾1"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾2"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾3"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾4"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾5"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾6"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾7"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾8"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
         <NamedIndividual IRI="/AIdentifyAGE#⎿A"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -3341,38 +3369,6 @@ Cátia Vaz</Literal>
     <ClassAssertion>
         <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
         <NamedIndividual IRI="/AIdentifyAGE#⎿E"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿1"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿2"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿3"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿4"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿5"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿6"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿7"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/AIdentifyAGE#PalmerDentalClassificationSystem"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿8"/>
     </ClassAssertion>
     <SameIndividual>
         <NamedIndividual abbreviatedIRI="obo:OHD_0000101"/>
@@ -3528,259 +3524,259 @@ Cátia Vaz</Literal>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_11"/>
-        <NamedIndividual IRI="/AIdentifyAGE#1+"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_1Plus"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_11"/>
-        <NamedIndividual IRI="/AIdentifyAGE#1⏌"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU1"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_12"/>
-        <NamedIndividual IRI="/AIdentifyAGE#2+"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_2Plus"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_12"/>
-        <NamedIndividual IRI="/AIdentifyAGE#2⏌"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU2"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_13"/>
-        <NamedIndividual IRI="/AIdentifyAGE#3+"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_3Plus"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_13"/>
-        <NamedIndividual IRI="/AIdentifyAGE#3⏌"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU3"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_14"/>
-        <NamedIndividual IRI="/AIdentifyAGE#4+"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_4Plus"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_14"/>
-        <NamedIndividual IRI="/AIdentifyAGE#4⏌"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU4"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_15"/>
-        <NamedIndividual IRI="/AIdentifyAGE#5+"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_5Plus"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_15"/>
-        <NamedIndividual IRI="/AIdentifyAGE#5⏌"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU5"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_16"/>
-        <NamedIndividual IRI="/AIdentifyAGE#6+"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_6Plus"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_16"/>
-        <NamedIndividual IRI="/AIdentifyAGE#6⏌"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU6"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_17"/>
-        <NamedIndividual IRI="/AIdentifyAGE#7+"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_7Plus"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_17"/>
-        <NamedIndividual IRI="/AIdentifyAGE#7⏌"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU7"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_18"/>
-        <NamedIndividual IRI="/AIdentifyAGE#8+"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_8Plus"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_18"/>
-        <NamedIndividual IRI="/AIdentifyAGE#8⏌"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU8"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_21"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+1"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus1"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_21"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿1"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU1"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_22"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+2"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus2"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_22"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿2"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU2"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_23"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+3"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus3"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_23"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿3"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU3"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_24"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+4"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus4"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_24"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿4"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU4"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_25"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+5"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus5"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_25"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿5"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU5"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_26"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+6"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus6"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_26"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿6"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU6"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_27"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+7"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus7"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_27"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿7"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU7"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_28"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+8"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus8"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_28"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿8"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU8"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_31"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-1"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus1"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_31"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾1"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL1"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_32"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-2"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus2"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_32"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾2"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL2"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_33"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-3"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus3"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_33"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾3"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL3"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_34"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-4"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus4"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_34"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾4"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL4"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_35"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-5"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus5"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_35"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾5"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL5"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_36"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-6"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus6"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_36"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾6"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL6"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_37"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-7"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus7"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_37"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾7"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL7"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_38"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-8"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus8"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_38"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾8"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL8"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_41"/>
-        <NamedIndividual IRI="/AIdentifyAGE#1-"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_1Minus"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_41"/>
-        <NamedIndividual IRI="/AIdentifyAGE#1⏋"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL1"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_42"/>
-        <NamedIndividual IRI="/AIdentifyAGE#2-"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_2Minus"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_42"/>
-        <NamedIndividual IRI="/AIdentifyAGE#2⏋"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL2"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_43"/>
-        <NamedIndividual IRI="/AIdentifyAGE#3-"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_3Minus"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_43"/>
-        <NamedIndividual IRI="/AIdentifyAGE#3⏋"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL3"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_44"/>
-        <NamedIndividual IRI="/AIdentifyAGE#4-"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_4Minus"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_44"/>
-        <NamedIndividual IRI="/AIdentifyAGE#4⏋"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL4"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_45"/>
-        <NamedIndividual IRI="/AIdentifyAGE#5-"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_5Minus"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_45"/>
-        <NamedIndividual IRI="/AIdentifyAGE#5⏋"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL5"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_46"/>
-        <NamedIndividual IRI="/AIdentifyAGE#6-"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_6Minus"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_46"/>
-        <NamedIndividual IRI="/AIdentifyAGE#6⏋"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL6"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_47"/>
-        <NamedIndividual IRI="/AIdentifyAGE#7-"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_7Minus"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_47"/>
-        <NamedIndividual IRI="/AIdentifyAGE#7⏋"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL7"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_48"/>
-        <NamedIndividual IRI="/AIdentifyAGE#8-"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_8Minus"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_48"/>
-        <NamedIndividual IRI="/AIdentifyAGE#8⏋"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL8"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_51"/>
@@ -3824,7 +3820,7 @@ Cátia Vaz</Literal>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_61"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+01"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus01"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_61"/>
@@ -3836,7 +3832,7 @@ Cátia Vaz</Literal>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_62"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+02"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus02"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_62"/>
@@ -3848,7 +3844,7 @@ Cátia Vaz</Literal>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_63"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+03"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus03"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_63"/>
@@ -3856,11 +3852,11 @@ Cátia Vaz</Literal>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_64"/>
-        <NamedIndividual IRI="/AIdentifyAGE#I"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus04"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_64"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+04"/>
+        <NamedIndividual IRI="/AIdentifyAGE#I"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_64"/>
@@ -3868,11 +3864,11 @@ Cátia Vaz</Literal>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_65"/>
-        <NamedIndividual IRI="/AIdentifyAGE#J"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus05"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_65"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+05"/>
+        <NamedIndividual IRI="/AIdentifyAGE#J"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_65"/>
@@ -3880,11 +3876,11 @@ Cátia Vaz</Literal>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_71"/>
-        <NamedIndividual IRI="/AIdentifyAGE#O"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus01"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_71"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-01"/>
+        <NamedIndividual IRI="/AIdentifyAGE#O"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_71"/>
@@ -3892,11 +3888,11 @@ Cátia Vaz</Literal>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_72"/>
-        <NamedIndividual IRI="/AIdentifyAGE#N"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus02"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_72"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-02"/>
+        <NamedIndividual IRI="/AIdentifyAGE#N"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_72"/>
@@ -3904,11 +3900,11 @@ Cátia Vaz</Literal>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_73"/>
-        <NamedIndividual IRI="/AIdentifyAGE#M"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus03"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_73"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-03"/>
+        <NamedIndividual IRI="/AIdentifyAGE#M"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_73"/>
@@ -3916,11 +3912,11 @@ Cátia Vaz</Literal>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_74"/>
-        <NamedIndividual IRI="/AIdentifyAGE#L"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus04"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_74"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-04"/>
+        <NamedIndividual IRI="/AIdentifyAGE#L"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_74"/>
@@ -3928,11 +3924,11 @@ Cátia Vaz</Literal>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_75"/>
-        <NamedIndividual IRI="/AIdentifyAGE#K"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus05"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_75"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-05"/>
+        <NamedIndividual IRI="/AIdentifyAGE#K"/>
     </SameIndividual>
     <SameIndividual>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_75"/>
@@ -4000,96 +3996,6 @@ Cátia Vaz</Literal>
     </SameIndividual>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual abbreviatedIRI="obo:OHD_0000102"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55697"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual abbreviatedIRI="obo:OHD_0000103"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55698"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual abbreviatedIRI="obo:OHD_0000104"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55688"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual abbreviatedIRI="obo:OHD_0000105"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55689"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual abbreviatedIRI="obo:OHD_0000106"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55798"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual abbreviatedIRI="obo:OHD_0000107"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55680"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual abbreviatedIRI="obo:OHD_0000120"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55692"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual abbreviatedIRI="obo:OHD_0000121"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55693"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual abbreviatedIRI="obo:OHD_0000123"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_57141"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual abbreviatedIRI="obo:OHD_0000124"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_57143"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual abbreviatedIRI="obo:OHD_0000125"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_57142"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual abbreviatedIRI="obo:OHD_0000126"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_57140"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual abbreviatedIRI="obo:OHD_0000127"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55686"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual abbreviatedIRI="obo:OHD_0000128"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55694"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual abbreviatedIRI="obo:OHD_0000129"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55695"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual abbreviatedIRI="obo:OHD_0000130"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55705"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual abbreviatedIRI="obo:OHD_0000131"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55706"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual abbreviatedIRI="obo:OHD_0000132"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55707"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
         <NamedIndividual IRI="/AIdentifyAGE#FDI_11"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55681"/>
     </ObjectPropertyAssertion>
@@ -4250,324 +4156,1114 @@ Cátia Vaz</Literal>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+1"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55682"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+2"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55683"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+3"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55799"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+4"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55690"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+5"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55691"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+6"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55699"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+7"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55700"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#+8"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55701"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-1"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_57143"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-2"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_57141"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-3"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55687"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-4"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55693"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-5"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55692"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-6"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55704"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-7"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55703"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#-8"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55702"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#1+"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55681"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#1-"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_1Minus"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_57142"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#1⏋"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_57142"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#1⏌"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_1Plus"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55681"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#2+"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55680"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#2-"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_2Minus"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_57140"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#2⏋"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_57140"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#2⏌"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_2Plus"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55680"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#3+"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55798"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#3-"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_3Minus"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55686"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#3⏋"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55686"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#3⏌"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_3Plus"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55798"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#4+"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55689"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#4-"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_4Minus"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55694"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#4⏋"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55694"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#4⏌"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_4Plus"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55689"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#5+"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55688"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#5-"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_5Minus"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55695"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#5⏋"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55695"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#5⏌"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_5Plus"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55688"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#6+"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55698"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#6-"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_6Minus"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55705"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#6⏋"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55705"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#6⏌"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_6Plus"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55698"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#7+"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55697"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#7-"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_7Minus"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55706"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#7⏋"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55706"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#7⏌"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_7Plus"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55697"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#8+"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55696"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#8-"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_8Minus"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55707"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#8⏋"/>
-        <NamedIndividual abbreviatedIRI="obo:FMA_55707"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#8⏌"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_8Plus"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55696"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾1"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus1"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_57143"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾2"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus2"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_57141"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾3"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus3"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55687"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾4"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus4"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55693"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾5"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus5"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55692"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾6"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus6"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55704"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾7"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus7"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55703"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎾8"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus8"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55702"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿1"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus1"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55682"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿2"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus2"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55683"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿3"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus3"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55799"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿4"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus4"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55690"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿5"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus5"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55691"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿6"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus6"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55699"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿7"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus7"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55700"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-        <NamedIndividual IRI="/AIdentifyAGE#⎿8"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus8"/>
         <NamedIndividual abbreviatedIRI="obo:FMA_55701"/>
     </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL1"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_57143"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL2"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_57141"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL3"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55687"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL4"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55693"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL5"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55692"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL6"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55704"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL7"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55703"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL8"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55702"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU1"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55682"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU2"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55683"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU3"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55799"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU4"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55690"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU5"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55691"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU6"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55699"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU7"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55700"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU8"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55701"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL1"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_57142"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL2"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_57140"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL3"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55686"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL4"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55694"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL5"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55695"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL6"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55705"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL7"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55706"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL8"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55707"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU1"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55681"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU2"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55680"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU3"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55798"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU4"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55689"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU5"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55688"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU6"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55698"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU7"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55697"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU8"/>
+        <NamedIndividual abbreviatedIRI="obo:FMA_55696"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000101"/>
+        <Literal>1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000102"/>
+        <Literal>2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000103"/>
+        <Literal>3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000104"/>
+        <Literal>4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000105"/>
+        <Literal>5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000106"/>
+        <Literal>6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000107"/>
+        <Literal>7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000108"/>
+        <Literal>8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000109"/>
+        <Literal>9</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000110"/>
+        <Literal>10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000111"/>
+        <Literal>11</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000112"/>
+        <Literal>12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000113"/>
+        <Literal>13</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000114"/>
+        <Literal>14</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000115"/>
+        <Literal>15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000116"/>
+        <Literal>16</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000117"/>
+        <Literal>17</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000118"/>
+        <Literal>18</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000119"/>
+        <Literal>19</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000120"/>
+        <Literal>20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000121"/>
+        <Literal>21</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000122"/>
+        <Literal>22</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000123"/>
+        <Literal>23</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000124"/>
+        <Literal>24</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000125"/>
+        <Literal>25</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000126"/>
+        <Literal>26</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000127"/>
+        <Literal>27</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000128"/>
+        <Literal>28</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000129"/>
+        <Literal>29</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000130"/>
+        <Literal>30</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000131"/>
+        <Literal>31</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual abbreviatedIRI="obo:OHD_0000132"/>
+        <Literal>32</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_11"/>
+        <Literal>11</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_12"/>
+        <Literal>12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_13"/>
+        <Literal>13</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_14"/>
+        <Literal>14</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_15"/>
+        <Literal>15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_16"/>
+        <Literal>16</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_17"/>
+        <Literal>17</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_18"/>
+        <Literal>18</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_21"/>
+        <Literal>21</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_22"/>
+        <Literal>22</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_23"/>
+        <Literal>23</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_24"/>
+        <Literal>24</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_25"/>
+        <Literal>25</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_26"/>
+        <Literal>26</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_27"/>
+        <Literal>27</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_28"/>
+        <Literal>28</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_31"/>
+        <Literal>31</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_32"/>
+        <Literal>32</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_33"/>
+        <Literal>33</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_34"/>
+        <Literal>34</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_35"/>
+        <Literal>35</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_36"/>
+        <Literal>36</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_37"/>
+        <Literal>37</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_38"/>
+        <Literal>38</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_41"/>
+        <Literal>41</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_42"/>
+        <Literal>42</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_43"/>
+        <Literal>43</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_44"/>
+        <Literal>44</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_45"/>
+        <Literal>45</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_46"/>
+        <Literal>46</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_47"/>
+        <Literal>47</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_48"/>
+        <Literal>48</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_51"/>
+        <Literal>51</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_52"/>
+        <Literal>52</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_53"/>
+        <Literal>53</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_54"/>
+        <Literal>54</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_55"/>
+        <Literal>55</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_61"/>
+        <Literal>61</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_62"/>
+        <Literal>62</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_63"/>
+        <Literal>63</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_64"/>
+        <Literal>64</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_65"/>
+        <Literal>65</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_71"/>
+        <Literal>71</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_72"/>
+        <Literal>72</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_73"/>
+        <Literal>73</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_74"/>
+        <Literal>74</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_75"/>
+        <Literal>75</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_81"/>
+        <Literal>81</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_82"/>
+        <Literal>82</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_83"/>
+        <Literal>83</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_84"/>
+        <Literal>84</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#FDI_85"/>
+        <Literal>85</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_1Minus"/>
+        <Literal>1Minus</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_1Plus"/>
+        <Literal>1Plus</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_2Minus"/>
+        <Literal>2Minus</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_2Plus"/>
+        <Literal>2Plus</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_3Minus"/>
+        <Literal>3Minus</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_3Plus"/>
+        <Literal>3Plus</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_4Minus"/>
+        <Literal>4Minus</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_4Plus"/>
+        <Literal>4Plus</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_5Minus"/>
+        <Literal>5Minus</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_5Plus"/>
+        <Literal>5Plus</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_6Minus"/>
+        <Literal>6Minus</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_6Plus"/>
+        <Literal>6Plus</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_7Minus"/>
+        <Literal>7Minus</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_7Plus"/>
+        <Literal>7Plus</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_8Minus"/>
+        <Literal>8Minus</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_8Plus"/>
+        <Literal>8Plus</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus01"/>
+        <Literal>Minus01</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus02"/>
+        <Literal>Minus02</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus03"/>
+        <Literal>Minus03</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus04"/>
+        <Literal>Minus04</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus05"/>
+        <Literal>Minus05</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus1"/>
+        <Literal>Minus1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus2"/>
+        <Literal>Minus2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus3"/>
+        <Literal>Minus3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus4"/>
+        <Literal>Minus4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus5"/>
+        <Literal>Minus5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus6"/>
+        <Literal>Minus6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus7"/>
+        <Literal>Minus7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Minus8"/>
+        <Literal>Minus8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus01"/>
+        <Literal>Plus01</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus02"/>
+        <Literal>Plus02</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus03"/>
+        <Literal>Plus03</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus04"/>
+        <Literal>Plus04</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus05"/>
+        <Literal>Plus05</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus1"/>
+        <Literal>Plus1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus2"/>
+        <Literal>Plus2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus3"/>
+        <Literal>Plus3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus4"/>
+        <Literal>Plus4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus5"/>
+        <Literal>Plus5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus6"/>
+        <Literal>Plus6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus7"/>
+        <Literal>Plus7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Haderup_Plus8"/>
+        <Literal>Plus8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL1"/>
+        <Literal>LL1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL2"/>
+        <Literal>LL2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL3"/>
+        <Literal>LL3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL4"/>
+        <Literal>LL4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL5"/>
+        <Literal>LL5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL6"/>
+        <Literal>LL6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL7"/>
+        <Literal>LL7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LL8"/>
+        <Literal>LL8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU1"/>
+        <Literal>LU1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU2"/>
+        <Literal>LU2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU3"/>
+        <Literal>LU3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU4"/>
+        <Literal>LU4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU5"/>
+        <Literal>LU5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU6"/>
+        <Literal>LU6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU7"/>
+        <Literal>LU7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_LU8"/>
+        <Literal>LU8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL1"/>
+        <Literal>RL1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL2"/>
+        <Literal>RL2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL3"/>
+        <Literal>RL3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL4"/>
+        <Literal>RL4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL5"/>
+        <Literal>RL5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL6"/>
+        <Literal>RL6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL7"/>
+        <Literal>RL7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RL8"/>
+        <Literal>RL8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU1"/>
+        <Literal>RU1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU2"/>
+        <Literal>RU2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU3"/>
+        <Literal>RU3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU4"/>
+        <Literal>RU4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU5"/>
+        <Literal>RU5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU6"/>
+        <Literal>RU6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU7"/>
+        <Literal>RU7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <NamedIndividual IRI="/AIdentifyAGE#Palmer_RU8"/>
+        <Literal>RU8</Literal>
+    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="prov:wasDerivedFrom"/>
@@ -5270,6 +5966,10 @@ Cátia Vaz</Literal>
     <DataPropertyRange>
         <DataProperty IRI="/AIdentifyAGE#standardDev"/>
         <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <AnnotationAssertion>
         <Annotation>
@@ -6765,166 +7465,6 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <Literal>ADA universal tooth number</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000101</AbbreviatedIRI>
-        <Literal xml:lang="en">1</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000102</AbbreviatedIRI>
-        <Literal xml:lang="en">2</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000103</AbbreviatedIRI>
-        <Literal xml:lang="en">3</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000104</AbbreviatedIRI>
-        <Literal xml:lang="en">4</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000105</AbbreviatedIRI>
-        <Literal xml:lang="en">5</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000106</AbbreviatedIRI>
-        <Literal xml:lang="en">6</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000107</AbbreviatedIRI>
-        <Literal xml:lang="en">7</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000108</AbbreviatedIRI>
-        <Literal xml:lang="en">8</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000109</AbbreviatedIRI>
-        <Literal xml:lang="en">9</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000110</AbbreviatedIRI>
-        <Literal xml:lang="en">10</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000111</AbbreviatedIRI>
-        <Literal xml:lang="en">11</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000112</AbbreviatedIRI>
-        <Literal xml:lang="en">12</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000113</AbbreviatedIRI>
-        <Literal xml:lang="en">13</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000114</AbbreviatedIRI>
-        <Literal xml:lang="en">14</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000115</AbbreviatedIRI>
-        <Literal xml:lang="en">15</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000116</AbbreviatedIRI>
-        <Literal xml:lang="en">16</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000117</AbbreviatedIRI>
-        <Literal xml:lang="en">17</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000118</AbbreviatedIRI>
-        <Literal xml:lang="en">18</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000119</AbbreviatedIRI>
-        <Literal xml:lang="en">19</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000120</AbbreviatedIRI>
-        <Literal xml:lang="en">20</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000121</AbbreviatedIRI>
-        <Literal xml:lang="en">21</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000122</AbbreviatedIRI>
-        <Literal xml:lang="en">22</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000123</AbbreviatedIRI>
-        <Literal xml:lang="en">23</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000124</AbbreviatedIRI>
-        <Literal xml:lang="en">24</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000125</AbbreviatedIRI>
-        <Literal xml:lang="en">25</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000126</AbbreviatedIRI>
-        <Literal xml:lang="en">26</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000127</AbbreviatedIRI>
-        <Literal xml:lang="en">27</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000128</AbbreviatedIRI>
-        <Literal xml:lang="en">28</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000129</AbbreviatedIRI>
-        <Literal xml:lang="en">29</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000130</AbbreviatedIRI>
-        <Literal xml:lang="en">30</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000131</AbbreviatedIRI>
-        <Literal xml:lang="en">31</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OHD_0000132</AbbreviatedIRI>
-        <Literal xml:lang="en">32</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="prov:wasDerivedFrom"/>
             <IRI>http://purl.obolibrary.org/obo/ro/releases/2023-06-28/ro.owl</IRI>
@@ -7094,7 +7634,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>/AIdentifyAGE#AIDentalAgeAssessment</IRI>
-        <Literal xml:lang="en">Represents the final age assessment report results, produced by using dental information to relate it with chronological age, based on AI/ML methods</Literal>
+        <Literal xml:lang="en">Dental age assessment performed by artificial intelligence systems using dental data to estimate age, either by producing a continuous numerical estimation of chronological age through regression models or by assigning an individual to predefined legal age thresholds through classification models</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7130,6 +7670,11 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/AIdentifyAGE#BhatReferenceStudy</IRI>
         <Literal xml:lang="en">Bhat Reference Study</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#Braces</IRI>
+        <Literal xml:lang="en">Orthodontic appliances, typically brackets and wires, that apply gentle, continuous pressure to straighten misaligned teeth and correct bite problems (malocclusions) like overbites, underbites, and gaps, improving both dental health and appearance</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7232,6 +7777,16 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <Literal xml:lang="en">Dental Age Assessment</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#DentalRestoration</IRI>
+        <Literal xml:lang="en">A procedure and/or its result by which the lost structure of a tooth is replaced in order to restore its form, function, and integrity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:source"/>
+        <IRI>/AIdentifyAGE#DentalRestoration</IRI>
+        <Literal xml:lang="en">ISO/DIS 1942 — Dentistry — Vocabulary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/AIdentifyAGE#DentalRestoration</IRI>
         <Literal xml:lang="en">Dental Restoration</Literal>
@@ -7248,8 +7803,263 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/AIdentifyAGE#FixedProstodonticRehabilitation</IRI>
-        <Literal>Fixed Prostodontic Rehabilitation</Literal>
+        <IRI>/AIdentifyAGE#FDI_11</IRI>
+        <Literal>FDI11</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_12</IRI>
+        <Literal>FDI12</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_13</IRI>
+        <Literal>FDI13</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_14</IRI>
+        <Literal>FDI14</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_15</IRI>
+        <Literal>FDI15</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_16</IRI>
+        <Literal>FDI16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_17</IRI>
+        <Literal>FDI17</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_18</IRI>
+        <Literal>FDI18</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_21</IRI>
+        <Literal>FDI21</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_22</IRI>
+        <Literal>FDI22</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_23</IRI>
+        <Literal>FDI23</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_24</IRI>
+        <Literal>FDI24</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_25</IRI>
+        <Literal>FDI25</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_26</IRI>
+        <Literal>FDI26</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_27</IRI>
+        <Literal>FDI27</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_28</IRI>
+        <Literal>FDI28</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_31</IRI>
+        <Literal>FDI31</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_32</IRI>
+        <Literal>FDI32</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_33</IRI>
+        <Literal>FDI33</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_34</IRI>
+        <Literal>FDI34</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_35</IRI>
+        <Literal>FDI35</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_36</IRI>
+        <Literal>FDI36</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_37</IRI>
+        <Literal>FDI37</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_38</IRI>
+        <Literal>FDI38</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_41</IRI>
+        <Literal>FDI41</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_42</IRI>
+        <Literal>FDI42</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_43</IRI>
+        <Literal>FDI43</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_44</IRI>
+        <Literal>FDI44</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_45</IRI>
+        <Literal>FDI45</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_46</IRI>
+        <Literal>FDI46</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_47</IRI>
+        <Literal>FDI47</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_48</IRI>
+        <Literal>FDI48</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_51</IRI>
+        <Literal>FDI51</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_52</IRI>
+        <Literal>FDI52</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_53</IRI>
+        <Literal>FDI53</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_54</IRI>
+        <Literal>FDI54</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_55</IRI>
+        <Literal>FDI55</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_61</IRI>
+        <Literal>FDI61</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_62</IRI>
+        <Literal>FDI62</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_63</IRI>
+        <Literal>FDI63</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_64</IRI>
+        <Literal>FDI64</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_65</IRI>
+        <Literal>FDI65</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_71</IRI>
+        <Literal>FDI71</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_72</IRI>
+        <Literal>FDI72</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_73</IRI>
+        <Literal>FDI73</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_74</IRI>
+        <Literal>FDI74</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_75</IRI>
+        <Literal>FDI75</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_81</IRI>
+        <Literal>FDI81</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_82</IRI>
+        <Literal>FDI82</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_83</IRI>
+        <Literal>FDI83</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_84</IRI>
+        <Literal>FDI84</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#FDI_85</IRI>
+        <Literal>FDI85</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
@@ -7382,6 +8192,216 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <Literal xml:lang="en">Haderup Dental Classification System</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_1Minus</IRI>
+        <Literal>1-</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_1Plus</IRI>
+        <Literal>1+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_2Minus</IRI>
+        <Literal>2-</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_2Plus</IRI>
+        <Literal>2+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_3Minus</IRI>
+        <Literal>3-</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_3Plus</IRI>
+        <Literal>3+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_4Minus</IRI>
+        <Literal>4-</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_4Plus</IRI>
+        <Literal>4+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_5Minus</IRI>
+        <Literal>5-</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_5Plus</IRI>
+        <Literal>5+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_6Minus</IRI>
+        <Literal>6-</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_6Plus</IRI>
+        <Literal>6+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_7Minus</IRI>
+        <Literal>7-</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_7Plus</IRI>
+        <Literal>7+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_8Minus</IRI>
+        <Literal>8-</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_8Plus</IRI>
+        <Literal>8+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Minus01</IRI>
+        <Literal>-01</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Minus02</IRI>
+        <Literal>-02</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Minus03</IRI>
+        <Literal>-03</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Minus04</IRI>
+        <Literal>-04</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Minus05</IRI>
+        <Literal>-05</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Minus1</IRI>
+        <Literal>-1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Minus2</IRI>
+        <Literal>-2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Minus3</IRI>
+        <Literal>-3</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Minus4</IRI>
+        <Literal>-4</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Minus5</IRI>
+        <Literal>-5</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Minus6</IRI>
+        <Literal>-6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Minus7</IRI>
+        <Literal>-7</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Minus8</IRI>
+        <Literal>-8</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Plus01</IRI>
+        <Literal>+01</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Plus02</IRI>
+        <Literal>+02</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Plus03</IRI>
+        <Literal>+03</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Plus04</IRI>
+        <Literal>+04</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Plus05</IRI>
+        <Literal>+05</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Plus1</IRI>
+        <Literal>+1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Plus2</IRI>
+        <Literal>+2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Plus3</IRI>
+        <Literal>+3</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Plus4</IRI>
+        <Literal>+4</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Plus5</IRI>
+        <Literal>+5</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Plus6</IRI>
+        <Literal>+6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Plus7</IRI>
+        <Literal>+7</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Haderup_Plus8</IRI>
+        <Literal>+8</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>/AIdentifyAGE#HavvikkoScoringMethod</IRI>
         <Literal xml:lang="en">Objectively defined set of steps of dental development, based on reproducible morphological criteria, to which a numerical score is assigned for the purpose of assessing tooth formation and estimating dental maturity, following Havvikko defined set of tooth development stages.</Literal>
@@ -7410,6 +8430,21 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/AIdentifyAGE#HavvikkoToothStage</IRI>
         <Literal xml:lang="en">Havvikko Tooth Stage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#Implants</IRI>
+        <Literal xml:lang="en">A device intended to be placed surgically in the jawbone or other craniofacial bone to provide support and/or retention for a dental prosthesis.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:source"/>
+        <IRI>/AIdentifyAGE#Implants</IRI>
+        <Literal xml:lang="en">ISO 16443 — Dentistry — Implants</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Implants</IRI>
+        <Literal xml:lang="en">Implants</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
@@ -7505,6 +8540,16 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/AIdentifyAGE#MincerReferenceStudy</IRI>
         <Literal xml:lang="en">Mincer Reference Study</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#MissingTooth</IRI>
+        <Literal>A tooth that is absent from the dental arch, either because it failed to develop (congenital absence) or because it was lost after eruption due to extraction, trauma, or disease.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:source"/>
+        <IRI>/AIdentifyAGE#MissingTooth</IRI>
+        <Literal xml:lang="en">ISO/DIS 1942 — Dentistry — Vocabulary</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7622,6 +8667,11 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <Literal xml:lang="en">Olze Reference Study</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#OrthodonticAppliances</IRI>
+        <Literal xml:lang="en">Devices used in orthodontic treatment to correct or prevent malocclusion by applying controlled forces to move teeth, modify jaw growth, or maintain tooth position</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/AIdentifyAGE#OrthodonticAppliances</IRI>
         <Literal>Orthodontic Appliances</Literal>
@@ -7635,6 +8685,166 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/AIdentifyAGE#PalmerDentalClassificationSystem</IRI>
         <Literal xml:lang="en">Palmer Dental Classification System</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_LL1</IRI>
+        <Literal>⎾1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_LL2</IRI>
+        <Literal>⎾2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_LL3</IRI>
+        <Literal>⎾3</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_LL4</IRI>
+        <Literal>⎾4</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_LL5</IRI>
+        <Literal>⎾5</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_LL6</IRI>
+        <Literal>⎾6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_LL7</IRI>
+        <Literal>⎾7</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_LL8</IRI>
+        <Literal>⎾8</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_LU1</IRI>
+        <Literal>⎿1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_LU2</IRI>
+        <Literal>⎿2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_LU3</IRI>
+        <Literal>⎿3</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_LU4</IRI>
+        <Literal>⎿4</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_LU5</IRI>
+        <Literal>⎿5</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_LU6</IRI>
+        <Literal>⎿6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_LU7</IRI>
+        <Literal>⎿7</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_LU8</IRI>
+        <Literal>⎿8</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_RL1</IRI>
+        <Literal>1⏋</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_RL2</IRI>
+        <Literal>2⏋</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_RL3</IRI>
+        <Literal>3⏋</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_RL4</IRI>
+        <Literal>4⏋</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_RL5</IRI>
+        <Literal>5⏋</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_RL6</IRI>
+        <Literal>6⏋</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_RL7</IRI>
+        <Literal>7⏋</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_RL8</IRI>
+        <Literal>8⏋</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_RU1</IRI>
+        <Literal>1⏌</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_RU2</IRI>
+        <Literal>2⏌</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_RU3</IRI>
+        <Literal>3⏌</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_RU4</IRI>
+        <Literal>4⏌</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_RU5</IRI>
+        <Literal>5⏌</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_RU6</IRI>
+        <Literal>6⏌</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_RU7</IRI>
+        <Literal>7⏌</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Palmer_RU8</IRI>
+        <Literal>8⏌</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
@@ -7697,6 +8907,11 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <Literal xml:lang="en">Requesting Entity</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#RootCanalTreatment</IRI>
+        <Literal xml:lang="en">A dental procedure involving the removal of diseased or necrotic pulp tissue, followed by cleaning, shaping, disinfection, and obturation of the root canal system, with the aim of eliminating infection and preventing reinfection while preserving the tooth.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/AIdentifyAGE#RootCanalTreatment</IRI>
         <Literal xml:lang="en">Root Canal Treatment</Literal>
@@ -7754,7 +8969,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>/AIdentifyAGE#TreatmentOption</IRI>
-        <Literal xml:lang="en">Represents all the possible dentistry/medical dentistry treatment options that can be present in person&apos;s teeth</Literal>
+        <Literal xml:lang="en">Possible therapeutic approach or intervention available for managing a medical or dental condition, selected based on clinical indication, patient needs, and professional judgment</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8227,6 +9442,16 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/AIdentifyAGE#studyYear</IRI>
         <Literal xml:lang="en">Study Year</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#toothLabel</IRI>
+        <Literal xml:lang="en">Label attributed to a given Dental Classification System entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#toothLabel</IRI>
+        <Literal xml:lang="en">Tooth Label</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
