@@ -323,28 +323,28 @@ entities in external ontologies.
 | Model* | MLS | mls:Model | AI model interoperability |
 | Inference Run | MLS | mls:Run | Run Execution of AI inference |
 
-![refstudy_hier.png](img/hierarchy/refstudy_hier.png)
+![refstudy_hier.png](https://github.com/AIdentifyAGE/ontology/blob/main/imgs/hierarchy/refstudy_hier.png?raw=true)
 
 The figure illustrates a hierarchical ontological structure that classifies
 individual reference studies under the Reference Study class. Each subclass of
 the Reference Study class, corresponds to a specific published study. The
 arrows define rdfs:subClassOf property relations.
 
-![stage_hier.png](img/hierarchy/stage_hier.png)
+![stage_hier.png](https://github.com/AIdentifyAGE/ontology/blob/main/imgs/hierarchy/stage_hier.png?raw=true)
 
 The figure depicts a hierarchical ontological structure that classifies
 individual stages under the Stage class. Each subclass of the  Stage,
 corresponds to a specific  developmental stage used in forensic dental age
 assessment. The arrows define rdfs:subClassOf property relations.
 
-![toothscoring_hier.png](img/hierarchy/toothscoring_hier.png)
+![toothscoring_hier.png](https://github.com/AIdentifyAGE/ontology/blob/main/imgs/hierarchy/toothscoring_hier.png?raw=true)
 
 The figure depicts a hierarchical ontological structure that classifies
 individual stages under the Scoring Stage class. Each subclass of the  Scoring
 Stage, corresponds to a specific set of steps of dental development. The arrows
 define rdfs:subClassOf property relations.
 
-![toothstage_hier.png](img/hierarchy/toothstage_hier.png)
+![toothstage_hier.png](https://github.com/AIdentifyAGE/ontology/blob/main/imgs/hierarchy/toothstage_hier.png?raw=true)
 
 The figure depicts a hierarchical ontological structure that classifies
 individual stages under the Tooth Stage class. Each subclass of the  Stage,
@@ -376,11 +376,13 @@ staging system. The arrows define rdfs:subClassOf property relations.
    will open the query editor. You are now ready to paste and execute the
    provided `SPARQL` queries against loaded data, as shown below.
 
-![sparql_menu_tab.png](img/how_to/sparql_menu_tab.png)
+![sparql_menu_tab.png](https://github.com/AIdentifyAGE/ontology/blob/main/imgs/how_to/sparql_menu_tab.png?raw=true)
 
 SPARQL Query tab location in Protégé `Window` menu.
 
-![sparql_tab.png](img/how_to/sparql_tab.png)
+![sparql_tab.png](https://github.com/AIdentifyAGE/ontology/blob/main/imgs/how_to/sparql_tab.png?raw=true)
+
+https://github.com/AIdentifyAGE/ontology/blob/main/imgs/hierarchy/refstudy_hier.png?raw=true
 
 SPARQL Query tab with example query. This query corresponds to the Competency Question 1.
 
