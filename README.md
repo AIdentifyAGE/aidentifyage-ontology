@@ -25,6 +25,8 @@ biomedical and AI ontologies.
 4. [Interoperability Mapping with External Ontologies](#interoperability-mapping-with-external-ontologies)
 5. [Accessing SPARQL in Protégé](#accessing-sparql-in-protégé)
 
+![abs.png](https://github.com/AIdentifyAGE/ontology/blob/main/imgs/abs.png?raw=true)
+
 ## Competency Questions
 
 ### Judicial and  Forensic Domain
